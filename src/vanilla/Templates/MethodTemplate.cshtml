@@ -73,6 +73,26 @@
 @EmptyLine
 
 
+@{ 
+    var allParms = parameterVariants.AllParameters;
+    var bodyParam = allParms.FirstOrDefault(p => p.ModelType is PrimaryType pt && pt.KnownPrimaryType == KnownPrimaryType.Stream);
+}
+
+@* ----------------------------------------------------- *@
+@* Observable, RestResponse, all parameters, FileSegment *@
+@* ----------------------------------------------------- *@
+@if (bodyParam != null)
+{
+    var fileParam = new ParameterJv();
+    fileParam.ModelType = new CompositeTypeJv("FileSegment");
+    fileParam.Name.FixedValue = bodyParam.Name;
+
+    @Model.Javadoc(allParms, Model.AsyncExceptionDocumentation, Model.ObservableReturnDocumentation)
+    @Model.ObservableRestResponseImpl(allParms.Replace(bodyParam, fileParam), takeOnlyRequiredParameters: false)
+    @EmptyLine
+}
+
+
 @* -------------------------------- *@
 @* Observable, Body, all parameters *@
 @* -------------------------------- *@

@@ -1,13 +1,21 @@
 package fixtures.bodyformdata;
 
+import com.google.common.base.Charsets;
+import com.microsoft.rest.RestResponse;
+import com.microsoft.rest.http.FileSegment;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.RandomAccessFile;
+import java.net.URI;
+import java.nio.channels.FileChannel;
+import java.nio.file.Paths;
 
 import fixtures.bodyformdata.implementation.AutoRestSwaggerBATFormDataServiceImpl;
 import rx.exceptions.Exceptions;
@@ -40,21 +48,25 @@ public class FormdataTests {
     public void uploadFileViaBody() throws Exception {
         // FIXME: generate FileRegion overload and pass the resource that way
         ClassLoader classLoader = getClass().getClassLoader();
-        try (InputStream stream = classLoader.getResourceAsStream("upload.txt")) {
-            byte[] bytes = IOUtils.toByteArray(stream);
-            stream.close();
-            byte[] actual = client.formdatas().uploadFileViaBodyAsync(bytes)
-                    .map(new Func1<InputStream, byte[]>() {
+        URI uri = classLoader.getResource("upload.txt").toURI();
+        RandomAccessFile raf = new RandomAccessFile(new File(uri), "r");
+        try {
+            byte[] actual = client.formdatas().uploadFileViaBodyWithRestResponseAsync(new FileSegment(raf.getChannel(), 0, (int)raf.length()))
+                    .map(new Func1<RestResponse<?, InputStream>, byte[]>() {
                         @Override
-                        public byte[] call(InputStream inputStreamServiceResponse) {
+                        public byte[] call(RestResponse<?, InputStream> inputStreamServiceResponse) {
                             try {
-                                return IOUtils.toByteArray(inputStreamServiceResponse);
+                                return IOUtils.toByteArray(inputStreamServiceResponse.body());
                             } catch (IOException e) {
                                 throw Exceptions.propagate(e);
                             }
                         }
                     }).toBlocking().value();
-            Assert.assertEquals(new String(bytes), IOUtils.toString(actual));
-        }
+
+            byte[] expected = new byte[(int)raf.length()];
+            raf.readFully(expected);
+
+            Assert.assertEquals(new String(expected, Charsets.UTF_8), new String(actual, Charsets.UTF_8));
+        } finally {}
     }
 }

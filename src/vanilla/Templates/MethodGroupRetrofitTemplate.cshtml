@@ -35,5 +35,18 @@ if (method.DefaultResponse.Body != null)
 }
 @:    Single<@(method.RestResponseConcreteTypeName)> @(method.Name)(@method.MethodParameterApiDeclaration);
 @EmptyLine
+
+@{ 
+    var allParms = method.OrderedRetrofitParameters;
+    var bodyParam = allParms.FirstOrDefault(p => p.ModelType is PrimaryType pt && pt.KnownPrimaryType == KnownPrimaryType.Stream);
+}
+
+if (bodyParam != null)
+{
+    var fileParam = new ParameterJv();
+    fileParam.ModelType = new CompositeTypeJv("FileSegment");
+    fileParam.Name.FixedValue = bodyParam.Name;
+
+    
 }
 }
