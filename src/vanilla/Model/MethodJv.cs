@@ -14,6 +14,7 @@ using AutoRest.Core.Model;
 using Newtonsoft.Json;
 using AutoRest.Core.Utilities.Collections;
 using System.Collections.Immutable;
+using AutoRest.Java.Syntax;
 
 namespace AutoRest.Java.Model
 {
@@ -305,6 +306,41 @@ namespace AutoRest.Java.Model
             return argsString;
         }
 
+
+        public ImmutableArray<OperationMethod> CreateOperationMethods()
+        {
+            var requiredParameters = LocalParameters
+                .Where(p => p.IsRequired && !p.IsConstant)
+                .Select(p => new JavaParameter(annotations: ImmutableArray<string>.Empty, type: p.WireType.Name, name: p.Name))
+                .ToImmutableArray();
+
+            var allParameters = LocalParameters
+                .Where(p => !p.IsConstant)
+                .Select(p => new JavaParameter(annotations: ImmutableArray<string>.Empty, type: p.WireType.Name, name: p.Name))
+                .ToImmutableArray();
+
+            ImmutableArray<OperationMethod> CreateOperationMethodsInner(ImmutableArray<JavaParameter> parameters)
+            {
+                // Observable impl
+                var obsMethod = new OperationMethod(
+                    returnTypeName: $"Single<{RestResponseAbstractTypeName}>",
+                    returnTypeDocumentation: ObservableBodyDocumentation,
+                    name: $"{Name}WithRestResponseAsync",
+                    parameters: requiredParameters,
+                    exceptionsDocumentation: AsyncExceptionDocumentation.ToImmutableArray(),
+                    implementation: ObservableRestResponseBodyImpl(takeOnlyRequiredParameters: true));
+
+                var callbackParameter = new JavaParameter(annotations: ImmutableArray<string>.Empty, type: "ServiceCallback<>", name: "serviceCallback");
+                
+                return ImmutableArray.Create(obsMethod);
+            }
+
+
+
+
+            return ImmutableArray<OperationMethod>.Empty;
+        }
+
         public IEnumerable<string> AsyncExceptionDocumentation => new[] { " * @throws IllegalArgumentException thrown if parameters fail the validation" };
 
         public string RestResponseHeadersName => ReturnType.Headers == null
@@ -326,6 +362,43 @@ namespace AutoRest.Java.Model
         // Observable overload generation helpers
 
         public string ObservableReturnDocumentation => string.IsNullOrEmpty(ReturnTypeResponseName) ? "" : $"a {{@link Single}} emitting the {RestResponseAbstractTypeName} object";
+
+        public string ObservableRestResponseBodyImpl(bool takeOnlyRequiredParameters)
+        {
+            var builder = new IndentedStringBuilder();
+            // Check presence of required parameters
+            foreach (var param in RequiredNullableParameters)
+            {
+                builder.AppendLine($"if ({param.Name} == null) {{");
+                builder.Indent();
+                builder.AppendLine($"throw new IllegalArgumentException(\"Parameter {param.Name} is required and cannot be null.\");");
+                builder.Outdent();
+                builder.AppendLine("}");
+            }
+
+            foreach (var param in LocalParameters)
+            {
+                if (takeOnlyRequiredParameters && !param.IsRequired)
+                {
+                    builder.AppendLine($"final {param.ClientType.Name} {param.Name} = {param.ClientType.GetDefaultValue(this) ?? "null"};");
+                }
+                else if (param.IsConstant)
+                {
+                    builder.AppendLine($"final {param.ClientType.Name} {param.Name} = {param.DefaultValue ?? "null"};");
+                }
+            }
+
+            foreach (var param in ParametersToValidate)
+            {
+                builder.AppendLine($"Validator.validate({param.Name});");
+            }
+
+            var beginning = builder.ToString();
+            var mappings = BuildInputMappings(takeOnlyRequiredParameters);
+            var parameterConversion = ParameterConversion;
+            var epilogue = $"    return service.{Name}({MethodParameterApiInvocation});{Environment.NewLine}}}";
+            return string.Join("\n", beginning, mappings, parameterConversion, epilogue);
+        }
 
         public string ObservableRestResponseImpl(IEnumerable<ParameterJv> parameters, bool takeOnlyRequiredParameters)
         {
