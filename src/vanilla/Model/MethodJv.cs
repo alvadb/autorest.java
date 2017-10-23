@@ -363,7 +363,7 @@ namespace AutoRest.Java.Model
             var beginning = builder.ToString();
             var mappings = BuildInputMappings(takeOnlyRequiredParameters);
             var parameterConversion = ParameterConversion;
-            var epilogue = $"    return service.{Name}({MethodParameterApiInvocation});\n}}";
+            var epilogue = $"    return service.{Name}({MethodParameterApiInvocation});{Environment.NewLine}}}";
 
             return string.Join("\n", beginning, mappings, parameterConversion, epilogue);
         }
