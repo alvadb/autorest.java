@@ -410,7 +410,7 @@ namespace AutoRest.Java.Model
             $" * @throws {OperationExceptionTypeString} thrown if the request is rejected by server",
             " * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent");
 
-        public string SyncReturnDocumentation => string.IsNullOrEmpty(ReturnTypeResponseName) && ReturnTypeResponseName != "void"
+        public string SyncReturnDocumentation => string.IsNullOrEmpty(ReturnTypeResponseName) || ReturnTypeResponseName == "void"
             ? ""
             : $"the {ReturnTypeResponseName.EscapeXmlComment()} object if successful.";
 
@@ -446,10 +446,14 @@ namespace AutoRest.Java.Model
             var implementation = ReturnTypeJv.BodyClientType.ResponseVariant.Name == "void"
                 ? $"{Name}Async({arguments}).toBlocking().value();"
                 : $"return {Name}Async({arguments}).toBlocking().value();";
-            
+
+            var returnTypeJavadoc = string.IsNullOrEmpty(ReturnTypeResponseName) || ReturnTypeResponseName == "void"
+                ? ""
+                : $"the {{@link {ReturnTypeResponseName}}} object if successful.";
+
             var method = new OperationMethod(
                 returnTypeName: ReturnTypeResponseName,
-                returnTypeJavadoc: $"the {{@link {ReturnTypeResponseName}}} object if successful.",
+                returnTypeJavadoc: returnTypeJavadoc,
                 name: Name,
                 parameters: CreateOperationParameters(takeOnlyRequiredParameters),
                 summaryJavadoc: Summary,
