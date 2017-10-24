@@ -13,16 +13,16 @@
 /**
 @if (!string.IsNullOrEmpty(Model.SummaryJavadoc))
 {
-@: * @Model.SummaryJavadoc
+@: * @Model.SummaryJavadoc.EscapeXmlComment().Period()
 }
 @if (!string.IsNullOrEmpty(Model.DescriptionJavadoc))
 {
-@: * @Model.DescriptionJavadoc
+@: * @Model.DescriptionJavadoc.EscapeXmlComment().Period()
 }
  *
 @foreach (var param in Model.Parameters)
 {
-@: * @@param @param.Name @param.Javadoc.Else($"the {param.Type} value");
+@: * @@param @param.Name @param.Javadoc.Else($"the {{@link {param.Type}}} value")
 }
 @foreach (var exceptionDoc in Model.ExceptionJavadocs)
 {

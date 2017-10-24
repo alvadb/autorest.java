@@ -357,7 +357,7 @@ namespace AutoRest.Java.Model
 
             var method = new OperationMethod(
                 returnTypeName: $"Single<{ReturnTypeJv.ServiceResponseGenericParameterString}>",
-                returnTypeJavadoc: $"a {{@link Single}} emitting the {ReturnTypeJv.ServiceResponseGenericParameterString.EscapeXmlComment()} object",
+                returnTypeJavadoc: $"a {{@link Single}} emitting the {{@link {ReturnTypeJv.ServiceResponseGenericParameterString}}} object",
                 name: $"{Name}Async",
                 parameters: operationParameters,
                 summaryJavadoc: Summary,
@@ -449,7 +449,7 @@ namespace AutoRest.Java.Model
             
             var method = new OperationMethod(
                 returnTypeName: ReturnTypeResponseName,
-                returnTypeJavadoc: $"the {ReturnTypeResponseName.EscapeXmlComment()} object if successful.",
+                returnTypeJavadoc: $"the {{@link {ReturnTypeResponseName}}} object if successful.",
                 name: Name,
                 parameters: CreateOperationParameters(takeOnlyRequiredParameters),
                 summaryJavadoc: Summary,
@@ -472,10 +472,10 @@ namespace AutoRest.Java.Model
                     // TODO: add FileSegment overload
                 }
 
+                yield return CreateSynchronous(takeOnlyRequiredParameters);
+                yield return CreateServiceFuture(takeOnlyRequiredParameters);
                 yield return CreateSingleRestResponse(takeOnlyRequiredParameters);
                 yield return CreateSingleBody(takeOnlyRequiredParameters);
-                yield return CreateServiceFuture(takeOnlyRequiredParameters);
-                yield return CreateSynchronous(takeOnlyRequiredParameters);
             }
 
             if (LocalParameters.Any(p => !p.IsConstant && !p.IsRequired))
