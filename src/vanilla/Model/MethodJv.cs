@@ -1070,6 +1070,11 @@ namespace AutoRest.Java.Model
             }
         }
 
+        public virtual bool ShouldGenerateBeginRestResponseMethod()
+        {
+            return true;
+        }
+
         internal static bool HasSequenceType(IModelType mt)
         {
             if (mt is SequenceType)
