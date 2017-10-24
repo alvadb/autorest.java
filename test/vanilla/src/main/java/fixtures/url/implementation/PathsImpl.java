@@ -228,7 +228,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getBooleanTrue() {
         getBooleanTrueAsync().toBlocking().value();
@@ -277,7 +276,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getBooleanFalse() {
         getBooleanFalseAsync().toBlocking().value();
@@ -326,7 +324,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getIntOneMillion() {
         getIntOneMillionAsync().toBlocking().value();
@@ -375,7 +372,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getIntNegativeOneMillion() {
         getIntNegativeOneMillionAsync().toBlocking().value();
@@ -424,7 +420,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getTenBillion() {
         getTenBillionAsync().toBlocking().value();
@@ -473,7 +468,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getNegativeTenBillion() {
         getNegativeTenBillionAsync().toBlocking().value();
@@ -522,7 +516,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void floatScientificPositive() {
         floatScientificPositiveAsync().toBlocking().value();
@@ -571,7 +564,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void floatScientificNegative() {
         floatScientificNegativeAsync().toBlocking().value();
@@ -620,7 +612,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void doubleDecimalPositive() {
         doubleDecimalPositiveAsync().toBlocking().value();
@@ -669,7 +660,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void doubleDecimalNegative() {
         doubleDecimalNegativeAsync().toBlocking().value();
@@ -718,7 +708,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringUnicode() {
         stringUnicodeAsync().toBlocking().value();
@@ -767,7 +756,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringUrlEncoded() {
         stringUrlEncodedAsync().toBlocking().value();
@@ -816,7 +804,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringEmpty() {
         stringEmptyAsync().toBlocking().value();
@@ -866,7 +853,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringNull(String stringPath) {
         stringNullAsync(stringPath).toBlocking().value();
@@ -921,7 +907,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void enumValid(UriColor enumPath) {
         enumValidAsync(enumPath).toBlocking().value();
@@ -976,7 +961,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void enumNull(UriColor enumPath) {
         enumNullAsync(enumPath).toBlocking().value();
@@ -1031,7 +1015,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteMultiByte(byte[] bytePath) {
         byteMultiByteAsync(bytePath).toBlocking().value();
@@ -1086,7 +1069,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteEmpty() {
         byteEmptyAsync().toBlocking().value();
@@ -1137,7 +1119,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteNull(byte[] bytePath) {
         byteNullAsync(bytePath).toBlocking().value();
@@ -1192,7 +1173,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateValid() {
         dateValidAsync().toBlocking().value();
@@ -1242,7 +1222,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateNull(LocalDate datePath) {
         dateNullAsync(datePath).toBlocking().value();
@@ -1296,7 +1275,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateTimeValid() {
         dateTimeValidAsync().toBlocking().value();
@@ -1346,7 +1324,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateTimeNull(DateTime dateTimePath) {
         dateTimeNullAsync(dateTimePath).toBlocking().value();
@@ -1401,7 +1378,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void base64Url(byte[] base64UrlPath) {
         base64UrlAsync(base64UrlPath).toBlocking().value();
@@ -1457,7 +1433,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayCsvInPath(List<String> arrayPath) {
         arrayCsvInPathAsync(arrayPath).toBlocking().value();
@@ -1514,7 +1489,6 @@ public class PathsImpl implements Paths {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void unixTimeUrl(DateTime unixTimeUrlPath) {
         unixTimeUrlAsync(unixTimeUrlPath).toBlocking().value();

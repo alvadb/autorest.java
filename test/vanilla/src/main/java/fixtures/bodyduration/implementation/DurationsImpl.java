@@ -134,11 +134,10 @@ public class DurationsImpl implements Durations {
     /**
      * Put a positive duration value.
      *
-     * @param durationBody the Period value
+     * @param durationBody the {@link Period} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putPositiveDuration(Period durationBody) {
         putPositiveDurationAsync(durationBody).toBlocking().value();
@@ -147,7 +146,7 @@ public class DurationsImpl implements Durations {
     /**
      * Put a positive duration value.
      *
-     * @param durationBody the Period value
+     * @param durationBody the {@link Period} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -159,7 +158,7 @@ public class DurationsImpl implements Durations {
     /**
      * Put a positive duration value.
      *
-     * @param durationBody the Period value
+     * @param durationBody the {@link Period} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -173,7 +172,7 @@ public class DurationsImpl implements Durations {
     /**
      * Put a positive duration value.
      *
-     * @param durationBody the Period value
+     * @param durationBody the {@link Period} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

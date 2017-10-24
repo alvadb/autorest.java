@@ -274,7 +274,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getBooleanTrue() {
         getBooleanTrueAsync().toBlocking().value();
@@ -323,7 +322,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getBooleanFalse() {
         getBooleanFalseAsync().toBlocking().value();
@@ -372,7 +370,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getBooleanNull() {
         getBooleanNullAsync().toBlocking().value();
@@ -422,7 +419,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getBooleanNull(Boolean boolQuery) {
         getBooleanNullAsync(boolQuery).toBlocking().value();
@@ -473,7 +469,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getIntOneMillion() {
         getIntOneMillionAsync().toBlocking().value();
@@ -522,7 +517,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getIntNegativeOneMillion() {
         getIntNegativeOneMillionAsync().toBlocking().value();
@@ -571,7 +565,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getIntNull() {
         getIntNullAsync().toBlocking().value();
@@ -621,7 +614,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getIntNull(Integer intQuery) {
         getIntNullAsync(intQuery).toBlocking().value();
@@ -672,7 +664,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getTenBillion() {
         getTenBillionAsync().toBlocking().value();
@@ -721,7 +712,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getNegativeTenBillion() {
         getNegativeTenBillionAsync().toBlocking().value();
@@ -770,7 +760,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getLongNull() {
         getLongNullAsync().toBlocking().value();
@@ -820,7 +809,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getLongNull(Long longQuery) {
         getLongNullAsync(longQuery).toBlocking().value();
@@ -871,7 +859,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void floatScientificPositive() {
         floatScientificPositiveAsync().toBlocking().value();
@@ -920,7 +907,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void floatScientificNegative() {
         floatScientificNegativeAsync().toBlocking().value();
@@ -969,7 +955,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void floatNull() {
         floatNullAsync().toBlocking().value();
@@ -1019,7 +1004,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void floatNull(Double floatQuery) {
         floatNullAsync(floatQuery).toBlocking().value();
@@ -1070,7 +1054,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void doubleDecimalPositive() {
         doubleDecimalPositiveAsync().toBlocking().value();
@@ -1119,7 +1102,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void doubleDecimalNegative() {
         doubleDecimalNegativeAsync().toBlocking().value();
@@ -1168,7 +1150,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void doubleNull() {
         doubleNullAsync().toBlocking().value();
@@ -1218,7 +1199,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void doubleNull(Double doubleQuery) {
         doubleNullAsync(doubleQuery).toBlocking().value();
@@ -1269,7 +1249,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringUnicode() {
         stringUnicodeAsync().toBlocking().value();
@@ -1318,7 +1297,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringUrlEncoded() {
         stringUrlEncodedAsync().toBlocking().value();
@@ -1367,7 +1345,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringEmpty() {
         stringEmptyAsync().toBlocking().value();
@@ -1416,7 +1393,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringNull() {
         stringNullAsync().toBlocking().value();
@@ -1466,7 +1442,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void stringNull(String stringQuery) {
         stringNullAsync(stringQuery).toBlocking().value();
@@ -1517,7 +1492,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void enumValid() {
         enumValidAsync().toBlocking().value();
@@ -1567,7 +1541,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void enumValid(UriColor enumQuery) {
         enumValidAsync(enumQuery).toBlocking().value();
@@ -1618,7 +1591,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void enumNull() {
         enumNullAsync().toBlocking().value();
@@ -1668,7 +1640,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void enumNull(UriColor enumQuery) {
         enumNullAsync(enumQuery).toBlocking().value();
@@ -1719,7 +1690,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteMultiByte() {
         byteMultiByteAsync().toBlocking().value();
@@ -1770,7 +1740,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteMultiByte(byte[] byteQuery) {
         byteMultiByteAsync(byteQuery).toBlocking().value();
@@ -1822,7 +1791,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteEmpty() {
         byteEmptyAsync().toBlocking().value();
@@ -1872,7 +1840,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteNull() {
         byteNullAsync().toBlocking().value();
@@ -1923,7 +1890,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void byteNull(byte[] byteQuery) {
         byteNullAsync(byteQuery).toBlocking().value();
@@ -1975,7 +1941,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateValid() {
         dateValidAsync().toBlocking().value();
@@ -2024,7 +1989,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateNull() {
         dateNullAsync().toBlocking().value();
@@ -2074,7 +2038,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateNull(LocalDate dateQuery) {
         dateNullAsync(dateQuery).toBlocking().value();
@@ -2125,7 +2088,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateTimeValid() {
         dateTimeValidAsync().toBlocking().value();
@@ -2174,7 +2136,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateTimeNull() {
         dateTimeNullAsync().toBlocking().value();
@@ -2224,7 +2185,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void dateTimeNull(DateTime dateTimeQuery) {
         dateTimeNullAsync(dateTimeQuery).toBlocking().value();
@@ -2275,7 +2235,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringCsvValid() {
         arrayStringCsvValidAsync().toBlocking().value();
@@ -2327,7 +2286,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringCsvValid(List<String> arrayQuery) {
         arrayStringCsvValidAsync(arrayQuery).toBlocking().value();
@@ -2380,7 +2338,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringCsvNull() {
         arrayStringCsvNullAsync().toBlocking().value();
@@ -2432,7 +2389,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringCsvNull(List<String> arrayQuery) {
         arrayStringCsvNullAsync(arrayQuery).toBlocking().value();
@@ -2485,7 +2441,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringCsvEmpty() {
         arrayStringCsvEmptyAsync().toBlocking().value();
@@ -2537,7 +2492,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringCsvEmpty(List<String> arrayQuery) {
         arrayStringCsvEmptyAsync(arrayQuery).toBlocking().value();
@@ -2590,7 +2544,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringSsvValid() {
         arrayStringSsvValidAsync().toBlocking().value();
@@ -2642,7 +2595,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringSsvValid(List<String> arrayQuery) {
         arrayStringSsvValidAsync(arrayQuery).toBlocking().value();
@@ -2695,7 +2647,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringTsvValid() {
         arrayStringTsvValidAsync().toBlocking().value();
@@ -2747,7 +2698,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringTsvValid(List<String> arrayQuery) {
         arrayStringTsvValidAsync(arrayQuery).toBlocking().value();
@@ -2800,7 +2750,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringPipesValid() {
         arrayStringPipesValidAsync().toBlocking().value();
@@ -2852,7 +2801,6 @@ public class QueriesImpl implements Queries {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void arrayStringPipesValid(List<String> arrayQuery) {
         arrayStringPipesValidAsync(arrayQuery).toBlocking().value();

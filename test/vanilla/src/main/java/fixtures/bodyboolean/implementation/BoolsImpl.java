@@ -145,11 +145,10 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value true.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putTrue(boolean boolBody) {
         putTrueAsync(boolBody).toBlocking().value();
@@ -158,7 +157,7 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value true.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -170,7 +169,7 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value true.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -181,7 +180,7 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value true.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -245,11 +244,10 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value false.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putFalse(boolean boolBody) {
         putFalseAsync(boolBody).toBlocking().value();
@@ -258,7 +256,7 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value false.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -270,7 +268,7 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value false.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -281,7 +279,7 @@ public class BoolsImpl implements Bools {
     /**
      * Set Boolean value false.
      *
-     * @param boolBody the boolean value
+     * @param boolBody the {@link boolean} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

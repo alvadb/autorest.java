@@ -560,11 +560,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putEmpty(Map<String, String> arrayBody) {
         putEmptyAsync(arrayBody).toBlocking().value();
@@ -573,7 +572,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -585,7 +584,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -600,7 +599,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -856,11 +855,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map<String, Boolean> value
+     * @param arrayBody the {@link Map<String, Boolean>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBooleanTfft(Map<String, Boolean> arrayBody) {
         putBooleanTfftAsync(arrayBody).toBlocking().value();
@@ -869,7 +867,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map<String, Boolean> value
+     * @param arrayBody the {@link Map<String, Boolean>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -881,7 +879,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map<String, Boolean> value
+     * @param arrayBody the {@link Map<String, Boolean>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -896,7 +894,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map<String, Boolean> value
+     * @param arrayBody the {@link Map<String, Boolean>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1056,11 +1054,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Integer> value
+     * @param arrayBody the {@link Map<String, Integer>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putIntegerValid(Map<String, Integer> arrayBody) {
         putIntegerValidAsync(arrayBody).toBlocking().value();
@@ -1069,7 +1066,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Integer> value
+     * @param arrayBody the {@link Map<String, Integer>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1081,7 +1078,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Integer> value
+     * @param arrayBody the {@link Map<String, Integer>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1096,7 +1093,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Integer> value
+     * @param arrayBody the {@link Map<String, Integer>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1256,11 +1253,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Long> value
+     * @param arrayBody the {@link Map<String, Long>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putLongValid(Map<String, Long> arrayBody) {
         putLongValidAsync(arrayBody).toBlocking().value();
@@ -1269,7 +1265,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Long> value
+     * @param arrayBody the {@link Map<String, Long>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1281,7 +1277,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Long> value
+     * @param arrayBody the {@link Map<String, Long>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1296,7 +1292,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map<String, Long> value
+     * @param arrayBody the {@link Map<String, Long>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1456,11 +1452,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putFloatValid(Map<String, Double> arrayBody) {
         putFloatValidAsync(arrayBody).toBlocking().value();
@@ -1469,7 +1464,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1481,7 +1476,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1496,7 +1491,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1656,11 +1651,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDoubleValid(Map<String, Double> arrayBody) {
         putDoubleValidAsync(arrayBody).toBlocking().value();
@@ -1669,7 +1663,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1681,7 +1675,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1696,7 +1690,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map<String, Double> value
+     * @param arrayBody the {@link Map<String, Double>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1856,11 +1850,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putStringValid(Map<String, String> arrayBody) {
         putStringValidAsync(arrayBody).toBlocking().value();
@@ -1869,7 +1862,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1881,7 +1874,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1896,7 +1889,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map<String, String> value
+     * @param arrayBody the {@link Map<String, String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -2056,11 +2049,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map<String, LocalDate> value
+     * @param arrayBody the {@link Map<String, LocalDate>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDateValid(Map<String, LocalDate> arrayBody) {
         putDateValidAsync(arrayBody).toBlocking().value();
@@ -2069,7 +2061,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map<String, LocalDate> value
+     * @param arrayBody the {@link Map<String, LocalDate>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2081,7 +2073,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map<String, LocalDate> value
+     * @param arrayBody the {@link Map<String, LocalDate>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2096,7 +2088,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map<String, LocalDate> value
+     * @param arrayBody the {@link Map<String, LocalDate>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -2256,11 +2248,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDateTimeValid(Map<String, DateTime> arrayBody) {
         putDateTimeValidAsync(arrayBody).toBlocking().value();
@@ -2269,7 +2260,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2281,7 +2272,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2296,7 +2287,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -2456,11 +2447,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDateTimeRfc1123Valid(Map<String, DateTime> arrayBody) {
         putDateTimeRfc1123ValidAsync(arrayBody).toBlocking().value();
@@ -2469,7 +2459,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2481,7 +2471,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2501,7 +2491,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map<String, DateTime> value
+     * @param arrayBody the {@link Map<String, DateTime>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -2565,11 +2555,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map<String, Period> value
+     * @param arrayBody the {@link Map<String, Period>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDurationValid(Map<String, Period> arrayBody) {
         putDurationValidAsync(arrayBody).toBlocking().value();
@@ -2578,7 +2567,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map<String, Period> value
+     * @param arrayBody the {@link Map<String, Period>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2590,7 +2579,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map<String, Period> value
+     * @param arrayBody the {@link Map<String, Period>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2605,7 +2594,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map<String, Period> value
+     * @param arrayBody the {@link Map<String, Period>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -2669,11 +2658,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map<String, byte[]> value
+     * @param arrayBody the {@link Map<String, byte[]>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putByteValid(Map<String, byte[]> arrayBody) {
         putByteValidAsync(arrayBody).toBlocking().value();
@@ -2682,7 +2670,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map<String, byte[]> value
+     * @param arrayBody the {@link Map<String, byte[]>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2694,7 +2682,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map<String, byte[]> value
+     * @param arrayBody the {@link Map<String, byte[]>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2709,7 +2697,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map<String, byte[]> value
+     * @param arrayBody the {@link Map<String, byte[]>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -3061,11 +3049,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map<String, Widget> value
+     * @param arrayBody the {@link Map<String, Widget>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putComplexValid(Map<String, Widget> arrayBody) {
         putComplexValidAsync(arrayBody).toBlocking().value();
@@ -3074,7 +3061,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map<String, Widget> value
+     * @param arrayBody the {@link Map<String, Widget>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -3086,7 +3073,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map<String, Widget> value
+     * @param arrayBody the {@link Map<String, Widget>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -3101,7 +3088,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map<String, Widget> value
+     * @param arrayBody the {@link Map<String, Widget>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -3357,11 +3344,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map<String, List<String>> value
+     * @param arrayBody the {@link Map<String, List<String>>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putArrayValid(Map<String, List<String>> arrayBody) {
         putArrayValidAsync(arrayBody).toBlocking().value();
@@ -3370,7 +3356,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map<String, List<String>> value
+     * @param arrayBody the {@link Map<String, List<String>>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -3382,7 +3368,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map<String, List<String>> value
+     * @param arrayBody the {@link Map<String, List<String>>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -3397,7 +3383,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map<String, List<String>> value
+     * @param arrayBody the {@link Map<String, List<String>>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -3653,11 +3639,10 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map<String, Map<String, String>> value
+     * @param arrayBody the {@link Map<String, Map<String, String>>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDictionaryValid(Map<String, Map<String, String>> arrayBody) {
         putDictionaryValidAsync(arrayBody).toBlocking().value();
@@ -3666,7 +3651,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map<String, Map<String, String>> value
+     * @param arrayBody the {@link Map<String, Map<String, String>>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -3678,7 +3663,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map<String, Map<String, String>> value
+     * @param arrayBody the {@link Map<String, Map<String, String>>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -3693,7 +3678,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map<String, Map<String, String>> value
+     * @param arrayBody the {@link Map<String, Map<String, String>>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

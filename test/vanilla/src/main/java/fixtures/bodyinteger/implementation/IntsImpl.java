@@ -440,11 +440,10 @@ public class IntsImpl implements Ints {
     /**
      * Put max int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putMax32(int intBody) {
         putMax32Async(intBody).toBlocking().value();
@@ -453,7 +452,7 @@ public class IntsImpl implements Ints {
     /**
      * Put max int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -465,7 +464,7 @@ public class IntsImpl implements Ints {
     /**
      * Put max int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -476,7 +475,7 @@ public class IntsImpl implements Ints {
     /**
      * Put max int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -492,11 +491,10 @@ public class IntsImpl implements Ints {
     /**
      * Put max int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putMax64(long intBody) {
         putMax64Async(intBody).toBlocking().value();
@@ -505,7 +503,7 @@ public class IntsImpl implements Ints {
     /**
      * Put max int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -517,7 +515,7 @@ public class IntsImpl implements Ints {
     /**
      * Put max int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -528,7 +526,7 @@ public class IntsImpl implements Ints {
     /**
      * Put max int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -544,11 +542,10 @@ public class IntsImpl implements Ints {
     /**
      * Put min int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putMin32(int intBody) {
         putMin32Async(intBody).toBlocking().value();
@@ -557,7 +554,7 @@ public class IntsImpl implements Ints {
     /**
      * Put min int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -569,7 +566,7 @@ public class IntsImpl implements Ints {
     /**
      * Put min int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -580,7 +577,7 @@ public class IntsImpl implements Ints {
     /**
      * Put min int32 value.
      *
-     * @param intBody the int value
+     * @param intBody the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -596,11 +593,10 @@ public class IntsImpl implements Ints {
     /**
      * Put min int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putMin64(long intBody) {
         putMin64Async(intBody).toBlocking().value();
@@ -609,7 +605,7 @@ public class IntsImpl implements Ints {
     /**
      * Put min int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -621,7 +617,7 @@ public class IntsImpl implements Ints {
     /**
      * Put min int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -632,7 +628,7 @@ public class IntsImpl implements Ints {
     /**
      * Put min int64 value.
      *
-     * @param intBody the long value
+     * @param intBody the {@link long} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -696,11 +692,10 @@ public class IntsImpl implements Ints {
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the DateTime value
+     * @param intBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putUnixTimeDate(DateTime intBody) {
         putUnixTimeDateAsync(intBody).toBlocking().value();
@@ -709,7 +704,7 @@ public class IntsImpl implements Ints {
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the DateTime value
+     * @param intBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -721,7 +716,7 @@ public class IntsImpl implements Ints {
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the DateTime value
+     * @param intBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -733,7 +728,7 @@ public class IntsImpl implements Ints {
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the DateTime value
+     * @param intBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

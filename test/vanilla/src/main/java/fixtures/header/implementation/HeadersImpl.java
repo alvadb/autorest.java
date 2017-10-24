@@ -257,7 +257,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramExistingKey(String userAgent) {
         paramExistingKeyAsync(userAgent).toBlocking().value();
@@ -311,7 +310,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseExistingKey() {
         responseExistingKeyAsync().toBlocking().value();
@@ -360,7 +358,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramProtectedKey(String contentType) {
         paramProtectedKeyAsync(contentType).toBlocking().value();
@@ -414,7 +411,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseProtectedKey() {
         responseProtectedKeyAsync().toBlocking().value();
@@ -464,7 +460,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramInteger(String scenario, int value) {
         paramIntegerAsync(scenario, value).toBlocking().value();
@@ -522,7 +517,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseInteger(String scenario) {
         responseIntegerAsync(scenario).toBlocking().value();
@@ -578,7 +572,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramLong(String scenario, long value) {
         paramLongAsync(scenario, value).toBlocking().value();
@@ -636,7 +629,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseLong(String scenario) {
         responseLongAsync(scenario).toBlocking().value();
@@ -692,7 +684,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramFloat(String scenario, double value) {
         paramFloatAsync(scenario, value).toBlocking().value();
@@ -750,7 +741,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseFloat(String scenario) {
         responseFloatAsync(scenario).toBlocking().value();
@@ -806,7 +796,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramDouble(String scenario, double value) {
         paramDoubleAsync(scenario, value).toBlocking().value();
@@ -864,7 +853,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseDouble(String scenario) {
         responseDoubleAsync(scenario).toBlocking().value();
@@ -920,7 +908,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramBool(String scenario, boolean value) {
         paramBoolAsync(scenario, value).toBlocking().value();
@@ -978,7 +965,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseBool(String scenario) {
         responseBoolAsync(scenario).toBlocking().value();
@@ -1033,7 +1019,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramString(String scenario) {
         paramStringAsync(scenario).toBlocking().value();
@@ -1090,7 +1075,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramString(String scenario, String value) {
         paramStringAsync(scenario, value).toBlocking().value();
@@ -1148,7 +1132,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseString(String scenario) {
         responseStringAsync(scenario).toBlocking().value();
@@ -1204,7 +1187,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramDate(String scenario, LocalDate value) {
         paramDateAsync(scenario, value).toBlocking().value();
@@ -1265,7 +1247,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseDate(String scenario) {
         responseDateAsync(scenario).toBlocking().value();
@@ -1321,7 +1302,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramDatetime(String scenario, DateTime value) {
         paramDatetimeAsync(scenario, value).toBlocking().value();
@@ -1382,7 +1362,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseDatetime(String scenario) {
         responseDatetimeAsync(scenario).toBlocking().value();
@@ -1437,7 +1416,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramDatetimeRfc1123(String scenario) {
         paramDatetimeRfc1123Async(scenario).toBlocking().value();
@@ -1498,7 +1476,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramDatetimeRfc1123(String scenario, DateTime value) {
         paramDatetimeRfc1123Async(scenario, value).toBlocking().value();
@@ -1560,7 +1537,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseDatetimeRfc1123(String scenario) {
         responseDatetimeRfc1123Async(scenario).toBlocking().value();
@@ -1616,7 +1592,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramDuration(String scenario, Period value) {
         paramDurationAsync(scenario, value).toBlocking().value();
@@ -1677,7 +1652,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseDuration(String scenario) {
         responseDurationAsync(scenario).toBlocking().value();
@@ -1733,7 +1707,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramByte(String scenario, byte[] value) {
         paramByteAsync(scenario, value).toBlocking().value();
@@ -1795,7 +1768,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseByte(String scenario) {
         responseByteAsync(scenario).toBlocking().value();
@@ -1850,7 +1822,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramEnum(String scenario) {
         paramEnumAsync(scenario).toBlocking().value();
@@ -1907,7 +1878,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void paramEnum(String scenario, GreyscaleColors value) {
         paramEnumAsync(scenario, value).toBlocking().value();
@@ -1965,7 +1935,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void responseEnum(String scenario) {
         responseEnumAsync(scenario).toBlocking().value();
@@ -2019,7 +1988,6 @@ public class HeadersImpl implements fixtures.header.Headers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void customRequestId() {
         customRequestIdAsync().toBlocking().value();

@@ -257,7 +257,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putInt(IntWrapper complexBody) {
         putIntAsync(complexBody).toBlocking().value();
@@ -361,7 +360,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putLong(LongWrapper complexBody) {
         putLongAsync(complexBody).toBlocking().value();
@@ -465,7 +463,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putFloat(FloatWrapper complexBody) {
         putFloatAsync(complexBody).toBlocking().value();
@@ -569,7 +566,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDouble(DoubleWrapper complexBody) {
         putDoubleAsync(complexBody).toBlocking().value();
@@ -673,7 +669,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBool(BooleanWrapper complexBody) {
         putBoolAsync(complexBody).toBlocking().value();
@@ -777,7 +772,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putString(StringWrapper complexBody) {
         putStringAsync(complexBody).toBlocking().value();
@@ -881,7 +875,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDate(DateWrapper complexBody) {
         putDateAsync(complexBody).toBlocking().value();
@@ -985,7 +978,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDateTime(DatetimeWrapper complexBody) {
         putDateTimeAsync(complexBody).toBlocking().value();
@@ -1089,7 +1081,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDateTimeRfc1123(Datetimerfc1123Wrapper complexBody) {
         putDateTimeRfc1123Async(complexBody).toBlocking().value();
@@ -1193,7 +1184,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDuration(DurationWrapper complexBody) {
         putDurationAsync(complexBody).toBlocking().value();
@@ -1297,7 +1287,6 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putByte(ByteWrapper complexBody) {
         putByteAsync(complexBody).toBlocking().value();

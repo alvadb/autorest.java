@@ -297,7 +297,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      *
      * @param resourceGroupName Required string between 3 and 10 chars with pattern [a-zA-Z0-9]+.
      * @param id Required int multiple of 10 from 100 to 1000.
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -312,7 +312,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      *
      * @param resourceGroupName Required string between 3 and 10 chars with pattern [a-zA-Z0-9]+.
      * @param id Required int multiple of 10 from 100 to 1000.
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -326,7 +326,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      *
      * @param resourceGroupName Required string between 3 and 10 chars with pattern [a-zA-Z0-9]+.
      * @param id Required int multiple of 10 from 100 to 1000.
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Product> object
      */
@@ -349,7 +349,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      *
      * @param resourceGroupName Required string between 3 and 10 chars with pattern [a-zA-Z0-9]+.
      * @param id Required int multiple of 10 from 100 to 1000.
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Product} object
      */
@@ -367,7 +367,6 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getWithConstantInPath() {
         getWithConstantInPathAsync().toBlocking().value();
@@ -456,7 +455,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
 
     /**
      *
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -468,7 +467,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
 
     /**
      *
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -479,7 +478,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
 
     /**
      *
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Product> object
      */
@@ -491,7 +490,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
 
     /**
      *
-     * @param body the Product value
+     * @param body the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Product} object
      */

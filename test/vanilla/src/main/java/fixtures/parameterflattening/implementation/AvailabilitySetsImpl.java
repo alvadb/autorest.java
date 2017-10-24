@@ -75,7 +75,6 @@ public class AvailabilitySetsImpl implements AvailabilitySets {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void update(String resourceGroupName, String avset, Map<String, String> tags) {
         updateAsync(resourceGroupName, avset, tags).toBlocking().value();

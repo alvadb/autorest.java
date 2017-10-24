@@ -90,7 +90,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getAllWithValues(String localStringPath, String pathItemStringPath) {
         getAllWithValuesAsync(localStringPath, pathItemStringPath).toBlocking().value();
@@ -159,7 +158,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getAllWithValues(String localStringPath, String pathItemStringPath, String localStringQuery, String pathItemStringQuery) {
         getAllWithValuesAsync(localStringPath, pathItemStringPath, localStringQuery, pathItemStringQuery).toBlocking().value();
@@ -230,7 +228,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getGlobalQueryNull(String localStringPath, String pathItemStringPath) {
         getGlobalQueryNullAsync(localStringPath, pathItemStringPath).toBlocking().value();
@@ -299,7 +296,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getGlobalQueryNull(String localStringPath, String pathItemStringPath, String localStringQuery, String pathItemStringQuery) {
         getGlobalQueryNullAsync(localStringPath, pathItemStringPath, localStringQuery, pathItemStringQuery).toBlocking().value();
@@ -370,7 +366,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getGlobalAndLocalQueryNull(String localStringPath, String pathItemStringPath) {
         getGlobalAndLocalQueryNullAsync(localStringPath, pathItemStringPath).toBlocking().value();
@@ -439,7 +434,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getGlobalAndLocalQueryNull(String localStringPath, String pathItemStringPath, String localStringQuery, String pathItemStringQuery) {
         getGlobalAndLocalQueryNullAsync(localStringPath, pathItemStringPath, localStringQuery, pathItemStringQuery).toBlocking().value();
@@ -510,7 +504,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getLocalPathItemQueryNull(String localStringPath, String pathItemStringPath) {
         getLocalPathItemQueryNullAsync(localStringPath, pathItemStringPath).toBlocking().value();
@@ -579,7 +572,6 @@ public class PathItemsImpl implements PathItems {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getLocalPathItemQueryNull(String localStringPath, String pathItemStringPath, String localStringQuery, String pathItemStringQuery) {
         getLocalPathItemQueryNullAsync(localStringPath, pathItemStringPath, localStringQuery, pathItemStringQuery).toBlocking().value();

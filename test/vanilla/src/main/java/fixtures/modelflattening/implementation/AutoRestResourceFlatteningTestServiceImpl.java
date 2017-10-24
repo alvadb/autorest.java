@@ -170,7 +170,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putArray() {
         putArrayAsync().toBlocking().value();
@@ -221,7 +220,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putArray(List<Resource> resourceArray) {
         putArrayAsync(resourceArray).toBlocking().value();
@@ -321,7 +319,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putWrappedArray() {
         putWrappedArrayAsync().toBlocking().value();
@@ -372,7 +369,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putWrappedArray(List<WrappedProduct> resourceArray) {
         putWrappedArrayAsync(resourceArray).toBlocking().value();
@@ -472,7 +468,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDictionary() {
         putDictionaryAsync().toBlocking().value();
@@ -523,7 +518,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putDictionary(Map<String, FlattenedProduct> resourceDictionary) {
         putDictionaryAsync(resourceDictionary).toBlocking().value();
@@ -623,7 +617,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putResourceCollection() {
         putResourceCollectionAsync().toBlocking().value();
@@ -674,7 +667,6 @@ public class AutoRestResourceFlatteningTestServiceImpl extends ServiceClient imp
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putResourceCollection(ResourceCollection resourceComplexObject) {
         putResourceCollectionAsync(resourceComplexObject).toBlocking().value();

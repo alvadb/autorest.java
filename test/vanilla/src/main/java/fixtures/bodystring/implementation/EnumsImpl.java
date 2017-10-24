@@ -152,7 +152,6 @@ public class EnumsImpl implements Enums {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putNotExpandable(Colors stringBody) {
         putNotExpandableAsync(stringBody).toBlocking().value();
@@ -255,7 +254,6 @@ public class EnumsImpl implements Enums {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putReferenced(Colors enumStringBody) {
         putReferencedAsync(enumStringBody).toBlocking().value();
@@ -354,11 +352,10 @@ public class EnumsImpl implements Enums {
     /**
      * Sends value 'green-color' from a constant.
      *
-     * @param enumStringBody the RefColorConstant value
+     * @param enumStringBody the {@link RefColorConstant} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putReferencedConstant(RefColorConstant enumStringBody) {
         putReferencedConstantAsync(enumStringBody).toBlocking().value();
@@ -367,7 +364,7 @@ public class EnumsImpl implements Enums {
     /**
      * Sends value 'green-color' from a constant.
      *
-     * @param enumStringBody the RefColorConstant value
+     * @param enumStringBody the {@link RefColorConstant} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -379,7 +376,7 @@ public class EnumsImpl implements Enums {
     /**
      * Sends value 'green-color' from a constant.
      *
-     * @param enumStringBody the RefColorConstant value
+     * @param enumStringBody the {@link RefColorConstant} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -394,7 +391,7 @@ public class EnumsImpl implements Enums {
     /**
      * Sends value 'green-color' from a constant.
      *
-     * @param enumStringBody the RefColorConstant value
+     * @param enumStringBody the {@link RefColorConstant} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

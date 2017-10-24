@@ -174,7 +174,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head300() {
         head300Async().toBlocking().value();
@@ -270,7 +269,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head301() {
         head301Async().toBlocking().value();
@@ -318,7 +316,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get301() {
         get301Async().toBlocking().value();
@@ -366,7 +363,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put301() {
         put301Async().toBlocking().value();
@@ -416,7 +412,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put301(Boolean booleanValue) {
         put301Async(booleanValue).toBlocking().value();
@@ -467,7 +462,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head302() {
         head302Async().toBlocking().value();
@@ -515,7 +509,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get302() {
         get302Async().toBlocking().value();
@@ -563,7 +556,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch302() {
         patch302Async().toBlocking().value();
@@ -613,7 +605,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch302(Boolean booleanValue) {
         patch302Async(booleanValue).toBlocking().value();
@@ -664,7 +655,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post303() {
         post303Async().toBlocking().value();
@@ -714,7 +704,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post303(Boolean booleanValue) {
         post303Async(booleanValue).toBlocking().value();
@@ -765,7 +754,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head307() {
         head307Async().toBlocking().value();
@@ -813,7 +801,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get307() {
         get307Async().toBlocking().value();
@@ -861,7 +848,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put307() {
         put307Async().toBlocking().value();
@@ -911,7 +897,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put307(Boolean booleanValue) {
         put307Async(booleanValue).toBlocking().value();
@@ -962,7 +947,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch307() {
         patch307Async().toBlocking().value();
@@ -1012,7 +996,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch307(Boolean booleanValue) {
         patch307Async(booleanValue).toBlocking().value();
@@ -1063,7 +1046,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post307() {
         post307Async().toBlocking().value();
@@ -1113,7 +1095,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post307(Boolean booleanValue) {
         post307Async(booleanValue).toBlocking().value();
@@ -1164,7 +1145,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete307() {
         delete307Async().toBlocking().value();
@@ -1214,7 +1194,6 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete307(Boolean booleanValue) {
         delete307Async(booleanValue).toBlocking().value();

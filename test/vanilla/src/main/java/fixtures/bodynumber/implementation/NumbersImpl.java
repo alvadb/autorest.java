@@ -398,11 +398,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big float value 3.402823e+20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBigFloat(double numberBody) {
         putBigFloatAsync(numberBody).toBlocking().value();
@@ -411,7 +410,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big float value 3.402823e+20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -423,7 +422,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big float value 3.402823e+20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -434,7 +433,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big float value 3.402823e+20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -498,11 +497,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 2.5976931e+101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBigDouble(double numberBody) {
         putBigDoubleAsync(numberBody).toBlocking().value();
@@ -511,7 +509,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 2.5976931e+101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -523,7 +521,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 2.5976931e+101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -534,7 +532,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 2.5976931e+101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -598,11 +596,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBigDoublePositiveDecimal(double numberBody) {
         putBigDoublePositiveDecimalAsync(numberBody).toBlocking().value();
@@ -611,7 +608,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -623,7 +620,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -634,7 +631,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value 99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -698,11 +695,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value -99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBigDoubleNegativeDecimal(double numberBody) {
         putBigDoubleNegativeDecimalAsync(numberBody).toBlocking().value();
@@ -711,7 +707,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value -99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -723,7 +719,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value -99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -734,7 +730,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big double value -99999999.99.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -798,11 +794,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 2.5976931e+101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBigDecimal(BigDecimal numberBody) {
         putBigDecimalAsync(numberBody).toBlocking().value();
@@ -811,7 +806,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 2.5976931e+101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -823,7 +818,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 2.5976931e+101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -837,7 +832,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 2.5976931e+101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -901,11 +896,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBigDecimalPositiveDecimal(BigDecimal numberBody) {
         putBigDecimalPositiveDecimalAsync(numberBody).toBlocking().value();
@@ -914,7 +908,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -926,7 +920,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -940,7 +934,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value 99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1004,11 +998,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value -99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBigDecimalNegativeDecimal(BigDecimal numberBody) {
         putBigDecimalNegativeDecimalAsync(numberBody).toBlocking().value();
@@ -1017,7 +1010,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value -99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1029,7 +1022,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value -99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1043,7 +1036,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put big decimal value -99999999.99.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1107,11 +1100,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small float value 3.402823e-20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putSmallFloat(double numberBody) {
         putSmallFloatAsync(numberBody).toBlocking().value();
@@ -1120,7 +1112,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small float value 3.402823e-20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1132,7 +1124,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small float value 3.402823e-20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1143,7 +1135,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small float value 3.402823e-20.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1207,11 +1199,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small double value 2.5976931e-101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putSmallDouble(double numberBody) {
         putSmallDoubleAsync(numberBody).toBlocking().value();
@@ -1220,7 +1211,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small double value 2.5976931e-101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1232,7 +1223,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small double value 2.5976931e-101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1243,7 +1234,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small double value 2.5976931e-101.
      *
-     * @param numberBody the double value
+     * @param numberBody the {@link double} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1307,11 +1298,10 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small decimal value 2.5976931e-101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putSmallDecimal(BigDecimal numberBody) {
         putSmallDecimalAsync(numberBody).toBlocking().value();
@@ -1320,7 +1310,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small decimal value 2.5976931e-101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1332,7 +1322,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small decimal value 2.5976931e-101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1346,7 +1336,7 @@ public class NumbersImpl implements Numbers {
     /**
      * Put small decimal value 2.5976931e-101.
      *
-     * @param numberBody the BigDecimal value
+     * @param numberBody the {@link BigDecimal} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

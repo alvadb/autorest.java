@@ -116,7 +116,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head408() {
         head408Async().toBlocking().value();
@@ -164,7 +163,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put500() {
         put500Async().toBlocking().value();
@@ -214,7 +212,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put500(Boolean booleanValue) {
         put500Async(booleanValue).toBlocking().value();
@@ -265,7 +262,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch500() {
         patch500Async().toBlocking().value();
@@ -315,7 +311,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch500(Boolean booleanValue) {
         patch500Async(booleanValue).toBlocking().value();
@@ -366,7 +361,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get502() {
         get502Async().toBlocking().value();
@@ -414,7 +408,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post503() {
         post503Async().toBlocking().value();
@@ -464,7 +457,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post503(Boolean booleanValue) {
         post503Async(booleanValue).toBlocking().value();
@@ -515,7 +507,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete503() {
         delete503Async().toBlocking().value();
@@ -565,7 +556,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete503(Boolean booleanValue) {
         delete503Async(booleanValue).toBlocking().value();
@@ -616,7 +606,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put504() {
         put504Async().toBlocking().value();
@@ -666,7 +655,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put504(Boolean booleanValue) {
         put504Async(booleanValue).toBlocking().value();
@@ -717,7 +705,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch504() {
         patch504Async().toBlocking().value();
@@ -767,7 +754,6 @@ public class HttpRetrysImpl implements HttpRetrys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch504(Boolean booleanValue) {
         patch504Async(booleanValue).toBlocking().value();

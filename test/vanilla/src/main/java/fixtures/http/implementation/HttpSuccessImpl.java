@@ -176,7 +176,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head200() {
         head200Async().toBlocking().value();
@@ -272,7 +271,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put200() {
         put200Async().toBlocking().value();
@@ -322,7 +320,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put200(Boolean booleanValue) {
         put200Async(booleanValue).toBlocking().value();
@@ -373,7 +370,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch200() {
         patch200Async().toBlocking().value();
@@ -423,7 +419,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch200(Boolean booleanValue) {
         patch200Async(booleanValue).toBlocking().value();
@@ -474,7 +469,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post200() {
         post200Async().toBlocking().value();
@@ -524,7 +518,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post200(Boolean booleanValue) {
         post200Async(booleanValue).toBlocking().value();
@@ -575,7 +568,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete200() {
         delete200Async().toBlocking().value();
@@ -625,7 +617,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete200(Boolean booleanValue) {
         delete200Async(booleanValue).toBlocking().value();
@@ -676,7 +667,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put201() {
         put201Async().toBlocking().value();
@@ -726,7 +716,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put201(Boolean booleanValue) {
         put201Async(booleanValue).toBlocking().value();
@@ -777,7 +766,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post201() {
         post201Async().toBlocking().value();
@@ -827,7 +815,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post201(Boolean booleanValue) {
         post201Async(booleanValue).toBlocking().value();
@@ -878,7 +865,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put202() {
         put202Async().toBlocking().value();
@@ -928,7 +914,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put202(Boolean booleanValue) {
         put202Async(booleanValue).toBlocking().value();
@@ -979,7 +964,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch202() {
         patch202Async().toBlocking().value();
@@ -1029,7 +1013,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch202(Boolean booleanValue) {
         patch202Async(booleanValue).toBlocking().value();
@@ -1080,7 +1063,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post202() {
         post202Async().toBlocking().value();
@@ -1130,7 +1112,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post202(Boolean booleanValue) {
         post202Async(booleanValue).toBlocking().value();
@@ -1181,7 +1162,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete202() {
         delete202Async().toBlocking().value();
@@ -1231,7 +1211,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete202(Boolean booleanValue) {
         delete202Async(booleanValue).toBlocking().value();
@@ -1282,7 +1261,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head204() {
         head204Async().toBlocking().value();
@@ -1330,7 +1308,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put204() {
         put204Async().toBlocking().value();
@@ -1380,7 +1357,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void put204(Boolean booleanValue) {
         put204Async(booleanValue).toBlocking().value();
@@ -1431,7 +1407,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch204() {
         patch204Async().toBlocking().value();
@@ -1481,7 +1456,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void patch204(Boolean booleanValue) {
         patch204Async(booleanValue).toBlocking().value();
@@ -1532,7 +1506,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post204() {
         post204Async().toBlocking().value();
@@ -1582,7 +1555,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void post204(Boolean booleanValue) {
         post204Async(booleanValue).toBlocking().value();
@@ -1633,7 +1605,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete204() {
         delete204Async().toBlocking().value();
@@ -1683,7 +1654,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void delete204(Boolean booleanValue) {
         delete204Async(booleanValue).toBlocking().value();
@@ -1734,7 +1704,6 @@ public class HttpSuccessImpl implements HttpSuccess {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void head404() {
         head404Async().toBlocking().value();

@@ -195,7 +195,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the int value
+     * @param bodyParameter the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -208,7 +208,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the int value
+     * @param bodyParameter the {@link int} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -220,7 +220,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the int value
+     * @param bodyParameter the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -231,7 +231,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the int value
+     * @param bodyParameter the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -250,7 +250,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerParameter() {
         postOptionalIntegerParameterAsync().toBlocking().value();
@@ -296,11 +295,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put null.
      *
-     * @param bodyParameter the Integer value
+     * @param bodyParameter the {@link Integer} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerParameter(Integer bodyParameter) {
         postOptionalIntegerParameterAsync(bodyParameter).toBlocking().value();
@@ -309,7 +307,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put null.
      *
-     * @param bodyParameter the Integer value
+     * @param bodyParameter the {@link Integer} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -321,7 +319,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put null.
      *
-     * @param bodyParameter the Integer value
+     * @param bodyParameter the {@link Integer} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -332,7 +330,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put null.
      *
-     * @param bodyParameter the Integer value
+     * @param bodyParameter the {@link Integer} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -348,7 +346,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the IntWrapper value
+     * @param bodyParameter the {@link IntWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -361,7 +359,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the IntWrapper value
+     * @param bodyParameter the {@link IntWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -373,7 +371,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the IntWrapper value
+     * @param bodyParameter the {@link IntWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -388,7 +386,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the IntWrapper value
+     * @param bodyParameter the {@link IntWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -407,7 +405,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerProperty() {
         postOptionalIntegerPropertyAsync().toBlocking().value();
@@ -454,11 +451,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
      *
-     * @param bodyParameter the IntOptionalWrapper value
+     * @param bodyParameter the {@link IntOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerProperty(IntOptionalWrapper bodyParameter) {
         postOptionalIntegerPropertyAsync(bodyParameter).toBlocking().value();
@@ -467,7 +463,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
      *
-     * @param bodyParameter the IntOptionalWrapper value
+     * @param bodyParameter the {@link IntOptionalWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -479,7 +475,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
      *
-     * @param bodyParameter the IntOptionalWrapper value
+     * @param bodyParameter the {@link IntOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -491,7 +487,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
      *
-     * @param bodyParameter the IntOptionalWrapper value
+     * @param bodyParameter the {@link IntOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -507,7 +503,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the int value
+     * @param headerParameter the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -520,7 +516,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the int value
+     * @param headerParameter the {@link int} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -532,7 +528,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the int value
+     * @param headerParameter the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -543,7 +539,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required integer. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the int value
+     * @param headerParameter the {@link int} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -562,7 +558,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerHeader() {
         postOptionalIntegerHeaderAsync().toBlocking().value();
@@ -608,11 +603,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the Integer value
+     * @param headerParameter the {@link Integer} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerHeader(Integer headerParameter) {
         postOptionalIntegerHeaderAsync(headerParameter).toBlocking().value();
@@ -621,7 +615,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the Integer value
+     * @param headerParameter the {@link Integer} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -633,7 +627,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the Integer value
+     * @param headerParameter the {@link Integer} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -644,7 +638,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the Integer value
+     * @param headerParameter the {@link Integer} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -660,7 +654,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -673,7 +667,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -685,7 +679,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -699,7 +693,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -718,7 +712,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalStringParameter() {
         postOptionalStringParameterAsync().toBlocking().value();
@@ -764,11 +757,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalStringParameter(String bodyParameter) {
         postOptionalStringParameterAsync(bodyParameter).toBlocking().value();
@@ -777,7 +769,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -789,7 +781,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -800,7 +792,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -816,7 +808,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the StringWrapper value
+     * @param bodyParameter the {@link StringWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -829,7 +821,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the StringWrapper value
+     * @param bodyParameter the {@link StringWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -841,7 +833,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the StringWrapper value
+     * @param bodyParameter the {@link StringWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -856,7 +848,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the StringWrapper value
+     * @param bodyParameter the {@link StringWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -875,7 +867,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalStringProperty() {
         postOptionalStringPropertyAsync().toBlocking().value();
@@ -922,11 +913,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
      *
-     * @param bodyParameter the StringOptionalWrapper value
+     * @param bodyParameter the {@link StringOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalStringProperty(StringOptionalWrapper bodyParameter) {
         postOptionalStringPropertyAsync(bodyParameter).toBlocking().value();
@@ -935,7 +925,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
      *
-     * @param bodyParameter the StringOptionalWrapper value
+     * @param bodyParameter the {@link StringOptionalWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -947,7 +937,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
      *
-     * @param bodyParameter the StringOptionalWrapper value
+     * @param bodyParameter the {@link StringOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -959,7 +949,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
      *
-     * @param bodyParameter the StringOptionalWrapper value
+     * @param bodyParameter the {@link StringOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -975,7 +965,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the String value
+     * @param headerParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -988,7 +978,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the String value
+     * @param headerParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1000,7 +990,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the String value
+     * @param headerParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1014,7 +1004,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required string. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the String value
+     * @param headerParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -1033,7 +1023,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalStringHeader() {
         postOptionalStringHeaderAsync().toBlocking().value();
@@ -1079,11 +1068,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalStringHeader(String bodyParameter) {
         postOptionalStringHeaderAsync(bodyParameter).toBlocking().value();
@@ -1092,7 +1080,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1104,7 +1092,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1115,7 +1103,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional string. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1131,7 +1119,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -1144,7 +1132,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1156,7 +1144,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1171,7 +1159,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -1190,7 +1178,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalClassParameter() {
         postOptionalClassParameterAsync().toBlocking().value();
@@ -1237,11 +1224,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put null.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalClassParameter(Product bodyParameter) {
         postOptionalClassParameterAsync(bodyParameter).toBlocking().value();
@@ -1250,7 +1236,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put null.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1262,7 +1248,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put null.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1274,7 +1260,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put null.
      *
-     * @param bodyParameter the Product value
+     * @param bodyParameter the {@link Product} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1290,7 +1276,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ClassWrapper value
+     * @param bodyParameter the {@link ClassWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -1303,7 +1289,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ClassWrapper value
+     * @param bodyParameter the {@link ClassWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1315,7 +1301,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ClassWrapper value
+     * @param bodyParameter the {@link ClassWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1330,7 +1316,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ClassWrapper value
+     * @param bodyParameter the {@link ClassWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -1349,7 +1335,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalClassProperty() {
         postOptionalClassPropertyAsync().toBlocking().value();
@@ -1396,11 +1381,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ClassOptionalWrapper value
+     * @param bodyParameter the {@link ClassOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalClassProperty(ClassOptionalWrapper bodyParameter) {
         postOptionalClassPropertyAsync(bodyParameter).toBlocking().value();
@@ -1409,7 +1393,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ClassOptionalWrapper value
+     * @param bodyParameter the {@link ClassOptionalWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1421,7 +1405,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ClassOptionalWrapper value
+     * @param bodyParameter the {@link ClassOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1433,7 +1417,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ClassOptionalWrapper value
+     * @param bodyParameter the {@link ClassOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1449,7 +1433,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -1462,7 +1446,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1474,7 +1458,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1489,7 +1473,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -1508,7 +1492,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayParameter() {
         postOptionalArrayParameterAsync().toBlocking().value();
@@ -1555,11 +1538,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayParameter(List<String> bodyParameter) {
         postOptionalArrayParameterAsync(bodyParameter).toBlocking().value();
@@ -1568,7 +1550,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1580,7 +1562,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1592,7 +1574,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List<String> value
+     * @param bodyParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1608,7 +1590,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ArrayWrapper value
+     * @param bodyParameter the {@link ArrayWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -1621,7 +1603,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ArrayWrapper value
+     * @param bodyParameter the {@link ArrayWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1633,7 +1615,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ArrayWrapper value
+     * @param bodyParameter the {@link ArrayWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1648,7 +1630,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the ArrayWrapper value
+     * @param bodyParameter the {@link ArrayWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -1667,7 +1649,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayProperty() {
         postOptionalArrayPropertyAsync().toBlocking().value();
@@ -1714,11 +1695,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ArrayOptionalWrapper value
+     * @param bodyParameter the {@link ArrayOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayProperty(ArrayOptionalWrapper bodyParameter) {
         postOptionalArrayPropertyAsync(bodyParameter).toBlocking().value();
@@ -1727,7 +1707,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ArrayOptionalWrapper value
+     * @param bodyParameter the {@link ArrayOptionalWrapper} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1739,7 +1719,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ArrayOptionalWrapper value
+     * @param bodyParameter the {@link ArrayOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1751,7 +1731,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
      *
-     * @param bodyParameter the ArrayOptionalWrapper value
+     * @param bodyParameter the {@link ArrayOptionalWrapper} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1767,7 +1747,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -1780,7 +1760,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1792,7 +1772,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1808,7 +1788,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -1827,7 +1807,6 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayHeader() {
         postOptionalArrayHeaderAsync().toBlocking().value();
@@ -1875,11 +1854,10 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayHeader(List<String> headerParameter) {
         postOptionalArrayHeaderAsync(headerParameter).toBlocking().value();
@@ -1888,7 +1866,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1900,7 +1878,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1913,7 +1891,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List<String> value
+     * @param headerParameter the {@link List<String>} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

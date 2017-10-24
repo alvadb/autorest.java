@@ -103,7 +103,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly required path parameter.
      *
-     * @param pathParameter the String value
+     * @param pathParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
@@ -116,7 +116,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly required path parameter.
      *
-     * @param pathParameter the String value
+     * @param pathParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -128,7 +128,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly required path parameter.
      *
-     * @param pathParameter the String value
+     * @param pathParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -142,7 +142,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly required path parameter.
      *
-     * @param pathParameter the String value
+     * @param pathParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Error} object
      */
@@ -161,7 +161,6 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putOptionalQuery() {
         putOptionalQueryAsync().toBlocking().value();
@@ -207,11 +206,10 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional query parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putOptionalQuery(String queryParameter) {
         putOptionalQueryAsync(queryParameter).toBlocking().value();
@@ -220,7 +218,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional query parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -232,7 +230,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional query parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -243,7 +241,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional query parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -262,7 +260,6 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putOptionalHeader() {
         putOptionalHeaderAsync().toBlocking().value();
@@ -308,11 +305,10 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional header parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putOptionalHeader(String queryParameter) {
         putOptionalHeaderAsync(queryParameter).toBlocking().value();
@@ -321,7 +317,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional header parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -333,7 +329,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional header parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -344,7 +340,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional header parameter.
      *
-     * @param queryParameter the String value
+     * @param queryParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -363,7 +359,6 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putOptionalBody() {
         putOptionalBodyAsync().toBlocking().value();
@@ -409,11 +404,10 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional body parameter.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putOptionalBody(String bodyParameter) {
         putOptionalBodyAsync(bodyParameter).toBlocking().value();
@@ -422,7 +416,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional body parameter.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -434,7 +428,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional body parameter.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -445,7 +439,7 @@ public class ImplicitsImpl implements Implicits {
     /**
      * Test implicitly optional body parameter.
      *
-     * @param bodyParameter the String value
+     * @param bodyParameter the {@link String} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

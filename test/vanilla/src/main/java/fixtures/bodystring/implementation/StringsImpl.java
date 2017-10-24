@@ -195,7 +195,6 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putNull() {
         putNullAsync().toBlocking().value();
@@ -245,7 +244,6 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putNull(String stringBody) {
         putNullAsync(stringBody).toBlocking().value();
@@ -345,7 +343,6 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putEmpty(String stringBody) {
         putEmptyAsync(stringBody).toBlocking().value();
@@ -448,7 +445,6 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putMbcs(String stringBody) {
         putMbcsAsync(stringBody).toBlocking().value();
@@ -551,7 +547,6 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putWhitespace(String stringBody) {
         putWhitespaceAsync(stringBody).toBlocking().value();
@@ -746,11 +741,10 @@ public class StringsImpl implements Strings {
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the byte[] value
+     * @param stringBody the {@link byte[]} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putBase64UrlEncoded(byte[] stringBody) {
         putBase64UrlEncodedAsync(stringBody).toBlocking().value();
@@ -759,7 +753,7 @@ public class StringsImpl implements Strings {
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the byte[] value
+     * @param stringBody the {@link byte[]} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -771,7 +765,7 @@ public class StringsImpl implements Strings {
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the byte[] value
+     * @param stringBody the {@link byte[]} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -786,7 +780,7 @@ public class StringsImpl implements Strings {
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the byte[] value
+     * @param stringBody the {@link byte[]} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

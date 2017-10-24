@@ -302,11 +302,10 @@ public class DatesImpl implements Dates {
     /**
      * Put max date value 9999-12-31.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putMaxDate(LocalDate dateBody) {
         putMaxDateAsync(dateBody).toBlocking().value();
@@ -315,7 +314,7 @@ public class DatesImpl implements Dates {
     /**
      * Put max date value 9999-12-31.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -327,7 +326,7 @@ public class DatesImpl implements Dates {
     /**
      * Put max date value 9999-12-31.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -341,7 +340,7 @@ public class DatesImpl implements Dates {
     /**
      * Put max date value 9999-12-31.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -405,11 +404,10 @@ public class DatesImpl implements Dates {
     /**
      * Put min date value 0000-01-01.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putMinDate(LocalDate dateBody) {
         putMinDateAsync(dateBody).toBlocking().value();
@@ -418,7 +416,7 @@ public class DatesImpl implements Dates {
     /**
      * Put min date value 0000-01-01.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -430,7 +428,7 @@ public class DatesImpl implements Dates {
     /**
      * Put min date value 0000-01-01.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -444,7 +442,7 @@ public class DatesImpl implements Dates {
     /**
      * Put min date value 0000-01-01.
      *
-     * @param dateBody the LocalDate value
+     * @param dateBody the {@link LocalDate} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

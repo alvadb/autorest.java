@@ -152,7 +152,6 @@ public class BasicsImpl implements Basics {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putValid(Basic complexBody) {
         putValidAsync(complexBody).toBlocking().value();

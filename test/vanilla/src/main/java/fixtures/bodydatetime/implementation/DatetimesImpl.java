@@ -368,11 +368,10 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value 9999-12-31T23:59:59.9999999Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putUtcMaxDateTime(DateTime datetimeBody) {
         putUtcMaxDateTimeAsync(datetimeBody).toBlocking().value();
@@ -381,7 +380,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value 9999-12-31T23:59:59.9999999Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -393,7 +392,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value 9999-12-31T23:59:59.9999999Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -407,7 +406,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value 9999-12-31T23:59:59.9999999Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -519,11 +518,10 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putLocalPositiveOffsetMaxDateTime(DateTime datetimeBody) {
         putLocalPositiveOffsetMaxDateTimeAsync(datetimeBody).toBlocking().value();
@@ -532,7 +530,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -544,7 +542,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -558,7 +556,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -670,11 +668,10 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putLocalNegativeOffsetMaxDateTime(DateTime datetimeBody) {
         putLocalNegativeOffsetMaxDateTimeAsync(datetimeBody).toBlocking().value();
@@ -683,7 +680,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -695,7 +692,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -709,7 +706,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -821,11 +818,10 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putUtcMinDateTime(DateTime datetimeBody) {
         putUtcMinDateTimeAsync(datetimeBody).toBlocking().value();
@@ -834,7 +830,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -846,7 +842,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -860,7 +856,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00Z.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -924,11 +920,10 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putLocalPositiveOffsetMinDateTime(DateTime datetimeBody) {
         putLocalPositiveOffsetMinDateTimeAsync(datetimeBody).toBlocking().value();
@@ -937,7 +932,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -949,7 +944,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -963,7 +958,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00+14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -1027,11 +1022,10 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putLocalNegativeOffsetMinDateTime(DateTime datetimeBody) {
         putLocalNegativeOffsetMinDateTimeAsync(datetimeBody).toBlocking().value();
@@ -1040,7 +1034,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1052,7 +1046,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1066,7 +1060,7 @@ public class DatetimesImpl implements Datetimes {
     /**
      * Put min datetime value 0001-01-01T00:00:00-14:00.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

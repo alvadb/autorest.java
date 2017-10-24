@@ -317,11 +317,10 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put max datetime value Fri, 31 Dec 9999 23:59:59 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putUtcMaxDateTime(DateTime datetimeBody) {
         putUtcMaxDateTimeAsync(datetimeBody).toBlocking().value();
@@ -330,7 +329,7 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put max datetime value Fri, 31 Dec 9999 23:59:59 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -342,7 +341,7 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put max datetime value Fri, 31 Dec 9999 23:59:59 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -357,7 +356,7 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put max datetime value Fri, 31 Dec 9999 23:59:59 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */
@@ -469,11 +468,10 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put min datetime value Mon, 1 Jan 0001 00:00:00 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void putUtcMinDateTime(DateTime datetimeBody) {
         putUtcMinDateTimeAsync(datetimeBody).toBlocking().value();
@@ -482,7 +480,7 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put min datetime value Mon, 1 Jan 0001 00:00:00 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -494,7 +492,7 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put min datetime value Mon, 1 Jan 0001 00:00:00 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -509,7 +507,7 @@ public class Datetimerfc1123sImpl implements Datetimerfc1123s {
     /**
      * Put min datetime value Mon, 1 Jan 0001 00:00:00 GMT.
      *
-     * @param datetimeBody the DateTime value
+     * @param datetimeBody the {@link DateTime} value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the {@link Void} object
      */

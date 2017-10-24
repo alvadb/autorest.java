@@ -825,7 +825,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get202None204NoneDefaultError202None() {
         get202None204NoneDefaultError202NoneAsync().toBlocking().value();
@@ -873,7 +872,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get202None204NoneDefaultError204None() {
         get202None204NoneDefaultError204NoneAsync().toBlocking().value();
@@ -921,7 +919,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get202None204NoneDefaultError400Valid() {
         get202None204NoneDefaultError400ValidAsync().toBlocking().value();
@@ -969,7 +966,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get202None204NoneDefaultNone202Invalid() {
         get202None204NoneDefaultNone202InvalidAsync().toBlocking().value();
@@ -1017,7 +1013,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get202None204NoneDefaultNone204None() {
         get202None204NoneDefaultNone204NoneAsync().toBlocking().value();
@@ -1065,7 +1060,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get202None204NoneDefaultNone400None() {
         get202None204NoneDefaultNone400NoneAsync().toBlocking().value();
@@ -1113,7 +1107,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void get202None204NoneDefaultNone400Invalid() {
         get202None204NoneDefaultNone400InvalidAsync().toBlocking().value();
@@ -1353,7 +1346,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getDefaultNone200Invalid() {
         getDefaultNone200InvalidAsync().toBlocking().value();
@@ -1401,7 +1393,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getDefaultNone200None() {
         getDefaultNone200NoneAsync().toBlocking().value();
@@ -1449,7 +1440,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getDefaultNone400Invalid() {
         getDefaultNone400InvalidAsync().toBlocking().value();
@@ -1497,7 +1487,6 @@ public class MultipleResponsesImpl implements MultipleResponses {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the {@link void} object if successful.
      */
     public void getDefaultNone400None() {
         getDefaultNone400NoneAsync().toBlocking().value();
