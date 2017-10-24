@@ -208,7 +208,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the IntWrapper object if successful.
+     * @return the {@link IntWrapper} object if successful.
      */
     public IntWrapper getInt() {
         return getIntAsync().toBlocking().value();
@@ -239,13 +239,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with integer properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, IntWrapper> object
+     * @return a {@link Single} emitting the {@link IntWrapper} object
      */
     public Single<IntWrapper> getIntAsync() {
-        return getIntWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, IntWrapper>, IntWrapper>() { public IntWrapper call(RestResponse<Void, IntWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getIntWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, IntWrapper>, IntWrapper>() {
+                    public IntWrapper call(RestResponse<Void, IntWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with integer properties.
@@ -254,7 +257,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putInt(IntWrapper complexBody) {
         putIntAsync(complexBody).toBlocking().value();
@@ -292,13 +295,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put -1 and 2
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putIntAsync(IntWrapper complexBody) {
-        return putIntWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putIntWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with long properties.
@@ -306,7 +312,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LongWrapper object if successful.
+     * @return the {@link LongWrapper} object if successful.
      */
     public LongWrapper getLong() {
         return getLongAsync().toBlocking().value();
@@ -337,13 +343,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with long properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, LongWrapper> object
+     * @return a {@link Single} emitting the {@link LongWrapper} object
      */
     public Single<LongWrapper> getLongAsync() {
-        return getLongWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, LongWrapper>, LongWrapper>() { public LongWrapper call(RestResponse<Void, LongWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLongWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, LongWrapper>, LongWrapper>() {
+                    public LongWrapper call(RestResponse<Void, LongWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with long properties.
@@ -352,7 +361,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putLong(LongWrapper complexBody) {
         putLongAsync(complexBody).toBlocking().value();
@@ -390,13 +399,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put 1099511627775 and -999511627788
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putLongAsync(LongWrapper complexBody) {
-        return putLongWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putLongWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with float properties.
@@ -404,7 +416,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FloatWrapper object if successful.
+     * @return the {@link FloatWrapper} object if successful.
      */
     public FloatWrapper getFloat() {
         return getFloatAsync().toBlocking().value();
@@ -435,13 +447,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with float properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, FloatWrapper> object
+     * @return a {@link Single} emitting the {@link FloatWrapper} object
      */
     public Single<FloatWrapper> getFloatAsync() {
-        return getFloatWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, FloatWrapper>, FloatWrapper>() { public FloatWrapper call(RestResponse<Void, FloatWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getFloatWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, FloatWrapper>, FloatWrapper>() {
+                    public FloatWrapper call(RestResponse<Void, FloatWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with float properties.
@@ -450,7 +465,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putFloat(FloatWrapper complexBody) {
         putFloatAsync(complexBody).toBlocking().value();
@@ -488,13 +503,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put 1.05 and -0.003
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putFloatAsync(FloatWrapper complexBody) {
-        return putFloatWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putFloatWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with double properties.
@@ -502,7 +520,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DoubleWrapper object if successful.
+     * @return the {@link DoubleWrapper} object if successful.
      */
     public DoubleWrapper getDouble() {
         return getDoubleAsync().toBlocking().value();
@@ -533,13 +551,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with double properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DoubleWrapper> object
+     * @return a {@link Single} emitting the {@link DoubleWrapper} object
      */
     public Single<DoubleWrapper> getDoubleAsync() {
-        return getDoubleWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DoubleWrapper>, DoubleWrapper>() { public DoubleWrapper call(RestResponse<Void, DoubleWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDoubleWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DoubleWrapper>, DoubleWrapper>() {
+                    public DoubleWrapper call(RestResponse<Void, DoubleWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with double properties.
@@ -548,7 +569,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDouble(DoubleWrapper complexBody) {
         putDoubleAsync(complexBody).toBlocking().value();
@@ -586,13 +607,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put 3e-100 and -0.000000000000000000000000000000000000000000000000000000005
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDoubleAsync(DoubleWrapper complexBody) {
-        return putDoubleWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDoubleWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with bool properties.
@@ -600,7 +624,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the BooleanWrapper object if successful.
+     * @return the {@link BooleanWrapper} object if successful.
      */
     public BooleanWrapper getBool() {
         return getBoolAsync().toBlocking().value();
@@ -631,13 +655,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with bool properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, BooleanWrapper> object
+     * @return a {@link Single} emitting the {@link BooleanWrapper} object
      */
     public Single<BooleanWrapper> getBoolAsync() {
-        return getBoolWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, BooleanWrapper>, BooleanWrapper>() { public BooleanWrapper call(RestResponse<Void, BooleanWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBoolWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, BooleanWrapper>, BooleanWrapper>() {
+                    public BooleanWrapper call(RestResponse<Void, BooleanWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with bool properties.
@@ -646,7 +673,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBool(BooleanWrapper complexBody) {
         putBoolAsync(complexBody).toBlocking().value();
@@ -684,13 +711,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put true and false
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBoolAsync(BooleanWrapper complexBody) {
-        return putBoolWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBoolWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with string properties.
@@ -698,7 +728,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the StringWrapper object if successful.
+     * @return the {@link StringWrapper} object if successful.
      */
     public StringWrapper getString() {
         return getStringAsync().toBlocking().value();
@@ -729,13 +759,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with string properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, StringWrapper> object
+     * @return a {@link Single} emitting the {@link StringWrapper} object
      */
     public Single<StringWrapper> getStringAsync() {
-        return getStringWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, StringWrapper>, StringWrapper>() { public StringWrapper call(RestResponse<Void, StringWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getStringWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, StringWrapper>, StringWrapper>() {
+                    public StringWrapper call(RestResponse<Void, StringWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with string properties.
@@ -744,7 +777,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putString(StringWrapper complexBody) {
         putStringAsync(complexBody).toBlocking().value();
@@ -782,13 +815,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put 'goodrequest', '', and null
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putStringAsync(StringWrapper complexBody) {
-        return putStringWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putStringWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with date properties.
@@ -796,7 +832,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateWrapper object if successful.
+     * @return the {@link DateWrapper} object if successful.
      */
     public DateWrapper getDate() {
         return getDateAsync().toBlocking().value();
@@ -827,13 +863,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with date properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateWrapper> object
+     * @return a {@link Single} emitting the {@link DateWrapper} object
      */
     public Single<DateWrapper> getDateAsync() {
-        return getDateWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateWrapper>, DateWrapper>() { public DateWrapper call(RestResponse<Void, DateWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateWrapper>, DateWrapper>() {
+                    public DateWrapper call(RestResponse<Void, DateWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with date properties.
@@ -842,7 +881,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDate(DateWrapper complexBody) {
         putDateAsync(complexBody).toBlocking().value();
@@ -880,13 +919,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put '0001-01-01' and '2016-02-29'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDateAsync(DateWrapper complexBody) {
-        return putDateWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDateWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with datetime properties.
@@ -894,7 +936,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DatetimeWrapper object if successful.
+     * @return the {@link DatetimeWrapper} object if successful.
      */
     public DatetimeWrapper getDateTime() {
         return getDateTimeAsync().toBlocking().value();
@@ -925,13 +967,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with datetime properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DatetimeWrapper> object
+     * @return a {@link Single} emitting the {@link DatetimeWrapper} object
      */
     public Single<DatetimeWrapper> getDateTimeAsync() {
-        return getDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DatetimeWrapper>, DatetimeWrapper>() { public DatetimeWrapper call(RestResponse<Void, DatetimeWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DatetimeWrapper>, DatetimeWrapper>() {
+                    public DatetimeWrapper call(RestResponse<Void, DatetimeWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with datetime properties.
@@ -940,7 +985,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDateTime(DatetimeWrapper complexBody) {
         putDateTimeAsync(complexBody).toBlocking().value();
@@ -978,13 +1023,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put '0001-01-01T12:00:00-04:00' and '2015-05-18T11:38:00-08:00'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDateTimeAsync(DatetimeWrapper complexBody) {
-        return putDateTimeWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDateTimeWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with datetimeRfc1123 properties.
@@ -992,7 +1040,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Datetimerfc1123Wrapper object if successful.
+     * @return the {@link Datetimerfc1123Wrapper} object if successful.
      */
     public Datetimerfc1123Wrapper getDateTimeRfc1123() {
         return getDateTimeRfc1123Async().toBlocking().value();
@@ -1023,13 +1071,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with datetimeRfc1123 properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Datetimerfc1123Wrapper> object
+     * @return a {@link Single} emitting the {@link Datetimerfc1123Wrapper} object
      */
     public Single<Datetimerfc1123Wrapper> getDateTimeRfc1123Async() {
-        return getDateTimeRfc1123WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Datetimerfc1123Wrapper>, Datetimerfc1123Wrapper>() { public Datetimerfc1123Wrapper call(RestResponse<Void, Datetimerfc1123Wrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateTimeRfc1123WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Datetimerfc1123Wrapper>, Datetimerfc1123Wrapper>() {
+                    public Datetimerfc1123Wrapper call(RestResponse<Void, Datetimerfc1123Wrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with datetimeRfc1123 properties.
@@ -1038,7 +1089,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDateTimeRfc1123(Datetimerfc1123Wrapper complexBody) {
         putDateTimeRfc1123Async(complexBody).toBlocking().value();
@@ -1076,13 +1127,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put 'Mon, 01 Jan 0001 12:00:00 GMT' and 'Mon, 18 May 2015 11:38:00 GMT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDateTimeRfc1123Async(Datetimerfc1123Wrapper complexBody) {
-        return putDateTimeRfc1123WithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDateTimeRfc1123WithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with duration properties.
@@ -1090,7 +1144,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DurationWrapper object if successful.
+     * @return the {@link DurationWrapper} object if successful.
      */
     public DurationWrapper getDuration() {
         return getDurationAsync().toBlocking().value();
@@ -1121,13 +1175,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with duration properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DurationWrapper> object
+     * @return a {@link Single} emitting the {@link DurationWrapper} object
      */
     public Single<DurationWrapper> getDurationAsync() {
-        return getDurationWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DurationWrapper>, DurationWrapper>() { public DurationWrapper call(RestResponse<Void, DurationWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDurationWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DurationWrapper>, DurationWrapper>() {
+                    public DurationWrapper call(RestResponse<Void, DurationWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with duration properties.
@@ -1136,7 +1193,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDuration(DurationWrapper complexBody) {
         putDurationAsync(complexBody).toBlocking().value();
@@ -1174,13 +1231,16 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put 'P123DT22H14M12.011S'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDurationAsync(DurationWrapper complexBody) {
-        return putDurationWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDurationWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with byte properties.
@@ -1188,7 +1248,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ByteWrapper object if successful.
+     * @return the {@link ByteWrapper} object if successful.
      */
     public ByteWrapper getByte() {
         return getByteAsync().toBlocking().value();
@@ -1219,13 +1279,16 @@ public class PrimitivesImpl implements Primitives {
      * Get complex types with byte properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, ByteWrapper> object
+     * @return a {@link Single} emitting the {@link ByteWrapper} object
      */
     public Single<ByteWrapper> getByteAsync() {
-        return getByteWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, ByteWrapper>, ByteWrapper>() { public ByteWrapper call(RestResponse<Void, ByteWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getByteWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, ByteWrapper>, ByteWrapper>() {
+                    public ByteWrapper call(RestResponse<Void, ByteWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with byte properties.
@@ -1234,7 +1297,7 @@ public class PrimitivesImpl implements Primitives {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putByte(ByteWrapper complexBody) {
         putByteAsync(complexBody).toBlocking().value();
@@ -1272,12 +1335,15 @@ public class PrimitivesImpl implements Primitives {
      *
      * @param complexBody Please put non-ascii byte string hex(FF FE FD FC 00 FA F9 F8 F7 F6)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putByteAsync(ByteWrapper complexBody) {
-        return putByteWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putByteWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

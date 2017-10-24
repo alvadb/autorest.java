@@ -155,7 +155,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the int object if successful.
+     * @return the {@link int} object if successful.
      */
     public int getNull() {
         return getNullAsync().toBlocking().value();
@@ -186,13 +186,16 @@ public class IntsImpl implements Ints {
      * Get null Int value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Integer> object
+     * @return a {@link Single} emitting the {@link Integer} object
      */
     public Single<Integer> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Integer>, Integer>() { public Integer call(RestResponse<Void, Integer> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Integer>, Integer>() {
+                    public Integer call(RestResponse<Void, Integer> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid Int value.
@@ -200,7 +203,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the int object if successful.
+     * @return the {@link int} object if successful.
      */
     public int getInvalid() {
         return getInvalidAsync().toBlocking().value();
@@ -231,13 +234,16 @@ public class IntsImpl implements Ints {
      * Get invalid Int value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Integer> object
+     * @return a {@link Single} emitting the {@link Integer} object
      */
     public Single<Integer> getInvalidAsync() {
-        return getInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Integer>, Integer>() { public Integer call(RestResponse<Void, Integer> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Integer>, Integer>() {
+                    public Integer call(RestResponse<Void, Integer> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get overflow Int32 value.
@@ -245,7 +251,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the int object if successful.
+     * @return the {@link int} object if successful.
      */
     public int getOverflowInt32() {
         return getOverflowInt32Async().toBlocking().value();
@@ -276,13 +282,16 @@ public class IntsImpl implements Ints {
      * Get overflow Int32 value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Integer> object
+     * @return a {@link Single} emitting the {@link Integer} object
      */
     public Single<Integer> getOverflowInt32Async() {
-        return getOverflowInt32WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Integer>, Integer>() { public Integer call(RestResponse<Void, Integer> restResponse) { return restResponse.body(); } });
-        }
-
+            return getOverflowInt32WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Integer>, Integer>() {
+                    public Integer call(RestResponse<Void, Integer> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get underflow Int32 value.
@@ -290,7 +299,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the int object if successful.
+     * @return the {@link int} object if successful.
      */
     public int getUnderflowInt32() {
         return getUnderflowInt32Async().toBlocking().value();
@@ -321,13 +330,16 @@ public class IntsImpl implements Ints {
      * Get underflow Int32 value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Integer> object
+     * @return a {@link Single} emitting the {@link Integer} object
      */
     public Single<Integer> getUnderflowInt32Async() {
-        return getUnderflowInt32WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Integer>, Integer>() { public Integer call(RestResponse<Void, Integer> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUnderflowInt32WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Integer>, Integer>() {
+                    public Integer call(RestResponse<Void, Integer> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get overflow Int64 value.
@@ -335,7 +347,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the long object if successful.
+     * @return the {@link long} object if successful.
      */
     public long getOverflowInt64() {
         return getOverflowInt64Async().toBlocking().value();
@@ -366,13 +378,16 @@ public class IntsImpl implements Ints {
      * Get overflow Int64 value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Long> object
+     * @return a {@link Single} emitting the {@link Long} object
      */
     public Single<Long> getOverflowInt64Async() {
-        return getOverflowInt64WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Long>, Long>() { public Long call(RestResponse<Void, Long> restResponse) { return restResponse.body(); } });
-        }
-
+            return getOverflowInt64WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Long>, Long>() {
+                    public Long call(RestResponse<Void, Long> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get underflow Int64 value.
@@ -380,7 +395,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the long object if successful.
+     * @return the {@link long} object if successful.
      */
     public long getUnderflowInt64() {
         return getUnderflowInt64Async().toBlocking().value();
@@ -411,13 +426,16 @@ public class IntsImpl implements Ints {
      * Get underflow Int64 value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Long> object
+     * @return a {@link Single} emitting the {@link Long} object
      */
     public Single<Long> getUnderflowInt64Async() {
-        return getUnderflowInt64WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Long>, Long>() { public Long call(RestResponse<Void, Long> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUnderflowInt64WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Long>, Long>() {
+                    public Long call(RestResponse<Void, Long> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put max int32 value.
@@ -426,7 +444,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putMax32(int intBody) {
         putMax32Async(intBody).toBlocking().value();
@@ -460,13 +478,16 @@ public class IntsImpl implements Ints {
      *
      * @param intBody the int value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putMax32Async(int intBody) {
-        return putMax32WithRestResponseAsync(intBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putMax32WithRestResponseAsync(intBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put max int64 value.
@@ -475,7 +496,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putMax64(long intBody) {
         putMax64Async(intBody).toBlocking().value();
@@ -509,13 +530,16 @@ public class IntsImpl implements Ints {
      *
      * @param intBody the long value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putMax64Async(long intBody) {
-        return putMax64WithRestResponseAsync(intBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putMax64WithRestResponseAsync(intBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put min int32 value.
@@ -524,7 +548,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putMin32(int intBody) {
         putMin32Async(intBody).toBlocking().value();
@@ -558,13 +582,16 @@ public class IntsImpl implements Ints {
      *
      * @param intBody the int value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putMin32Async(int intBody) {
-        return putMin32WithRestResponseAsync(intBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putMin32WithRestResponseAsync(intBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put min int64 value.
@@ -573,7 +600,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putMin64(long intBody) {
         putMin64Async(intBody).toBlocking().value();
@@ -607,13 +634,16 @@ public class IntsImpl implements Ints {
      *
      * @param intBody the long value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putMin64Async(long intBody) {
-        return putMin64WithRestResponseAsync(intBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putMin64WithRestResponseAsync(intBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get datetime encoded as Unix time value.
@@ -621,7 +651,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getUnixTime() {
         return getUnixTimeAsync().toBlocking().value();
@@ -652,22 +682,25 @@ public class IntsImpl implements Ints {
      * Get datetime encoded as Unix time value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getUnixTimeAsync() {
-        return getUnixTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUnixTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the long value
+     * @param intBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putUnixTimeDate(DateTime intBody) {
         putUnixTimeDateAsync(intBody).toBlocking().value();
@@ -676,7 +709,7 @@ public class IntsImpl implements Ints {
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the long value
+     * @param intBody the DateTime value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -688,27 +721,30 @@ public class IntsImpl implements Ints {
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the long value
+     * @param intBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
     public Single<RestResponse<Void, Void>> putUnixTimeDateWithRestResponseAsync(DateTime intBody) {
-    Long intBodyConverted = intBody.toDateTime(DateTimeZone.UTC).getMillis() / 1000;
+        Long intBodyConverted = intBody.toDateTime(DateTimeZone.UTC).getMillis() / 1000;
         return service.putUnixTimeDate(intBodyConverted);
     }
 
     /**
      * Put datetime encoded as Unix time.
      *
-     * @param intBody the long value
+     * @param intBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putUnixTimeDateAsync(DateTime intBody) {
-        return putUnixTimeDateWithRestResponseAsync(intBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putUnixTimeDateWithRestResponseAsync(intBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid Unix time value.
@@ -716,7 +752,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getInvalidUnixTime() {
         return getInvalidUnixTimeAsync().toBlocking().value();
@@ -747,13 +783,16 @@ public class IntsImpl implements Ints {
      * Get invalid Unix time value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getInvalidUnixTimeAsync() {
-        return getInvalidUnixTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidUnixTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get null Unix time value.
@@ -761,7 +800,7 @@ public class IntsImpl implements Ints {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getNullUnixTime() {
         return getNullUnixTimeAsync().toBlocking().value();
@@ -792,12 +831,15 @@ public class IntsImpl implements Ints {
      * Get null Unix time value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getNullUnixTimeAsync() {
-        return getNullUnixTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullUnixTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

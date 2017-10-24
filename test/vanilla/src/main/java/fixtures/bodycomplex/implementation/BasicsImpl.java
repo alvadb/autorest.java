@@ -103,7 +103,7 @@ public class BasicsImpl implements Basics {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Basic object if successful.
+     * @return the {@link Basic} object if successful.
      */
     public Basic getValid() {
         return getValidAsync().toBlocking().value();
@@ -134,13 +134,16 @@ public class BasicsImpl implements Basics {
      * Get complex type {id: 2, name: 'abc', color: 'YELLOW'}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Basic> object
+     * @return a {@link Single} emitting the {@link Basic} object
      */
     public Single<Basic> getValidAsync() {
-        return getValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Basic>, Basic>() { public Basic call(RestResponse<Void, Basic> restResponse) { return restResponse.body(); } });
-        }
-
+            return getValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Basic>, Basic>() {
+                    public Basic call(RestResponse<Void, Basic> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Please put {id: 2, name: 'abc', color: 'Magenta'}.
@@ -149,7 +152,7 @@ public class BasicsImpl implements Basics {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putValid(Basic complexBody) {
         putValidAsync(complexBody).toBlocking().value();
@@ -187,13 +190,16 @@ public class BasicsImpl implements Basics {
      *
      * @param complexBody Please put {id: 2, name: 'abc', color: 'Magenta'}
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putValidAsync(Basic complexBody) {
-        return putValidWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putValidWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get a basic complex type that is invalid for the local strong type.
@@ -201,7 +207,7 @@ public class BasicsImpl implements Basics {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Basic object if successful.
+     * @return the {@link Basic} object if successful.
      */
     public Basic getInvalid() {
         return getInvalidAsync().toBlocking().value();
@@ -232,13 +238,16 @@ public class BasicsImpl implements Basics {
      * Get a basic complex type that is invalid for the local strong type.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Basic> object
+     * @return a {@link Single} emitting the {@link Basic} object
      */
     public Single<Basic> getInvalidAsync() {
-        return getInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Basic>, Basic>() { public Basic call(RestResponse<Void, Basic> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Basic>, Basic>() {
+                    public Basic call(RestResponse<Void, Basic> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get a basic complex type that is empty.
@@ -246,7 +255,7 @@ public class BasicsImpl implements Basics {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Basic object if successful.
+     * @return the {@link Basic} object if successful.
      */
     public Basic getEmpty() {
         return getEmptyAsync().toBlocking().value();
@@ -277,13 +286,16 @@ public class BasicsImpl implements Basics {
      * Get a basic complex type that is empty.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Basic> object
+     * @return a {@link Single} emitting the {@link Basic} object
      */
     public Single<Basic> getEmptyAsync() {
-        return getEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Basic>, Basic>() { public Basic call(RestResponse<Void, Basic> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Basic>, Basic>() {
+                    public Basic call(RestResponse<Void, Basic> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get a basic complex type whose properties are null.
@@ -291,7 +303,7 @@ public class BasicsImpl implements Basics {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Basic object if successful.
+     * @return the {@link Basic} object if successful.
      */
     public Basic getNull() {
         return getNullAsync().toBlocking().value();
@@ -322,13 +334,16 @@ public class BasicsImpl implements Basics {
      * Get a basic complex type whose properties are null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Basic> object
+     * @return a {@link Single} emitting the {@link Basic} object
      */
     public Single<Basic> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Basic>, Basic>() { public Basic call(RestResponse<Void, Basic> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Basic>, Basic>() {
+                    public Basic call(RestResponse<Void, Basic> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get a basic complex type while the server doesn't provide a response payload.
@@ -336,7 +351,7 @@ public class BasicsImpl implements Basics {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Basic object if successful.
+     * @return the {@link Basic} object if successful.
      */
     public Basic getNotProvided() {
         return getNotProvidedAsync().toBlocking().value();
@@ -367,12 +382,15 @@ public class BasicsImpl implements Basics {
      * Get a basic complex type while the server doesn't provide a response payload.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Basic> object
+     * @return a {@link Single} emitting the {@link Basic} object
      */
     public Single<Basic> getNotProvidedAsync() {
-        return getNotProvidedWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Basic>, Basic>() { public Basic call(RestResponse<Void, Basic> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNotProvidedWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Basic>, Basic>() {
+                    public Basic call(RestResponse<Void, Basic> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

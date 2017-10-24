@@ -86,7 +86,7 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error head501() {
         return head501Async().toBlocking().value();
@@ -117,13 +117,16 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * Return 501 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> head501Async() {
-        return head501WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return head501WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 501 status code - should be represented in the client as an error.
@@ -131,7 +134,7 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error get501() {
         return get501Async().toBlocking().value();
@@ -162,13 +165,16 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * Return 501 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> get501Async() {
-        return get501WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return get501WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 505 status code - should be represented in the client as an error.
@@ -176,7 +182,7 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post505() {
         return post505Async().toBlocking().value();
@@ -208,12 +214,16 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * Return 505 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post505Async() {
-        return post505WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return post505WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 505 status code - should be represented in the client as an error.
@@ -222,7 +232,7 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post505(Boolean booleanValue) {
         return post505Async(booleanValue).toBlocking().value();
@@ -256,13 +266,16 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post505Async(Boolean booleanValue) {
-        return post505WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return post505WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 505 status code - should be represented in the client as an error.
@@ -270,7 +283,7 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete505() {
         return delete505Async().toBlocking().value();
@@ -302,12 +315,16 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * Return 505 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete505Async() {
-        return delete505WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return delete505WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 505 status code - should be represented in the client as an error.
@@ -316,7 +333,7 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete505(Boolean booleanValue) {
         return delete505Async(booleanValue).toBlocking().value();
@@ -350,12 +367,15 @@ public class HttpServerFailuresImpl implements HttpServerFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete505Async(Boolean booleanValue) {
-        return delete505WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return delete505WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

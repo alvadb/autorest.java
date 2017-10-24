@@ -147,7 +147,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the String object if successful.
+     * @return the {@link String} object if successful.
      */
     public String getNull() {
         return getNullAsync().toBlocking().value();
@@ -178,13 +178,16 @@ public class StringsImpl implements Strings {
      * Get null string value value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, String> object
+     * @return a {@link Single} emitting the {@link String} object
      */
     public Single<String> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, String>, String>() { public String call(RestResponse<Void, String> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, String>, String>() {
+                    public String call(RestResponse<Void, String> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set string value null.
@@ -192,7 +195,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putNull() {
         putNullAsync().toBlocking().value();
@@ -224,12 +227,16 @@ public class StringsImpl implements Strings {
      * Set string value null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putNullAsync() {
-        return putNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return putNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set string value null.
@@ -238,7 +245,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putNull(String stringBody) {
         putNullAsync(stringBody).toBlocking().value();
@@ -272,13 +279,16 @@ public class StringsImpl implements Strings {
      *
      * @param stringBody Possible values include: ''
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putNullAsync(String stringBody) {
-        return putNullWithRestResponseAsync(stringBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putNullWithRestResponseAsync(stringBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get empty string value value ''.
@@ -286,7 +296,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the String object if successful.
+     * @return the {@link String} object if successful.
      */
     public String getEmpty() {
         return getEmptyAsync().toBlocking().value();
@@ -317,13 +327,16 @@ public class StringsImpl implements Strings {
      * Get empty string value value ''.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, String> object
+     * @return a {@link Single} emitting the {@link String} object
      */
     public Single<String> getEmptyAsync() {
-        return getEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, String>, String>() { public String call(RestResponse<Void, String> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, String>, String>() {
+                    public String call(RestResponse<Void, String> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set string value empty ''.
@@ -332,7 +345,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putEmpty(String stringBody) {
         putEmptyAsync(stringBody).toBlocking().value();
@@ -369,13 +382,16 @@ public class StringsImpl implements Strings {
      *
      * @param stringBody Possible values include: ''
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putEmptyAsync(String stringBody) {
-        return putEmptyWithRestResponseAsync(stringBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putEmptyWithRestResponseAsync(stringBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get mbcs string value '啊齄丂狛狜隣郎隣兀﨩ˊ▇█〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€ '.
@@ -383,7 +399,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the String object if successful.
+     * @return the {@link String} object if successful.
      */
     public String getMbcs() {
         return getMbcsAsync().toBlocking().value();
@@ -414,13 +430,16 @@ public class StringsImpl implements Strings {
      * Get mbcs string value '啊齄丂狛狜隣郎隣兀﨩ˊ▇█〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€ '.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, String> object
+     * @return a {@link Single} emitting the {@link String} object
      */
     public Single<String> getMbcsAsync() {
-        return getMbcsWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, String>, String>() { public String call(RestResponse<Void, String> restResponse) { return restResponse.body(); } });
-        }
-
+            return getMbcsWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, String>, String>() {
+                    public String call(RestResponse<Void, String> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set string value mbcs '啊齄丂狛狜隣郎隣兀﨩ˊ▇█〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€ '.
@@ -429,7 +448,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putMbcs(String stringBody) {
         putMbcsAsync(stringBody).toBlocking().value();
@@ -466,13 +485,16 @@ public class StringsImpl implements Strings {
      *
      * @param stringBody Possible values include: '啊齄丂狛狜隣郎隣兀﨩ˊ▇█〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€ '
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putMbcsAsync(String stringBody) {
-        return putMbcsWithRestResponseAsync(stringBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putMbcsWithRestResponseAsync(stringBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get string value with leading and trailing whitespace '&lt;tab&gt;&lt;space&gt;&lt;space&gt;Now is the time for all good men to come to the aid of their country&lt;tab&gt;&lt;space&gt;&lt;space&gt;'.
@@ -480,7 +502,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the String object if successful.
+     * @return the {@link String} object if successful.
      */
     public String getWhitespace() {
         return getWhitespaceAsync().toBlocking().value();
@@ -511,13 +533,16 @@ public class StringsImpl implements Strings {
      * Get string value with leading and trailing whitespace '&lt;tab&gt;&lt;space&gt;&lt;space&gt;Now is the time for all good men to come to the aid of their country&lt;tab&gt;&lt;space&gt;&lt;space&gt;'.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, String> object
+     * @return a {@link Single} emitting the {@link String} object
      */
     public Single<String> getWhitespaceAsync() {
-        return getWhitespaceWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, String>, String>() { public String call(RestResponse<Void, String> restResponse) { return restResponse.body(); } });
-        }
-
+            return getWhitespaceWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, String>, String>() {
+                    public String call(RestResponse<Void, String> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set String value with leading and trailing whitespace '&lt;tab&gt;&lt;space&gt;&lt;space&gt;Now is the time for all good men to come to the aid of their country&lt;tab&gt;&lt;space&gt;&lt;space&gt;'.
@@ -526,7 +551,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putWhitespace(String stringBody) {
         putWhitespaceAsync(stringBody).toBlocking().value();
@@ -563,13 +588,16 @@ public class StringsImpl implements Strings {
      *
      * @param stringBody Possible values include: '    Now is the time for all good men to come to the aid of their country    '
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putWhitespaceAsync(String stringBody) {
-        return putWhitespaceWithRestResponseAsync(stringBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putWhitespaceWithRestResponseAsync(stringBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get String value when no string value is sent in response payload.
@@ -577,7 +605,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the String object if successful.
+     * @return the {@link String} object if successful.
      */
     public String getNotProvided() {
         return getNotProvidedAsync().toBlocking().value();
@@ -608,13 +636,16 @@ public class StringsImpl implements Strings {
      * Get String value when no string value is sent in response payload.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, String> object
+     * @return a {@link Single} emitting the {@link String} object
      */
     public Single<String> getNotProvidedAsync() {
-        return getNotProvidedWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, String>, String>() { public String call(RestResponse<Void, String> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNotProvidedWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, String>, String>() {
+                    public String call(RestResponse<Void, String> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get value that is base64 encoded.
@@ -622,7 +653,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the byte[] object if successful.
+     * @return the {@link byte[]} object if successful.
      */
     public byte[] getBase64Encoded() {
         return getBase64EncodedAsync().toBlocking().value();
@@ -653,13 +684,16 @@ public class StringsImpl implements Strings {
      * Get value that is base64 encoded.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, byte[]> object
+     * @return a {@link Single} emitting the {@link byte[]} object
      */
     public Single<byte[]> getBase64EncodedAsync() {
-        return getBase64EncodedWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, byte[]>, byte[]>() { public byte[] call(RestResponse<Void, byte[]> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBase64EncodedWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, byte[]>, byte[]>() {
+                    public byte[] call(RestResponse<Void, byte[]> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get value that is base64url encoded.
@@ -667,7 +701,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the byte[] object if successful.
+     * @return the {@link byte[]} object if successful.
      */
     public byte[] getBase64UrlEncoded() {
         return getBase64UrlEncodedAsync().toBlocking().value();
@@ -698,22 +732,25 @@ public class StringsImpl implements Strings {
      * Get value that is base64url encoded.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, byte[]> object
+     * @return a {@link Single} emitting the {@link byte[]} object
      */
     public Single<byte[]> getBase64UrlEncodedAsync() {
-        return getBase64UrlEncodedWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, byte[]>, byte[]>() { public byte[] call(RestResponse<Void, byte[]> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBase64UrlEncodedWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, byte[]>, byte[]>() {
+                    public byte[] call(RestResponse<Void, byte[]> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the Base64Url value
+     * @param stringBody the byte[] value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBase64UrlEncoded(byte[] stringBody) {
         putBase64UrlEncodedAsync(stringBody).toBlocking().value();
@@ -722,7 +759,7 @@ public class StringsImpl implements Strings {
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the Base64Url value
+     * @param stringBody the byte[] value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -734,7 +771,7 @@ public class StringsImpl implements Strings {
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the Base64Url value
+     * @param stringBody the byte[] value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -742,22 +779,25 @@ public class StringsImpl implements Strings {
         if (stringBody == null) {
             throw new IllegalArgumentException("Parameter stringBody is required and cannot be null.");
         }
-    Base64Url stringBodyConverted = Base64Url.encode(stringBody);
+        Base64Url stringBodyConverted = Base64Url.encode(stringBody);
         return service.putBase64UrlEncoded(stringBodyConverted);
     }
 
     /**
      * Put value that is base64url encoded.
      *
-     * @param stringBody the Base64Url value
+     * @param stringBody the byte[] value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBase64UrlEncodedAsync(byte[] stringBody) {
-        return putBase64UrlEncodedWithRestResponseAsync(stringBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBase64UrlEncodedWithRestResponseAsync(stringBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get null value that is expected to be base64url encoded.
@@ -765,7 +805,7 @@ public class StringsImpl implements Strings {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the byte[] object if successful.
+     * @return the {@link byte[]} object if successful.
      */
     public byte[] getNullBase64UrlEncoded() {
         return getNullBase64UrlEncodedAsync().toBlocking().value();
@@ -796,12 +836,15 @@ public class StringsImpl implements Strings {
      * Get null value that is expected to be base64url encoded.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, byte[]> object
+     * @return a {@link Single} emitting the {@link byte[]} object
      */
     public Single<byte[]> getNullBase64UrlEncodedAsync() {
-        return getNullBase64UrlEncodedWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, byte[]>, byte[]>() { public byte[] call(RestResponse<Void, byte[]> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullBase64UrlEncodedWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, byte[]>, byte[]>() {
+                    public byte[] call(RestResponse<Void, byte[]> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

@@ -102,7 +102,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DictionaryWrapper object if successful.
+     * @return the {@link DictionaryWrapper} object if successful.
      */
     public DictionaryWrapper getValid() {
         return getValidAsync().toBlocking().value();
@@ -133,13 +133,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get complex types with dictionary property.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DictionaryWrapper> object
+     * @return a {@link Single} emitting the {@link DictionaryWrapper} object
      */
     public Single<DictionaryWrapper> getValidAsync() {
-        return getValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() { public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() {
+                    public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with dictionary property.
@@ -148,7 +151,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putValid(DictionaryWrapper complexBody) {
         putValidAsync(complexBody).toBlocking().value();
@@ -186,13 +189,16 @@ public class DictionarysImpl implements Dictionarys {
      *
      * @param complexBody Please put a dictionary with 5 key-value pairs: "txt":"notepad", "bmp":"mspaint", "xls":"excel", "exe":"", "":null
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putValidAsync(DictionaryWrapper complexBody) {
-        return putValidWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putValidWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with dictionary property which is empty.
@@ -200,7 +206,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DictionaryWrapper object if successful.
+     * @return the {@link DictionaryWrapper} object if successful.
      */
     public DictionaryWrapper getEmpty() {
         return getEmptyAsync().toBlocking().value();
@@ -231,13 +237,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get complex types with dictionary property which is empty.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DictionaryWrapper> object
+     * @return a {@link Single} emitting the {@link DictionaryWrapper} object
      */
     public Single<DictionaryWrapper> getEmptyAsync() {
-        return getEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() { public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() {
+                    public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types with dictionary property which is empty.
@@ -246,7 +255,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putEmpty(DictionaryWrapper complexBody) {
         putEmptyAsync(complexBody).toBlocking().value();
@@ -284,13 +293,16 @@ public class DictionarysImpl implements Dictionarys {
      *
      * @param complexBody Please put an empty dictionary
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putEmptyAsync(DictionaryWrapper complexBody) {
-        return putEmptyWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putEmptyWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with dictionary property which is null.
@@ -298,7 +310,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DictionaryWrapper object if successful.
+     * @return the {@link DictionaryWrapper} object if successful.
      */
     public DictionaryWrapper getNull() {
         return getNullAsync().toBlocking().value();
@@ -329,13 +341,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get complex types with dictionary property which is null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DictionaryWrapper> object
+     * @return a {@link Single} emitting the {@link DictionaryWrapper} object
      */
     public Single<DictionaryWrapper> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() { public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() {
+                    public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get complex types with dictionary property while server doesn't provide a response payload.
@@ -343,7 +358,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DictionaryWrapper object if successful.
+     * @return the {@link DictionaryWrapper} object if successful.
      */
     public DictionaryWrapper getNotProvided() {
         return getNotProvidedAsync().toBlocking().value();
@@ -374,12 +389,15 @@ public class DictionarysImpl implements Dictionarys {
      * Get complex types with dictionary property while server doesn't provide a response payload.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DictionaryWrapper> object
+     * @return a {@link Single} emitting the {@link DictionaryWrapper} object
      */
     public Single<DictionaryWrapper> getNotProvidedAsync() {
-        return getNotProvidedWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() { public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNotProvidedWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DictionaryWrapper>, DictionaryWrapper>() {
+                    public DictionaryWrapper call(RestResponse<Void, DictionaryWrapper> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

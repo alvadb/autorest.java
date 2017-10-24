@@ -467,7 +467,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Integer&gt; object if successful.
+     * @return the {@link Map<String, Integer>} object if successful.
      */
     public Map<String, Integer> getNull() {
         return getNullAsync().toBlocking().value();
@@ -498,13 +498,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get null dictionary value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Integer>> object
+     * @return a {@link Single} emitting the {@link Map<String, Integer>} object
      */
     public Single<Map<String, Integer>> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() { public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() {
+                    public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get empty dictionary value {}.
@@ -512,7 +515,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Integer&gt; object if successful.
+     * @return the {@link Map<String, Integer>} object if successful.
      */
     public Map<String, Integer> getEmpty() {
         return getEmptyAsync().toBlocking().value();
@@ -543,22 +546,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get empty dictionary value {}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Integer>> object
+     * @return a {@link Single} emitting the {@link Map<String, Integer>} object
      */
     public Single<Map<String, Integer>> getEmptyAsync() {
-        return getEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() { public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() {
+                    public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putEmpty(Map<String, String> arrayBody) {
         putEmptyAsync(arrayBody).toBlocking().value();
@@ -567,7 +573,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -579,7 +585,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -594,15 +600,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putEmptyAsync(Map<String, String> arrayBody) {
-        return putEmptyWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putEmptyWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get Dictionary with null value.
@@ -610,7 +619,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, String&gt; object if successful.
+     * @return the {@link Map<String, String>} object if successful.
      */
     public Map<String, String> getNullValue() {
         return getNullValueAsync().toBlocking().value();
@@ -641,13 +650,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get Dictionary with null value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, String>> object
+     * @return a {@link Single} emitting the {@link Map<String, String>} object
      */
     public Single<Map<String, String>> getNullValueAsync() {
-        return getNullValueWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() { public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullValueWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() {
+                    public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get Dictionary with null key.
@@ -655,7 +667,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, String&gt; object if successful.
+     * @return the {@link Map<String, String>} object if successful.
      */
     public Map<String, String> getNullKey() {
         return getNullKeyAsync().toBlocking().value();
@@ -686,13 +698,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get Dictionary with null key.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, String>> object
+     * @return a {@link Single} emitting the {@link Map<String, String>} object
      */
     public Single<Map<String, String>> getNullKeyAsync() {
-        return getNullKeyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() { public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullKeyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() {
+                    public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get Dictionary with key as empty string.
@@ -700,7 +715,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, String&gt; object if successful.
+     * @return the {@link Map<String, String>} object if successful.
      */
     public Map<String, String> getEmptyStringKey() {
         return getEmptyStringKeyAsync().toBlocking().value();
@@ -731,13 +746,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get Dictionary with key as empty string.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, String>> object
+     * @return a {@link Single} emitting the {@link Map<String, String>} object
      */
     public Single<Map<String, String>> getEmptyStringKeyAsync() {
-        return getEmptyStringKeyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() { public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyStringKeyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() {
+                    public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid Dictionary value.
@@ -745,7 +763,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, String&gt; object if successful.
+     * @return the {@link Map<String, String>} object if successful.
      */
     public Map<String, String> getInvalid() {
         return getInvalidAsync().toBlocking().value();
@@ -776,13 +794,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get invalid Dictionary value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, String>> object
+     * @return a {@link Single} emitting the {@link Map<String, String>} object
      */
     public Single<Map<String, String>> getInvalidAsync() {
-        return getInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() { public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() {
+                    public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get boolean dictionary value {"0": true, "1": false, "2": false, "3": true }.
@@ -790,7 +811,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Boolean&gt; object if successful.
+     * @return the {@link Map<String, Boolean>} object if successful.
      */
     public Map<String, Boolean> getBooleanTfft() {
         return getBooleanTfftAsync().toBlocking().value();
@@ -821,22 +842,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get boolean dictionary value {"0": true, "1": false, "2": false, "3": true }.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Boolean>> object
+     * @return a {@link Single} emitting the {@link Map<String, Boolean>} object
      */
     public Single<Map<String, Boolean>> getBooleanTfftAsync() {
-        return getBooleanTfftWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Boolean>>, Map<String, Boolean>>() { public Map<String, Boolean> call(RestResponse<Void, Map<String, Boolean>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBooleanTfftWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Boolean>>, Map<String, Boolean>>() {
+                    public Map<String, Boolean> call(RestResponse<Void, Map<String, Boolean>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map&lt;String, Boolean&gt; value
+     * @param arrayBody the Map<String, Boolean> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBooleanTfft(Map<String, Boolean> arrayBody) {
         putBooleanTfftAsync(arrayBody).toBlocking().value();
@@ -845,7 +869,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map&lt;String, Boolean&gt; value
+     * @param arrayBody the Map<String, Boolean> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -857,7 +881,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map&lt;String, Boolean&gt; value
+     * @param arrayBody the Map<String, Boolean> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -872,15 +896,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": true, "1": false, "2": false, "3": true }.
      *
-     * @param arrayBody the Map&lt;String, Boolean&gt; value
+     * @param arrayBody the Map<String, Boolean> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBooleanTfftAsync(Map<String, Boolean> arrayBody) {
-        return putBooleanTfftWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBooleanTfftWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get boolean dictionary value {"0": true, "1": null, "2": false }.
@@ -888,7 +915,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Boolean&gt; object if successful.
+     * @return the {@link Map<String, Boolean>} object if successful.
      */
     public Map<String, Boolean> getBooleanInvalidNull() {
         return getBooleanInvalidNullAsync().toBlocking().value();
@@ -919,13 +946,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get boolean dictionary value {"0": true, "1": null, "2": false }.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Boolean>> object
+     * @return a {@link Single} emitting the {@link Map<String, Boolean>} object
      */
     public Single<Map<String, Boolean>> getBooleanInvalidNullAsync() {
-        return getBooleanInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Boolean>>, Map<String, Boolean>>() { public Map<String, Boolean> call(RestResponse<Void, Map<String, Boolean>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBooleanInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Boolean>>, Map<String, Boolean>>() {
+                    public Map<String, Boolean> call(RestResponse<Void, Map<String, Boolean>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get boolean dictionary value '{"0": true, "1": "boolean", "2": false}'.
@@ -933,7 +963,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Boolean&gt; object if successful.
+     * @return the {@link Map<String, Boolean>} object if successful.
      */
     public Map<String, Boolean> getBooleanInvalidString() {
         return getBooleanInvalidStringAsync().toBlocking().value();
@@ -964,13 +994,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get boolean dictionary value '{"0": true, "1": "boolean", "2": false}'.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Boolean>> object
+     * @return a {@link Single} emitting the {@link Map<String, Boolean>} object
      */
     public Single<Map<String, Boolean>> getBooleanInvalidStringAsync() {
-        return getBooleanInvalidStringWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Boolean>>, Map<String, Boolean>>() { public Map<String, Boolean> call(RestResponse<Void, Map<String, Boolean>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBooleanInvalidStringWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Boolean>>, Map<String, Boolean>>() {
+                    public Map<String, Boolean> call(RestResponse<Void, Map<String, Boolean>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}.
@@ -978,7 +1011,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Integer&gt; object if successful.
+     * @return the {@link Map<String, Integer>} object if successful.
      */
     public Map<String, Integer> getIntegerValid() {
         return getIntegerValidAsync().toBlocking().value();
@@ -1009,22 +1042,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Integer>> object
+     * @return a {@link Single} emitting the {@link Map<String, Integer>} object
      */
     public Single<Map<String, Integer>> getIntegerValidAsync() {
-        return getIntegerValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() { public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getIntegerValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() {
+                    public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Integer&gt; value
+     * @param arrayBody the Map<String, Integer> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putIntegerValid(Map<String, Integer> arrayBody) {
         putIntegerValidAsync(arrayBody).toBlocking().value();
@@ -1033,7 +1069,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Integer&gt; value
+     * @param arrayBody the Map<String, Integer> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1045,7 +1081,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Integer&gt; value
+     * @param arrayBody the Map<String, Integer> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1060,15 +1096,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Integer&gt; value
+     * @param arrayBody the Map<String, Integer> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putIntegerValidAsync(Map<String, Integer> arrayBody) {
-        return putIntegerValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putIntegerValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get integer dictionary value {"0": 1, "1": null, "2": 0}.
@@ -1076,7 +1115,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Integer&gt; object if successful.
+     * @return the {@link Map<String, Integer>} object if successful.
      */
     public Map<String, Integer> getIntInvalidNull() {
         return getIntInvalidNullAsync().toBlocking().value();
@@ -1107,13 +1146,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get integer dictionary value {"0": 1, "1": null, "2": 0}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Integer>> object
+     * @return a {@link Single} emitting the {@link Map<String, Integer>} object
      */
     public Single<Map<String, Integer>> getIntInvalidNullAsync() {
-        return getIntInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() { public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getIntInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() {
+                    public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get integer dictionary value {"0": 1, "1": "integer", "2": 0}.
@@ -1121,7 +1163,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Integer&gt; object if successful.
+     * @return the {@link Map<String, Integer>} object if successful.
      */
     public Map<String, Integer> getIntInvalidString() {
         return getIntInvalidStringAsync().toBlocking().value();
@@ -1152,13 +1194,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get integer dictionary value {"0": 1, "1": "integer", "2": 0}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Integer>> object
+     * @return a {@link Single} emitting the {@link Map<String, Integer>} object
      */
     public Single<Map<String, Integer>> getIntInvalidStringAsync() {
-        return getIntInvalidStringWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() { public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getIntInvalidStringWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() {
+                    public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}.
@@ -1166,7 +1211,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Long&gt; object if successful.
+     * @return the {@link Map<String, Long>} object if successful.
      */
     public Map<String, Long> getLongValid() {
         return getLongValidAsync().toBlocking().value();
@@ -1197,22 +1242,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Long>> object
+     * @return a {@link Single} emitting the {@link Map<String, Long>} object
      */
     public Single<Map<String, Long>> getLongValidAsync() {
-        return getLongValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Long>>, Map<String, Long>>() { public Map<String, Long> call(RestResponse<Void, Map<String, Long>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLongValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Long>>, Map<String, Long>>() {
+                    public Map<String, Long> call(RestResponse<Void, Map<String, Long>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Long&gt; value
+     * @param arrayBody the Map<String, Long> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putLongValid(Map<String, Long> arrayBody) {
         putLongValidAsync(arrayBody).toBlocking().value();
@@ -1221,7 +1269,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Long&gt; value
+     * @param arrayBody the Map<String, Long> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1233,7 +1281,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Long&gt; value
+     * @param arrayBody the Map<String, Long> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1248,15 +1296,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}.
      *
-     * @param arrayBody the Map&lt;String, Long&gt; value
+     * @param arrayBody the Map<String, Long> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putLongValidAsync(Map<String, Long> arrayBody) {
-        return putLongValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putLongValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get long dictionary value {"0": 1, "1": null, "2": 0}.
@@ -1264,7 +1315,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Long&gt; object if successful.
+     * @return the {@link Map<String, Long>} object if successful.
      */
     public Map<String, Long> getLongInvalidNull() {
         return getLongInvalidNullAsync().toBlocking().value();
@@ -1295,13 +1346,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get long dictionary value {"0": 1, "1": null, "2": 0}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Long>> object
+     * @return a {@link Single} emitting the {@link Map<String, Long>} object
      */
     public Single<Map<String, Long>> getLongInvalidNullAsync() {
-        return getLongInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Long>>, Map<String, Long>>() { public Map<String, Long> call(RestResponse<Void, Map<String, Long>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLongInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Long>>, Map<String, Long>>() {
+                    public Map<String, Long> call(RestResponse<Void, Map<String, Long>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get long dictionary value {"0": 1, "1": "integer", "2": 0}.
@@ -1309,7 +1363,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Long&gt; object if successful.
+     * @return the {@link Map<String, Long>} object if successful.
      */
     public Map<String, Long> getLongInvalidString() {
         return getLongInvalidStringAsync().toBlocking().value();
@@ -1340,13 +1394,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get long dictionary value {"0": 1, "1": "integer", "2": 0}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Long>> object
+     * @return a {@link Single} emitting the {@link Map<String, Long>} object
      */
     public Single<Map<String, Long>> getLongInvalidStringAsync() {
-        return getLongInvalidStringWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Long>>, Map<String, Long>>() { public Map<String, Long> call(RestResponse<Void, Map<String, Long>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLongInvalidStringWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Long>>, Map<String, Long>>() {
+                    public Map<String, Long> call(RestResponse<Void, Map<String, Long>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
@@ -1354,7 +1411,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Double&gt; object if successful.
+     * @return the {@link Map<String, Double>} object if successful.
      */
     public Map<String, Double> getFloatValid() {
         return getFloatValidAsync().toBlocking().value();
@@ -1385,22 +1442,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Double>> object
+     * @return a {@link Single} emitting the {@link Map<String, Double>} object
      */
     public Single<Map<String, Double>> getFloatValidAsync() {
-        return getFloatValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() { public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getFloatValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() {
+                    public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putFloatValid(Map<String, Double> arrayBody) {
         putFloatValidAsync(arrayBody).toBlocking().value();
@@ -1409,7 +1469,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1421,7 +1481,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1436,15 +1496,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putFloatValidAsync(Map<String, Double> arrayBody) {
-        return putFloatValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putFloatValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}.
@@ -1452,7 +1515,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Double&gt; object if successful.
+     * @return the {@link Map<String, Double>} object if successful.
      */
     public Map<String, Double> getFloatInvalidNull() {
         return getFloatInvalidNullAsync().toBlocking().value();
@@ -1483,13 +1546,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Double>> object
+     * @return a {@link Single} emitting the {@link Map<String, Double>} object
      */
     public Single<Map<String, Double>> getFloatInvalidNullAsync() {
-        return getFloatInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() { public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getFloatInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() {
+                    public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}.
@@ -1497,7 +1563,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Double&gt; object if successful.
+     * @return the {@link Map<String, Double>} object if successful.
      */
     public Map<String, Double> getFloatInvalidString() {
         return getFloatInvalidStringAsync().toBlocking().value();
@@ -1528,13 +1594,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Double>> object
+     * @return a {@link Single} emitting the {@link Map<String, Double>} object
      */
     public Single<Map<String, Double>> getFloatInvalidStringAsync() {
-        return getFloatInvalidStringWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() { public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getFloatInvalidStringWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() {
+                    public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
@@ -1542,7 +1611,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Double&gt; object if successful.
+     * @return the {@link Map<String, Double>} object if successful.
      */
     public Map<String, Double> getDoubleValid() {
         return getDoubleValidAsync().toBlocking().value();
@@ -1573,22 +1642,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Double>> object
+     * @return a {@link Single} emitting the {@link Map<String, Double>} object
      */
     public Single<Map<String, Double>> getDoubleValidAsync() {
-        return getDoubleValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() { public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDoubleValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() {
+                    public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDoubleValid(Map<String, Double> arrayBody) {
         putDoubleValidAsync(arrayBody).toBlocking().value();
@@ -1597,7 +1669,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1609,7 +1681,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1624,15 +1696,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}.
      *
-     * @param arrayBody the Map&lt;String, Double&gt; value
+     * @param arrayBody the Map<String, Double> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDoubleValidAsync(Map<String, Double> arrayBody) {
-        return putDoubleValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDoubleValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}.
@@ -1640,7 +1715,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Double&gt; object if successful.
+     * @return the {@link Map<String, Double>} object if successful.
      */
     public Map<String, Double> getDoubleInvalidNull() {
         return getDoubleInvalidNullAsync().toBlocking().value();
@@ -1671,13 +1746,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Double>> object
+     * @return a {@link Single} emitting the {@link Map<String, Double>} object
      */
     public Single<Map<String, Double>> getDoubleInvalidNullAsync() {
-        return getDoubleInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() { public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDoubleInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() {
+                    public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}.
@@ -1685,7 +1763,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Double&gt; object if successful.
+     * @return the {@link Map<String, Double>} object if successful.
      */
     public Map<String, Double> getDoubleInvalidString() {
         return getDoubleInvalidStringAsync().toBlocking().value();
@@ -1716,13 +1794,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Double>> object
+     * @return a {@link Single} emitting the {@link Map<String, Double>} object
      */
     public Single<Map<String, Double>> getDoubleInvalidStringAsync() {
-        return getDoubleInvalidStringWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() { public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDoubleInvalidStringWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Double>>, Map<String, Double>>() {
+                    public Map<String, Double> call(RestResponse<Void, Map<String, Double>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get string dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
@@ -1730,7 +1811,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, String&gt; object if successful.
+     * @return the {@link Map<String, String>} object if successful.
      */
     public Map<String, String> getStringValid() {
         return getStringValidAsync().toBlocking().value();
@@ -1761,22 +1842,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get string dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, String>> object
+     * @return a {@link Single} emitting the {@link Map<String, String>} object
      */
     public Single<Map<String, String>> getStringValidAsync() {
-        return getStringValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() { public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getStringValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() {
+                    public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putStringValid(Map<String, String> arrayBody) {
         putStringValidAsync(arrayBody).toBlocking().value();
@@ -1785,7 +1869,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1797,7 +1881,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1812,15 +1896,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}.
      *
-     * @param arrayBody the Map&lt;String, String&gt; value
+     * @param arrayBody the Map<String, String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putStringValidAsync(Map<String, String> arrayBody) {
-        return putStringValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putStringValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get string dictionary value {"0": "foo", "1": null, "2": "foo2"}.
@@ -1828,7 +1915,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, String&gt; object if successful.
+     * @return the {@link Map<String, String>} object if successful.
      */
     public Map<String, String> getStringWithNull() {
         return getStringWithNullAsync().toBlocking().value();
@@ -1859,13 +1946,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get string dictionary value {"0": "foo", "1": null, "2": "foo2"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, String>> object
+     * @return a {@link Single} emitting the {@link Map<String, String>} object
      */
     public Single<Map<String, String>> getStringWithNullAsync() {
-        return getStringWithNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() { public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getStringWithNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() {
+                    public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get string dictionary value {"0": "foo", "1": 123, "2": "foo2"}.
@@ -1873,7 +1963,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, String&gt; object if successful.
+     * @return the {@link Map<String, String>} object if successful.
      */
     public Map<String, String> getStringWithInvalid() {
         return getStringWithInvalidAsync().toBlocking().value();
@@ -1904,13 +1994,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get string dictionary value {"0": "foo", "1": 123, "2": "foo2"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, String>> object
+     * @return a {@link Single} emitting the {@link Map<String, String>} object
      */
     public Single<Map<String, String>> getStringWithInvalidAsync() {
-        return getStringWithInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() { public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getStringWithInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, String>>, Map<String, String>>() {
+                    public Map<String, String> call(RestResponse<Void, Map<String, String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get integer dictionary value {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
@@ -1918,7 +2011,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, LocalDate&gt; object if successful.
+     * @return the {@link Map<String, LocalDate>} object if successful.
      */
     public Map<String, LocalDate> getDateValid() {
         return getDateValidAsync().toBlocking().value();
@@ -1949,22 +2042,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get integer dictionary value {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, LocalDate>> object
+     * @return a {@link Single} emitting the {@link Map<String, LocalDate>} object
      */
     public Single<Map<String, LocalDate>> getDateValidAsync() {
-        return getDateValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, LocalDate>>, Map<String, LocalDate>>() { public Map<String, LocalDate> call(RestResponse<Void, Map<String, LocalDate>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, LocalDate>>, Map<String, LocalDate>>() {
+                    public Map<String, LocalDate> call(RestResponse<Void, Map<String, LocalDate>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map&lt;String, LocalDate&gt; value
+     * @param arrayBody the Map<String, LocalDate> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDateValid(Map<String, LocalDate> arrayBody) {
         putDateValidAsync(arrayBody).toBlocking().value();
@@ -1973,7 +2069,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map&lt;String, LocalDate&gt; value
+     * @param arrayBody the Map<String, LocalDate> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1985,7 +2081,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map&lt;String, LocalDate&gt; value
+     * @param arrayBody the Map<String, LocalDate> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2000,15 +2096,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2": "1492-10-12"}.
      *
-     * @param arrayBody the Map&lt;String, LocalDate&gt; value
+     * @param arrayBody the Map<String, LocalDate> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDateValidAsync(Map<String, LocalDate> arrayBody) {
-        return putDateValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDateValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get date dictionary value {"0": "2012-01-01", "1": null, "2": "1776-07-04"}.
@@ -2016,7 +2115,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, LocalDate&gt; object if successful.
+     * @return the {@link Map<String, LocalDate>} object if successful.
      */
     public Map<String, LocalDate> getDateInvalidNull() {
         return getDateInvalidNullAsync().toBlocking().value();
@@ -2047,13 +2146,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get date dictionary value {"0": "2012-01-01", "1": null, "2": "1776-07-04"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, LocalDate>> object
+     * @return a {@link Single} emitting the {@link Map<String, LocalDate>} object
      */
     public Single<Map<String, LocalDate>> getDateInvalidNullAsync() {
-        return getDateInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, LocalDate>>, Map<String, LocalDate>>() { public Map<String, LocalDate> call(RestResponse<Void, Map<String, LocalDate>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, LocalDate>>, Map<String, LocalDate>>() {
+                    public Map<String, LocalDate> call(RestResponse<Void, Map<String, LocalDate>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get date dictionary value {"0": "2011-03-22", "1": "date"}.
@@ -2061,7 +2163,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, LocalDate&gt; object if successful.
+     * @return the {@link Map<String, LocalDate>} object if successful.
      */
     public Map<String, LocalDate> getDateInvalidChars() {
         return getDateInvalidCharsAsync().toBlocking().value();
@@ -2092,13 +2194,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get date dictionary value {"0": "2011-03-22", "1": "date"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, LocalDate>> object
+     * @return a {@link Single} emitting the {@link Map<String, LocalDate>} object
      */
     public Single<Map<String, LocalDate>> getDateInvalidCharsAsync() {
-        return getDateInvalidCharsWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, LocalDate>>, Map<String, LocalDate>>() { public Map<String, LocalDate> call(RestResponse<Void, Map<String, LocalDate>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateInvalidCharsWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, LocalDate>>, Map<String, LocalDate>>() {
+                    public Map<String, LocalDate> call(RestResponse<Void, Map<String, LocalDate>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get date-time dictionary value {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
@@ -2106,7 +2211,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, DateTime&gt; object if successful.
+     * @return the {@link Map<String, DateTime>} object if successful.
      */
     public Map<String, DateTime> getDateTimeValid() {
         return getDateTimeValidAsync().toBlocking().value();
@@ -2137,22 +2242,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get date-time dictionary value {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, DateTime>> object
+     * @return a {@link Single} emitting the {@link Map<String, DateTime>} object
      */
     public Single<Map<String, DateTime>> getDateTimeValidAsync() {
-        return getDateTimeValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() { public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateTimeValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() {
+                    public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map&lt;String, DateTime&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDateTimeValid(Map<String, DateTime> arrayBody) {
         putDateTimeValidAsync(arrayBody).toBlocking().value();
@@ -2161,7 +2269,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map&lt;String, DateTime&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2173,7 +2281,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map&lt;String, DateTime&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2188,15 +2296,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "2000-12-01t00:00:01z", "1": "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}.
      *
-     * @param arrayBody the Map&lt;String, DateTime&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDateTimeValidAsync(Map<String, DateTime> arrayBody) {
-        return putDateTimeValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDateTimeValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get date dictionary value {"0": "2000-12-01t00:00:01z", "1": null}.
@@ -2204,7 +2315,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, DateTime&gt; object if successful.
+     * @return the {@link Map<String, DateTime>} object if successful.
      */
     public Map<String, DateTime> getDateTimeInvalidNull() {
         return getDateTimeInvalidNullAsync().toBlocking().value();
@@ -2235,13 +2346,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get date dictionary value {"0": "2000-12-01t00:00:01z", "1": null}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, DateTime>> object
+     * @return a {@link Single} emitting the {@link Map<String, DateTime>} object
      */
     public Single<Map<String, DateTime>> getDateTimeInvalidNullAsync() {
-        return getDateTimeInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() { public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateTimeInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() {
+                    public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get date dictionary value {"0": "2000-12-01t00:00:01z", "1": "date-time"}.
@@ -2249,7 +2363,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, DateTime&gt; object if successful.
+     * @return the {@link Map<String, DateTime>} object if successful.
      */
     public Map<String, DateTime> getDateTimeInvalidChars() {
         return getDateTimeInvalidCharsAsync().toBlocking().value();
@@ -2280,13 +2394,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get date dictionary value {"0": "2000-12-01t00:00:01z", "1": "date-time"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, DateTime>> object
+     * @return a {@link Single} emitting the {@link Map<String, DateTime>} object
      */
     public Single<Map<String, DateTime>> getDateTimeInvalidCharsAsync() {
-        return getDateTimeInvalidCharsWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() { public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateTimeInvalidCharsWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() {
+                    public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get date-time-rfc1123 dictionary value {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
@@ -2294,7 +2411,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, DateTime&gt; object if successful.
+     * @return the {@link Map<String, DateTime>} object if successful.
      */
     public Map<String, DateTime> getDateTimeRfc1123Valid() {
         return getDateTimeRfc1123ValidAsync().toBlocking().value();
@@ -2325,22 +2442,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get date-time-rfc1123 dictionary value {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, DateTime>> object
+     * @return a {@link Single} emitting the {@link Map<String, DateTime>} object
      */
     public Single<Map<String, DateTime>> getDateTimeRfc1123ValidAsync() {
-        return getDateTimeRfc1123ValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() { public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDateTimeRfc1123ValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, DateTime>>, Map<String, DateTime>>() {
+                    public Map<String, DateTime> call(RestResponse<Void, Map<String, DateTime>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map&lt;String, DateTimeRfc1123&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDateTimeRfc1123Valid(Map<String, DateTime> arrayBody) {
         putDateTimeRfc1123ValidAsync(arrayBody).toBlocking().value();
@@ -2349,7 +2469,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map&lt;String, DateTimeRfc1123&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2361,7 +2481,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map&lt;String, DateTimeRfc1123&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2370,26 +2490,29 @@ public class DictionarysImpl implements Dictionarys {
             throw new IllegalArgumentException("Parameter arrayBody is required and cannot be null.");
         }
         Validator.validate(arrayBody);
-    Map<String, DateTimeRfc1123> arrayBodyConverted = new HashMap<String, DateTimeRfc1123>();
-    for (Map.Entry<String, DateTime> entry : arrayBody.entrySet()) {
-        DateTimeRfc1123 value = new DateTimeRfc1123(entry.getValue());
-        arrayBodyConverted.put(entry.getKey(), value);
-    }
+        Map<String, DateTimeRfc1123> arrayBodyConverted = new HashMap<String, DateTimeRfc1123>();
+        for (Map.Entry<String, DateTime> entry : arrayBody.entrySet()) {
+            DateTimeRfc1123 value = new DateTimeRfc1123(entry.getValue());
+            arrayBodyConverted.put(entry.getKey(), value);
+        }
         return service.putDateTimeRfc1123Valid(arrayBodyConverted);
     }
 
     /**
      * Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}.
      *
-     * @param arrayBody the Map&lt;String, DateTimeRfc1123&gt; value
+     * @param arrayBody the Map<String, DateTime> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDateTimeRfc1123ValidAsync(Map<String, DateTime> arrayBody) {
-        return putDateTimeRfc1123ValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDateTimeRfc1123ValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get duration dictionary value {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
@@ -2397,7 +2520,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Period&gt; object if successful.
+     * @return the {@link Map<String, Period>} object if successful.
      */
     public Map<String, Period> getDurationValid() {
         return getDurationValidAsync().toBlocking().value();
@@ -2428,22 +2551,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get duration dictionary value {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Period>> object
+     * @return a {@link Single} emitting the {@link Map<String, Period>} object
      */
     public Single<Map<String, Period>> getDurationValidAsync() {
-        return getDurationValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Period>>, Map<String, Period>>() { public Map<String, Period> call(RestResponse<Void, Map<String, Period>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDurationValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Period>>, Map<String, Period>>() {
+                    public Map<String, Period> call(RestResponse<Void, Map<String, Period>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map&lt;String, Period&gt; value
+     * @param arrayBody the Map<String, Period> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDurationValid(Map<String, Period> arrayBody) {
         putDurationValidAsync(arrayBody).toBlocking().value();
@@ -2452,7 +2578,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map&lt;String, Period&gt; value
+     * @param arrayBody the Map<String, Period> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2464,7 +2590,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map&lt;String, Period&gt; value
+     * @param arrayBody the Map<String, Period> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2479,15 +2605,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}.
      *
-     * @param arrayBody the Map&lt;String, Period&gt; value
+     * @param arrayBody the Map<String, Period> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDurationValidAsync(Map<String, Period> arrayBody) {
-        return putDurationValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDurationValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get byte dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each item encoded in base64.
@@ -2495,7 +2624,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, byte[]&gt; object if successful.
+     * @return the {@link Map<String, byte[]>} object if successful.
      */
     public Map<String, byte[]> getByteValid() {
         return getByteValidAsync().toBlocking().value();
@@ -2526,22 +2655,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get byte dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each item encoded in base64.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, byte[]>> object
+     * @return a {@link Single} emitting the {@link Map<String, byte[]>} object
      */
     public Single<Map<String, byte[]>> getByteValidAsync() {
-        return getByteValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, byte[]>>, Map<String, byte[]>>() { public Map<String, byte[]> call(RestResponse<Void, Map<String, byte[]>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getByteValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, byte[]>>, Map<String, byte[]>>() {
+                    public Map<String, byte[]> call(RestResponse<Void, Map<String, byte[]>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map&lt;String, byte[]&gt; value
+     * @param arrayBody the Map<String, byte[]> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putByteValid(Map<String, byte[]> arrayBody) {
         putByteValidAsync(arrayBody).toBlocking().value();
@@ -2550,7 +2682,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map&lt;String, byte[]&gt; value
+     * @param arrayBody the Map<String, byte[]> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2562,7 +2694,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map&lt;String, byte[]&gt; value
+     * @param arrayBody the Map<String, byte[]> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2577,15 +2709,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03), "2": hex (25, 29, 43)} with each elementencoded in base 64.
      *
-     * @param arrayBody the Map&lt;String, byte[]&gt; value
+     * @param arrayBody the Map<String, byte[]> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putByteValidAsync(Map<String, byte[]> arrayBody) {
-        return putByteValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putByteValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get byte dictionary value {"0": hex(FF FF FF FA), "1": null} with the first item base64 encoded.
@@ -2593,7 +2728,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, byte[]&gt; object if successful.
+     * @return the {@link Map<String, byte[]>} object if successful.
      */
     public Map<String, byte[]> getByteInvalidNull() {
         return getByteInvalidNullAsync().toBlocking().value();
@@ -2624,13 +2759,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get byte dictionary value {"0": hex(FF FF FF FA), "1": null} with the first item base64 encoded.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, byte[]>> object
+     * @return a {@link Single} emitting the {@link Map<String, byte[]>} object
      */
     public Single<Map<String, byte[]>> getByteInvalidNullAsync() {
-        return getByteInvalidNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, byte[]>>, Map<String, byte[]>>() { public Map<String, byte[]> call(RestResponse<Void, Map<String, byte[]>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getByteInvalidNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, byte[]>>, Map<String, byte[]>>() {
+                    public Map<String, byte[]> call(RestResponse<Void, Map<String, byte[]>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get base64url dictionary value {"0": "a string that gets encoded with base64url", "1": "test string", "2": "Lorem ipsum"}.
@@ -2638,7 +2776,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, byte[]&gt; object if successful.
+     * @return the {@link Map<String, byte[]>} object if successful.
      */
     public Map<String, byte[]> getBase64Url() {
         return getBase64UrlAsync().toBlocking().value();
@@ -2669,13 +2807,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get base64url dictionary value {"0": "a string that gets encoded with base64url", "1": "test string", "2": "Lorem ipsum"}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, byte[]>> object
+     * @return a {@link Single} emitting the {@link Map<String, byte[]>} object
      */
     public Single<Map<String, byte[]>> getBase64UrlAsync() {
-        return getBase64UrlWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, byte[]>>, Map<String, byte[]>>() { public Map<String, byte[]> call(RestResponse<Void, Map<String, byte[]>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBase64UrlWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, byte[]>>, Map<String, byte[]>>() {
+                    public Map<String, byte[]> call(RestResponse<Void, Map<String, byte[]>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get dictionary of complex type null value.
@@ -2683,7 +2824,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Widget&gt; object if successful.
+     * @return the {@link Map<String, Widget>} object if successful.
      */
     public Map<String, Widget> getComplexNull() {
         return getComplexNullAsync().toBlocking().value();
@@ -2714,13 +2855,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get dictionary of complex type null value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Widget>> object
+     * @return a {@link Single} emitting the {@link Map<String, Widget>} object
      */
     public Single<Map<String, Widget>> getComplexNullAsync() {
-        return getComplexNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() { public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getComplexNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() {
+                    public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get empty dictionary of complex type {}.
@@ -2728,7 +2872,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Widget&gt; object if successful.
+     * @return the {@link Map<String, Widget>} object if successful.
      */
     public Map<String, Widget> getComplexEmpty() {
         return getComplexEmptyAsync().toBlocking().value();
@@ -2759,13 +2903,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get empty dictionary of complex type {}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Widget>> object
+     * @return a {@link Single} emitting the {@link Map<String, Widget>} object
      */
     public Single<Map<String, Widget>> getComplexEmptyAsync() {
-        return getComplexEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() { public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getComplexEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() {
+                    public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get dictionary of complex type with null item {"0": {"integer": 1, "string": "2"}, "1": null, "2": {"integer": 5, "string": "6"}}.
@@ -2773,7 +2920,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Widget&gt; object if successful.
+     * @return the {@link Map<String, Widget>} object if successful.
      */
     public Map<String, Widget> getComplexItemNull() {
         return getComplexItemNullAsync().toBlocking().value();
@@ -2804,13 +2951,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get dictionary of complex type with null item {"0": {"integer": 1, "string": "2"}, "1": null, "2": {"integer": 5, "string": "6"}}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Widget>> object
+     * @return a {@link Single} emitting the {@link Map<String, Widget>} object
      */
     public Single<Map<String, Widget>> getComplexItemNullAsync() {
-        return getComplexItemNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() { public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getComplexItemNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() {
+                    public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get dictionary of complex type with empty item {"0": {"integer": 1, "string": "2"}, "1:" {}, "2": {"integer": 5, "string": "6"}}.
@@ -2818,7 +2968,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Widget&gt; object if successful.
+     * @return the {@link Map<String, Widget>} object if successful.
      */
     public Map<String, Widget> getComplexItemEmpty() {
         return getComplexItemEmptyAsync().toBlocking().value();
@@ -2849,13 +2999,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get dictionary of complex type with empty item {"0": {"integer": 1, "string": "2"}, "1:" {}, "2": {"integer": 5, "string": "6"}}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Widget>> object
+     * @return a {@link Single} emitting the {@link Map<String, Widget>} object
      */
     public Single<Map<String, Widget>> getComplexItemEmptyAsync() {
-        return getComplexItemEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() { public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getComplexItemEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() {
+                    public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get dictionary of complex type with {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
@@ -2863,7 +3016,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Widget&gt; object if successful.
+     * @return the {@link Map<String, Widget>} object if successful.
      */
     public Map<String, Widget> getComplexValid() {
         return getComplexValidAsync().toBlocking().value();
@@ -2894,22 +3047,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get dictionary of complex type with {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Widget>> object
+     * @return a {@link Single} emitting the {@link Map<String, Widget>} object
      */
     public Single<Map<String, Widget>> getComplexValidAsync() {
-        return getComplexValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() { public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getComplexValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Widget>>, Map<String, Widget>>() {
+                    public Map<String, Widget> call(RestResponse<Void, Map<String, Widget>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map&lt;String, Widget&gt; value
+     * @param arrayBody the Map<String, Widget> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putComplexValid(Map<String, Widget> arrayBody) {
         putComplexValidAsync(arrayBody).toBlocking().value();
@@ -2918,7 +3074,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map&lt;String, Widget&gt; value
+     * @param arrayBody the Map<String, Widget> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -2930,7 +3086,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map&lt;String, Widget&gt; value
+     * @param arrayBody the Map<String, Widget> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -2945,15 +3101,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put an dictionary of complex type with values {"0": {"integer": 1, "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5, "string": "6"}}.
      *
-     * @param arrayBody the Map&lt;String, Widget&gt; value
+     * @param arrayBody the Map<String, Widget> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putComplexValidAsync(Map<String, Widget> arrayBody) {
-        return putComplexValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putComplexValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get a null array.
@@ -2961,7 +3120,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, List&lt;String&gt;&gt; object if successful.
+     * @return the {@link Map<String, List<String>>} object if successful.
      */
     public Map<String, List<String>> getArrayNull() {
         return getArrayNullAsync().toBlocking().value();
@@ -2992,13 +3151,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get a null array.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, List<String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, List<String>>} object
      */
     public Single<Map<String, List<String>>> getArrayNullAsync() {
-        return getArrayNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() { public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getArrayNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() {
+                    public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an empty dictionary {}.
@@ -3006,7 +3168,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, List&lt;String&gt;&gt; object if successful.
+     * @return the {@link Map<String, List<String>>} object if successful.
      */
     public Map<String, List<String>> getArrayEmpty() {
         return getArrayEmptyAsync().toBlocking().value();
@@ -3037,13 +3199,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get an empty dictionary {}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, List<String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, List<String>>} object
      */
     public Single<Map<String, List<String>>> getArrayEmptyAsync() {
-        return getArrayEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() { public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getArrayEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() {
+                    public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an dictionary of array of strings {"0": ["1", "2", "3"], "1": null, "2": ["7", "8", "9"]}.
@@ -3051,7 +3216,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, List&lt;String&gt;&gt; object if successful.
+     * @return the {@link Map<String, List<String>>} object if successful.
      */
     public Map<String, List<String>> getArrayItemNull() {
         return getArrayItemNullAsync().toBlocking().value();
@@ -3082,13 +3247,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get an dictionary of array of strings {"0": ["1", "2", "3"], "1": null, "2": ["7", "8", "9"]}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, List<String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, List<String>>} object
      */
     public Single<Map<String, List<String>>> getArrayItemNullAsync() {
-        return getArrayItemNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() { public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getArrayItemNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() {
+                    public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an array of array of strings [{"0": ["1", "2", "3"], "1": [], "2": ["7", "8", "9"]}.
@@ -3096,7 +3264,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, List&lt;String&gt;&gt; object if successful.
+     * @return the {@link Map<String, List<String>>} object if successful.
      */
     public Map<String, List<String>> getArrayItemEmpty() {
         return getArrayItemEmptyAsync().toBlocking().value();
@@ -3127,13 +3295,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get an array of array of strings [{"0": ["1", "2", "3"], "1": [], "2": ["7", "8", "9"]}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, List<String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, List<String>>} object
      */
     public Single<Map<String, List<String>>> getArrayItemEmptyAsync() {
-        return getArrayItemEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() { public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getArrayItemEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() {
+                    public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
@@ -3141,7 +3312,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, List&lt;String&gt;&gt; object if successful.
+     * @return the {@link Map<String, List<String>>} object if successful.
      */
     public Map<String, List<String>> getArrayValid() {
         return getArrayValidAsync().toBlocking().value();
@@ -3172,22 +3343,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get an array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, List<String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, List<String>>} object
      */
     public Single<Map<String, List<String>>> getArrayValidAsync() {
-        return getArrayValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() { public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getArrayValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, List<String>>>, Map<String, List<String>>>() {
+                    public Map<String, List<String>> call(RestResponse<Void, Map<String, List<String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map&lt;String, List&lt;String&gt;&gt; value
+     * @param arrayBody the Map<String, List<String>> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putArrayValid(Map<String, List<String>> arrayBody) {
         putArrayValidAsync(arrayBody).toBlocking().value();
@@ -3196,7 +3370,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map&lt;String, List&lt;String&gt;&gt; value
+     * @param arrayBody the Map<String, List<String>> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -3208,7 +3382,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map&lt;String, List&lt;String&gt;&gt; value
+     * @param arrayBody the Map<String, List<String>> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -3223,15 +3397,18 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4", "5", "6"], "2": ["7", "8", "9"]}.
      *
-     * @param arrayBody the Map&lt;String, List&lt;String&gt;&gt; value
+     * @param arrayBody the Map<String, List<String>> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putArrayValidAsync(Map<String, List<String>> arrayBody) {
-        return putArrayValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putArrayValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an dictionaries of dictionaries with value null.
@@ -3239,7 +3416,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Map&lt;String, String&gt;&gt; object if successful.
+     * @return the {@link Map<String, Map<String, String>>} object if successful.
      */
     public Map<String, Map<String, String>> getDictionaryNull() {
         return getDictionaryNullAsync().toBlocking().value();
@@ -3270,13 +3447,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get an dictionaries of dictionaries with value null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Map<String, String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, Map<String, String>>} object
      */
     public Single<Map<String, Map<String, String>>> getDictionaryNullAsync() {
-        return getDictionaryNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() { public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDictionaryNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() {
+                    public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {}.
@@ -3284,7 +3464,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Map&lt;String, String&gt;&gt; object if successful.
+     * @return the {@link Map<String, Map<String, String>>} object if successful.
      */
     public Map<String, Map<String, String>> getDictionaryEmpty() {
         return getDictionaryEmptyAsync().toBlocking().value();
@@ -3315,13 +3495,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Map<String, String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, Map<String, String>>} object
      */
     public Single<Map<String, Map<String, String>>> getDictionaryEmptyAsync() {
-        return getDictionaryEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() { public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDictionaryEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() {
+                    public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": null, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
@@ -3329,7 +3512,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Map&lt;String, String&gt;&gt; object if successful.
+     * @return the {@link Map<String, Map<String, String>>} object if successful.
      */
     public Map<String, Map<String, String>> getDictionaryItemNull() {
         return getDictionaryItemNullAsync().toBlocking().value();
@@ -3360,13 +3543,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": null, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Map<String, String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, Map<String, String>>} object
      */
     public Single<Map<String, Map<String, String>>> getDictionaryItemNullAsync() {
-        return getDictionaryItemNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() { public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDictionaryItemNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() {
+                    public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
@@ -3374,7 +3560,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Map&lt;String, String&gt;&gt; object if successful.
+     * @return the {@link Map<String, Map<String, String>>} object if successful.
      */
     public Map<String, Map<String, String>> getDictionaryItemEmpty() {
         return getDictionaryItemEmptyAsync().toBlocking().value();
@@ -3405,13 +3591,16 @@ public class DictionarysImpl implements Dictionarys {
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Map<String, String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, Map<String, String>>} object
      */
     public Single<Map<String, Map<String, String>>> getDictionaryItemEmptyAsync() {
-        return getDictionaryItemEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() { public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDictionaryItemEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() {
+                    public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
@@ -3419,7 +3608,7 @@ public class DictionarysImpl implements Dictionarys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Map&lt;String, String&gt;&gt; object if successful.
+     * @return the {@link Map<String, Map<String, String>>} object if successful.
      */
     public Map<String, Map<String, String>> getDictionaryValid() {
         return getDictionaryValidAsync().toBlocking().value();
@@ -3450,22 +3639,25 @@ public class DictionarysImpl implements Dictionarys {
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Map<String, String>>> object
+     * @return a {@link Single} emitting the {@link Map<String, Map<String, String>>} object
      */
     public Single<Map<String, Map<String, String>>> getDictionaryValidAsync() {
-        return getDictionaryValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() { public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getDictionaryValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Map<String, String>>>, Map<String, Map<String, String>>>() {
+                    public Map<String, Map<String, String>> call(RestResponse<Void, Map<String, Map<String, String>>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map&lt;String, Map&lt;String, String&gt;&gt; value
+     * @param arrayBody the Map<String, Map<String, String>> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putDictionaryValid(Map<String, Map<String, String>> arrayBody) {
         putDictionaryValidAsync(arrayBody).toBlocking().value();
@@ -3474,7 +3666,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map&lt;String, Map&lt;String, String&gt;&gt; value
+     * @param arrayBody the Map<String, Map<String, String>> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -3486,7 +3678,7 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map&lt;String, Map&lt;String, String&gt;&gt; value
+     * @param arrayBody the Map<String, Map<String, String>> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -3501,14 +3693,17 @@ public class DictionarysImpl implements Dictionarys {
     /**
      * Get an dictionaries of dictionaries of type &lt;string, string&gt; with value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four", "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9": "nine"}}.
      *
-     * @param arrayBody the Map&lt;String, Map&lt;String, String&gt;&gt; value
+     * @param arrayBody the Map<String, Map<String, String>> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putDictionaryValidAsync(Map<String, Map<String, String>> arrayBody) {
-        return putDictionaryValidWithRestResponseAsync(arrayBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putDictionaryValidWithRestResponseAsync(arrayBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

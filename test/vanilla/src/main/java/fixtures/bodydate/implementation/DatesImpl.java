@@ -113,7 +113,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LocalDate object if successful.
+     * @return the {@link LocalDate} object if successful.
      */
     public LocalDate getNull() {
         return getNullAsync().toBlocking().value();
@@ -144,13 +144,16 @@ public class DatesImpl implements Dates {
      * Get null date value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, LocalDate> object
+     * @return a {@link Single} emitting the {@link LocalDate} object
      */
     public Single<LocalDate> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() { public LocalDate call(RestResponse<Void, LocalDate> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() {
+                    public LocalDate call(RestResponse<Void, LocalDate> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid date value.
@@ -158,7 +161,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LocalDate object if successful.
+     * @return the {@link LocalDate} object if successful.
      */
     public LocalDate getInvalidDate() {
         return getInvalidDateAsync().toBlocking().value();
@@ -189,13 +192,16 @@ public class DatesImpl implements Dates {
      * Get invalid date value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, LocalDate> object
+     * @return a {@link Single} emitting the {@link LocalDate} object
      */
     public Single<LocalDate> getInvalidDateAsync() {
-        return getInvalidDateWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() { public LocalDate call(RestResponse<Void, LocalDate> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidDateWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() {
+                    public LocalDate call(RestResponse<Void, LocalDate> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get overflow date value.
@@ -203,7 +209,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LocalDate object if successful.
+     * @return the {@link LocalDate} object if successful.
      */
     public LocalDate getOverflowDate() {
         return getOverflowDateAsync().toBlocking().value();
@@ -234,13 +240,16 @@ public class DatesImpl implements Dates {
      * Get overflow date value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, LocalDate> object
+     * @return a {@link Single} emitting the {@link LocalDate} object
      */
     public Single<LocalDate> getOverflowDateAsync() {
-        return getOverflowDateWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() { public LocalDate call(RestResponse<Void, LocalDate> restResponse) { return restResponse.body(); } });
-        }
-
+            return getOverflowDateWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() {
+                    public LocalDate call(RestResponse<Void, LocalDate> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get underflow date value.
@@ -248,7 +257,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LocalDate object if successful.
+     * @return the {@link LocalDate} object if successful.
      */
     public LocalDate getUnderflowDate() {
         return getUnderflowDateAsync().toBlocking().value();
@@ -279,13 +288,16 @@ public class DatesImpl implements Dates {
      * Get underflow date value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, LocalDate> object
+     * @return a {@link Single} emitting the {@link LocalDate} object
      */
     public Single<LocalDate> getUnderflowDateAsync() {
-        return getUnderflowDateWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() { public LocalDate call(RestResponse<Void, LocalDate> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUnderflowDateWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() {
+                    public LocalDate call(RestResponse<Void, LocalDate> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put max date value 9999-12-31.
@@ -294,7 +306,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putMaxDate(LocalDate dateBody) {
         putMaxDateAsync(dateBody).toBlocking().value();
@@ -331,13 +343,16 @@ public class DatesImpl implements Dates {
      *
      * @param dateBody the LocalDate value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putMaxDateAsync(LocalDate dateBody) {
-        return putMaxDateWithRestResponseAsync(dateBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putMaxDateWithRestResponseAsync(dateBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get max date value 9999-12-31.
@@ -345,7 +360,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LocalDate object if successful.
+     * @return the {@link LocalDate} object if successful.
      */
     public LocalDate getMaxDate() {
         return getMaxDateAsync().toBlocking().value();
@@ -376,13 +391,16 @@ public class DatesImpl implements Dates {
      * Get max date value 9999-12-31.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, LocalDate> object
+     * @return a {@link Single} emitting the {@link LocalDate} object
      */
     public Single<LocalDate> getMaxDateAsync() {
-        return getMaxDateWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() { public LocalDate call(RestResponse<Void, LocalDate> restResponse) { return restResponse.body(); } });
-        }
-
+            return getMaxDateWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() {
+                    public LocalDate call(RestResponse<Void, LocalDate> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put min date value 0000-01-01.
@@ -391,7 +409,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putMinDate(LocalDate dateBody) {
         putMinDateAsync(dateBody).toBlocking().value();
@@ -428,13 +446,16 @@ public class DatesImpl implements Dates {
      *
      * @param dateBody the LocalDate value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putMinDateAsync(LocalDate dateBody) {
-        return putMinDateWithRestResponseAsync(dateBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putMinDateWithRestResponseAsync(dateBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get min date value 0000-01-01.
@@ -442,7 +463,7 @@ public class DatesImpl implements Dates {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LocalDate object if successful.
+     * @return the {@link LocalDate} object if successful.
      */
     public LocalDate getMinDate() {
         return getMinDateAsync().toBlocking().value();
@@ -473,12 +494,15 @@ public class DatesImpl implements Dates {
      * Get min date value 0000-01-01.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, LocalDate> object
+     * @return a {@link Single} emitting the {@link LocalDate} object
      */
     public Single<LocalDate> getMinDateAsync() {
-        return getMinDateWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() { public LocalDate call(RestResponse<Void, LocalDate> restResponse) { return restResponse.body(); } });
-        }
-
+            return getMinDateWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, LocalDate>, LocalDate>() {
+                    public LocalDate call(RestResponse<Void, LocalDate> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

@@ -199,7 +199,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredIntegerParameter(int bodyParameter) {
         return postRequiredIntegerParameterAsync(bodyParameter).toBlocking().value();
@@ -233,13 +233,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the int value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredIntegerParameterAsync(int bodyParameter) {
-        return postRequiredIntegerParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredIntegerParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put null.
@@ -247,7 +250,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerParameter() {
         postOptionalIntegerParameterAsync().toBlocking().value();
@@ -279,12 +282,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional integer. Please put null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalIntegerParameterAsync() {
-        return postOptionalIntegerParameterWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalIntegerParameterWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put null.
@@ -293,7 +300,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerParameter(Integer bodyParameter) {
         postOptionalIntegerParameterAsync(bodyParameter).toBlocking().value();
@@ -327,13 +334,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the Integer value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalIntegerParameterAsync(Integer bodyParameter) {
-        return postOptionalIntegerParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalIntegerParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the client library should throw before the request is sent.
@@ -342,7 +352,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredIntegerProperty(IntWrapper bodyParameter) {
         return postRequiredIntegerPropertyAsync(bodyParameter).toBlocking().value();
@@ -380,13 +390,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the IntWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredIntegerPropertyAsync(IntWrapper bodyParameter) {
-        return postRequiredIntegerPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredIntegerPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
@@ -394,7 +407,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerProperty() {
         postOptionalIntegerPropertyAsync().toBlocking().value();
@@ -427,12 +440,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalIntegerPropertyAsync() {
-        return postOptionalIntegerPropertyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalIntegerPropertyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
@@ -441,7 +458,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerProperty(IntOptionalWrapper bodyParameter) {
         postOptionalIntegerPropertyAsync(bodyParameter).toBlocking().value();
@@ -476,13 +493,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the IntOptionalWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalIntegerPropertyAsync(IntOptionalWrapper bodyParameter) {
-        return postOptionalIntegerPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalIntegerPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required integer. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
@@ -491,7 +511,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredIntegerHeader(int headerParameter) {
         return postRequiredIntegerHeaderAsync(headerParameter).toBlocking().value();
@@ -525,13 +545,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param headerParameter the int value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredIntegerHeaderAsync(int headerParameter) {
-        return postRequiredIntegerHeaderWithRestResponseAsync(headerParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredIntegerHeaderWithRestResponseAsync(headerParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
@@ -539,7 +562,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerHeader() {
         postOptionalIntegerHeaderAsync().toBlocking().value();
@@ -571,12 +594,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalIntegerHeaderAsync() {
-        return postOptionalIntegerHeaderWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalIntegerHeaderWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
@@ -585,7 +612,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalIntegerHeader(Integer headerParameter) {
         postOptionalIntegerHeaderAsync(headerParameter).toBlocking().value();
@@ -619,13 +646,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param headerParameter the Integer value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalIntegerHeaderAsync(Integer headerParameter) {
-        return postOptionalIntegerHeaderWithRestResponseAsync(headerParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalIntegerHeaderWithRestResponseAsync(headerParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required string. Please put null and the client library should throw before the request is sent.
@@ -634,7 +664,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredStringParameter(String bodyParameter) {
         return postRequiredStringParameterAsync(bodyParameter).toBlocking().value();
@@ -671,13 +701,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredStringParameterAsync(String bodyParameter) {
-        return postRequiredStringParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredStringParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional string. Please put null.
@@ -685,7 +718,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalStringParameter() {
         postOptionalStringParameterAsync().toBlocking().value();
@@ -717,12 +750,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional string. Please put null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalStringParameterAsync() {
-        return postOptionalStringParameterWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalStringParameterWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional string. Please put null.
@@ -731,7 +768,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalStringParameter(String bodyParameter) {
         postOptionalStringParameterAsync(bodyParameter).toBlocking().value();
@@ -765,13 +802,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalStringParameterAsync(String bodyParameter) {
-        return postOptionalStringParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalStringParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the client library should throw before the request is sent.
@@ -780,7 +820,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredStringProperty(StringWrapper bodyParameter) {
         return postRequiredStringPropertyAsync(bodyParameter).toBlocking().value();
@@ -818,13 +858,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the StringWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredStringPropertyAsync(StringWrapper bodyParameter) {
-        return postRequiredStringPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredStringPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
@@ -832,7 +875,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalStringProperty() {
         postOptionalStringPropertyAsync().toBlocking().value();
@@ -865,12 +908,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalStringPropertyAsync() {
-        return postOptionalStringPropertyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalStringPropertyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
@@ -879,7 +926,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalStringProperty(StringOptionalWrapper bodyParameter) {
         postOptionalStringPropertyAsync(bodyParameter).toBlocking().value();
@@ -914,13 +961,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the StringOptionalWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalStringPropertyAsync(StringOptionalWrapper bodyParameter) {
-        return postOptionalStringPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalStringPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required string. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
@@ -929,7 +979,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredStringHeader(String headerParameter) {
         return postRequiredStringHeaderAsync(headerParameter).toBlocking().value();
@@ -966,13 +1016,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param headerParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredStringHeaderAsync(String headerParameter) {
-        return postRequiredStringHeaderWithRestResponseAsync(headerParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredStringHeaderWithRestResponseAsync(headerParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional string. Please put a header 'headerParameter' =&gt; null.
@@ -980,7 +1033,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalStringHeader() {
         postOptionalStringHeaderAsync().toBlocking().value();
@@ -1012,12 +1065,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional string. Please put a header 'headerParameter' =&gt; null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalStringHeaderAsync() {
-        return postOptionalStringHeaderWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalStringHeaderWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional string. Please put a header 'headerParameter' =&gt; null.
@@ -1026,7 +1083,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalStringHeader(String bodyParameter) {
         postOptionalStringHeaderAsync(bodyParameter).toBlocking().value();
@@ -1060,13 +1117,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalStringHeaderAsync(String bodyParameter) {
-        return postOptionalStringHeaderWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalStringHeaderWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required complex object. Please put null and the client library should throw before the request is sent.
@@ -1075,7 +1135,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredClassParameter(Product bodyParameter) {
         return postRequiredClassParameterAsync(bodyParameter).toBlocking().value();
@@ -1113,13 +1173,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the Product value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredClassParameterAsync(Product bodyParameter) {
-        return postRequiredClassParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredClassParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional complex object. Please put null.
@@ -1127,7 +1190,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalClassParameter() {
         postOptionalClassParameterAsync().toBlocking().value();
@@ -1160,12 +1223,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional complex object. Please put null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalClassParameterAsync() {
-        return postOptionalClassParameterWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalClassParameterWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional complex object. Please put null.
@@ -1174,7 +1241,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalClassParameter(Product bodyParameter) {
         postOptionalClassParameterAsync(bodyParameter).toBlocking().value();
@@ -1209,13 +1276,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the Product value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalClassParameterAsync(Product bodyParameter) {
-        return postOptionalClassParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalClassParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null and the client library should throw before the request is sent.
@@ -1224,7 +1294,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredClassProperty(ClassWrapper bodyParameter) {
         return postRequiredClassPropertyAsync(bodyParameter).toBlocking().value();
@@ -1262,13 +1332,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the ClassWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredClassPropertyAsync(ClassWrapper bodyParameter) {
-        return postRequiredClassPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredClassPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
@@ -1276,7 +1349,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalClassProperty() {
         postOptionalClassPropertyAsync().toBlocking().value();
@@ -1309,12 +1382,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalClassPropertyAsync() {
-        return postOptionalClassPropertyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalClassPropertyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
@@ -1323,7 +1400,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalClassProperty(ClassOptionalWrapper bodyParameter) {
         postOptionalClassPropertyAsync(bodyParameter).toBlocking().value();
@@ -1358,22 +1435,25 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the ClassOptionalWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalClassPropertyAsync(ClassOptionalWrapper bodyParameter) {
-        return postOptionalClassPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalClassPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredArrayParameter(List<String> bodyParameter) {
         return postRequiredArrayParameterAsync(bodyParameter).toBlocking().value();
@@ -1382,7 +1462,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1394,7 +1474,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1409,15 +1489,18 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put null and the client library should throw before the request is sent.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredArrayParameterAsync(List<String> bodyParameter) {
-        return postRequiredArrayParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredArrayParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional array. Please put null.
@@ -1425,7 +1508,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayParameter() {
         postOptionalArrayParameterAsync().toBlocking().value();
@@ -1458,21 +1541,25 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional array. Please put null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalArrayParameterAsync() {
-        return postOptionalArrayParameterWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalArrayParameterWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayParameter(List<String> bodyParameter) {
         postOptionalArrayParameterAsync(bodyParameter).toBlocking().value();
@@ -1481,7 +1568,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1493,7 +1580,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
@@ -1505,15 +1592,18 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional array. Please put null.
      *
-     * @param bodyParameter the List&lt;String&gt; value
+     * @param bodyParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalArrayParameterAsync(List<String> bodyParameter) {
-        return postOptionalArrayParameterWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalArrayParameterWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the client library should throw before the request is sent.
@@ -1522,7 +1612,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredArrayProperty(ArrayWrapper bodyParameter) {
         return postRequiredArrayPropertyAsync(bodyParameter).toBlocking().value();
@@ -1560,13 +1650,16 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the ArrayWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredArrayPropertyAsync(ArrayWrapper bodyParameter) {
-        return postRequiredArrayPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredArrayPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
@@ -1574,7 +1667,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayProperty() {
         postOptionalArrayPropertyAsync().toBlocking().value();
@@ -1607,12 +1700,16 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalArrayPropertyAsync() {
-        return postOptionalArrayPropertyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalArrayPropertyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
@@ -1621,7 +1718,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayProperty(ArrayOptionalWrapper bodyParameter) {
         postOptionalArrayPropertyAsync(bodyParameter).toBlocking().value();
@@ -1656,22 +1753,25 @@ public class ExplicitsImpl implements Explicits {
      *
      * @param bodyParameter the ArrayOptionalWrapper value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalArrayPropertyAsync(ArrayOptionalWrapper bodyParameter) {
-        return postOptionalArrayPropertyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalArrayPropertyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error postRequiredArrayHeader(List<String> headerParameter) {
         return postRequiredArrayHeaderAsync(headerParameter).toBlocking().value();
@@ -1680,7 +1780,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1692,7 +1792,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Error> object
      */
@@ -1701,22 +1801,25 @@ public class ExplicitsImpl implements Explicits {
             throw new IllegalArgumentException("Parameter headerParameter is required and cannot be null.");
         }
         Validator.validate(headerParameter);
-    String headerParameterConverted = this.client.serializerAdapter().serializeList(headerParameter, CollectionFormat.CSV);
+        String headerParameterConverted = this.client.serializerAdapter().serializeList(headerParameter, CollectionFormat.CSV);
         return service.postRequiredArrayHeader(headerParameterConverted);
     }
 
     /**
      * Test explicitly required array. Please put a header 'headerParameter' =&gt; null and the client library should throw before the request is sent.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> postRequiredArrayHeaderAsync(List<String> headerParameter) {
-        return postRequiredArrayHeaderWithRestResponseAsync(headerParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return postRequiredArrayHeaderWithRestResponseAsync(headerParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
@@ -1724,7 +1827,7 @@ public class ExplicitsImpl implements Explicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayHeader() {
         postOptionalArrayHeaderAsync().toBlocking().value();
@@ -1750,7 +1853,7 @@ public class ExplicitsImpl implements Explicits {
     public Single<RestResponse<Void, Void>> postOptionalArrayHeaderWithRestResponseAsync() {
         final List<String> headerParameter = null;
         Validator.validate(headerParameter);
-    String headerParameterConverted = this.client.serializerAdapter().serializeList(headerParameter, CollectionFormat.CSV);
+        String headerParameterConverted = this.client.serializerAdapter().serializeList(headerParameter, CollectionFormat.CSV);
         return service.postOptionalArrayHeader(headerParameterConverted);
     }
 
@@ -1758,21 +1861,25 @@ public class ExplicitsImpl implements Explicits {
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalArrayHeaderAsync() {
-        return postOptionalArrayHeaderWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return postOptionalArrayHeaderWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void postOptionalArrayHeader(List<String> headerParameter) {
         postOptionalArrayHeaderAsync(headerParameter).toBlocking().value();
@@ -1781,7 +1888,7 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
@@ -1793,27 +1900,30 @@ public class ExplicitsImpl implements Explicits {
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return a {@link Single} emitting the RestResponse<Void, Void> object
      */
     public Single<RestResponse<Void, Void>> postOptionalArrayHeaderWithRestResponseAsync(List<String> headerParameter) {
         Validator.validate(headerParameter);
-    String headerParameterConverted = this.client.serializerAdapter().serializeList(headerParameter, CollectionFormat.CSV);
+        String headerParameterConverted = this.client.serializerAdapter().serializeList(headerParameter, CollectionFormat.CSV);
         return service.postOptionalArrayHeader(headerParameterConverted);
     }
 
     /**
      * Test explicitly optional integer. Please put a header 'headerParameter' =&gt; null.
      *
-     * @param headerParameter the List&lt;String&gt; value
+     * @param headerParameter the List<String> value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> postOptionalArrayHeaderAsync(List<String> headerParameter) {
-        return postOptionalArrayHeaderWithRestResponseAsync(headerParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return postOptionalArrayHeaderWithRestResponseAsync(headerParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

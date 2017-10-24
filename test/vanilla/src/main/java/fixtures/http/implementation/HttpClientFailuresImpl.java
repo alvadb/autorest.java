@@ -183,7 +183,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error head400() {
         return head400Async().toBlocking().value();
@@ -214,13 +214,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 400 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> head400Async() {
-        return head400WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return head400WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -228,7 +231,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error get400() {
         return get400Async().toBlocking().value();
@@ -259,13 +262,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 400 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> get400Async() {
-        return get400WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return get400WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -273,7 +279,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put400() {
         return put400Async().toBlocking().value();
@@ -305,12 +311,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 400 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put400Async() {
-        return put400WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return put400WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -319,7 +329,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put400(Boolean booleanValue) {
         return put400Async(booleanValue).toBlocking().value();
@@ -353,13 +363,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put400Async(Boolean booleanValue) {
-        return put400WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return put400WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -367,7 +380,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error patch400() {
         return patch400Async().toBlocking().value();
@@ -399,12 +412,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 400 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> patch400Async() {
-        return patch400WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return patch400WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -413,7 +430,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error patch400(Boolean booleanValue) {
         return patch400Async(booleanValue).toBlocking().value();
@@ -447,13 +464,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> patch400Async(Boolean booleanValue) {
-        return patch400WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return patch400WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -461,7 +481,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post400() {
         return post400Async().toBlocking().value();
@@ -493,12 +513,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 400 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post400Async() {
-        return post400WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return post400WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -507,7 +531,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post400(Boolean booleanValue) {
         return post400Async(booleanValue).toBlocking().value();
@@ -541,13 +565,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post400Async(Boolean booleanValue) {
-        return post400WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return post400WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -555,7 +582,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete400() {
         return delete400Async().toBlocking().value();
@@ -587,12 +614,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 400 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete400Async() {
-        return delete400WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return delete400WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 400 status code - should be represented in the client as an error.
@@ -601,7 +632,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete400(Boolean booleanValue) {
         return delete400Async(booleanValue).toBlocking().value();
@@ -635,13 +666,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete400Async(Boolean booleanValue) {
-        return delete400WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return delete400WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 401 status code - should be represented in the client as an error.
@@ -649,7 +683,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error head401() {
         return head401Async().toBlocking().value();
@@ -680,13 +714,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 401 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> head401Async() {
-        return head401WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return head401WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 402 status code - should be represented in the client as an error.
@@ -694,7 +731,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error get402() {
         return get402Async().toBlocking().value();
@@ -725,13 +762,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 402 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> get402Async() {
-        return get402WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return get402WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 403 status code - should be represented in the client as an error.
@@ -739,7 +779,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error get403() {
         return get403Async().toBlocking().value();
@@ -770,13 +810,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 403 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> get403Async() {
-        return get403WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return get403WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 404 status code - should be represented in the client as an error.
@@ -784,7 +827,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put404() {
         return put404Async().toBlocking().value();
@@ -816,12 +859,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 404 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put404Async() {
-        return put404WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return put404WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 404 status code - should be represented in the client as an error.
@@ -830,7 +877,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put404(Boolean booleanValue) {
         return put404Async(booleanValue).toBlocking().value();
@@ -864,13 +911,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put404Async(Boolean booleanValue) {
-        return put404WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return put404WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 405 status code - should be represented in the client as an error.
@@ -878,7 +928,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error patch405() {
         return patch405Async().toBlocking().value();
@@ -910,12 +960,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 405 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> patch405Async() {
-        return patch405WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return patch405WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 405 status code - should be represented in the client as an error.
@@ -924,7 +978,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error patch405(Boolean booleanValue) {
         return patch405Async(booleanValue).toBlocking().value();
@@ -958,13 +1012,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> patch405Async(Boolean booleanValue) {
-        return patch405WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return patch405WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 406 status code - should be represented in the client as an error.
@@ -972,7 +1029,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post406() {
         return post406Async().toBlocking().value();
@@ -1004,12 +1061,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 406 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post406Async() {
-        return post406WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return post406WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 406 status code - should be represented in the client as an error.
@@ -1018,7 +1079,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post406(Boolean booleanValue) {
         return post406Async(booleanValue).toBlocking().value();
@@ -1052,13 +1113,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post406Async(Boolean booleanValue) {
-        return post406WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return post406WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 407 status code - should be represented in the client as an error.
@@ -1066,7 +1130,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete407() {
         return delete407Async().toBlocking().value();
@@ -1098,12 +1162,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 407 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete407Async() {
-        return delete407WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return delete407WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 407 status code - should be represented in the client as an error.
@@ -1112,7 +1180,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete407(Boolean booleanValue) {
         return delete407Async(booleanValue).toBlocking().value();
@@ -1146,13 +1214,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete407Async(Boolean booleanValue) {
-        return delete407WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return delete407WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 409 status code - should be represented in the client as an error.
@@ -1160,7 +1231,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put409() {
         return put409Async().toBlocking().value();
@@ -1192,12 +1263,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 409 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put409Async() {
-        return put409WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return put409WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 409 status code - should be represented in the client as an error.
@@ -1206,7 +1281,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put409(Boolean booleanValue) {
         return put409Async(booleanValue).toBlocking().value();
@@ -1240,13 +1315,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put409Async(Boolean booleanValue) {
-        return put409WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return put409WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 410 status code - should be represented in the client as an error.
@@ -1254,7 +1332,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error head410() {
         return head410Async().toBlocking().value();
@@ -1285,13 +1363,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 410 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> head410Async() {
-        return head410WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return head410WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 411 status code - should be represented in the client as an error.
@@ -1299,7 +1380,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error get411() {
         return get411Async().toBlocking().value();
@@ -1330,13 +1411,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 411 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> get411Async() {
-        return get411WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return get411WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 412 status code - should be represented in the client as an error.
@@ -1344,7 +1428,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error get412() {
         return get412Async().toBlocking().value();
@@ -1375,13 +1459,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 412 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> get412Async() {
-        return get412WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return get412WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 413 status code - should be represented in the client as an error.
@@ -1389,7 +1476,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put413() {
         return put413Async().toBlocking().value();
@@ -1421,12 +1508,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 413 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put413Async() {
-        return put413WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return put413WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 413 status code - should be represented in the client as an error.
@@ -1435,7 +1526,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error put413(Boolean booleanValue) {
         return put413Async(booleanValue).toBlocking().value();
@@ -1469,13 +1560,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> put413Async(Boolean booleanValue) {
-        return put413WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return put413WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 414 status code - should be represented in the client as an error.
@@ -1483,7 +1577,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error patch414() {
         return patch414Async().toBlocking().value();
@@ -1515,12 +1609,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 414 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> patch414Async() {
-        return patch414WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return patch414WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 414 status code - should be represented in the client as an error.
@@ -1529,7 +1627,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error patch414(Boolean booleanValue) {
         return patch414Async(booleanValue).toBlocking().value();
@@ -1563,13 +1661,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> patch414Async(Boolean booleanValue) {
-        return patch414WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return patch414WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 415 status code - should be represented in the client as an error.
@@ -1577,7 +1678,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post415() {
         return post415Async().toBlocking().value();
@@ -1609,12 +1710,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 415 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post415Async() {
-        return post415WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return post415WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 415 status code - should be represented in the client as an error.
@@ -1623,7 +1728,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error post415(Boolean booleanValue) {
         return post415Async(booleanValue).toBlocking().value();
@@ -1657,13 +1762,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> post415Async(Boolean booleanValue) {
-        return post415WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return post415WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 416 status code - should be represented in the client as an error.
@@ -1671,7 +1779,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error get416() {
         return get416Async().toBlocking().value();
@@ -1702,13 +1810,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 416 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> get416Async() {
-        return get416WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return get416WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 417 status code - should be represented in the client as an error.
@@ -1716,7 +1827,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete417() {
         return delete417Async().toBlocking().value();
@@ -1748,12 +1859,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 417 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete417Async() {
-        return delete417WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
+            return delete417WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 417 status code - should be represented in the client as an error.
@@ -1762,7 +1877,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error delete417(Boolean booleanValue) {
         return delete417Async(booleanValue).toBlocking().value();
@@ -1796,13 +1911,16 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> delete417Async(Boolean booleanValue) {
-        return delete417WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return delete417WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 429 status code - should be represented in the client as an error.
@@ -1810,7 +1928,7 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error head429() {
         return head429Async().toBlocking().value();
@@ -1841,12 +1959,15 @@ public class HttpClientFailuresImpl implements HttpClientFailures {
      * Return 429 status code - should be represented in the client as an error.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> head429Async() {
-        return head429WithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return head429WithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

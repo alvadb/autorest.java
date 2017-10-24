@@ -209,7 +209,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getNull() {
         return getNullAsync().toBlocking().value();
@@ -240,13 +240,16 @@ public class NumbersImpl implements Numbers {
      * Get null Number value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid float Number value.
@@ -254,7 +257,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getInvalidFloat() {
         return getInvalidFloatAsync().toBlocking().value();
@@ -285,13 +288,16 @@ public class NumbersImpl implements Numbers {
      * Get invalid float Number value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getInvalidFloatAsync() {
-        return getInvalidFloatWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidFloatWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid double Number value.
@@ -299,7 +305,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getInvalidDouble() {
         return getInvalidDoubleAsync().toBlocking().value();
@@ -330,13 +336,16 @@ public class NumbersImpl implements Numbers {
      * Get invalid double Number value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getInvalidDoubleAsync() {
-        return getInvalidDoubleWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidDoubleWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid decimal Number value.
@@ -344,7 +353,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the BigDecimal object if successful.
+     * @return the {@link BigDecimal} object if successful.
      */
     public BigDecimal getInvalidDecimal() {
         return getInvalidDecimalAsync().toBlocking().value();
@@ -375,13 +384,16 @@ public class NumbersImpl implements Numbers {
      * Get invalid decimal Number value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, BigDecimal> object
+     * @return a {@link Single} emitting the {@link BigDecimal} object
      */
     public Single<BigDecimal> getInvalidDecimalAsync() {
-        return getInvalidDecimalWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() { public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidDecimalWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() {
+                    public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put big float value 3.402823e+20.
@@ -390,7 +402,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBigFloat(double numberBody) {
         putBigFloatAsync(numberBody).toBlocking().value();
@@ -424,13 +436,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the double value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBigFloatAsync(double numberBody) {
-        return putBigFloatWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBigFloatWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big float value 3.402823e+20.
@@ -438,7 +453,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getBigFloat() {
         return getBigFloatAsync().toBlocking().value();
@@ -469,13 +484,16 @@ public class NumbersImpl implements Numbers {
      * Get big float value 3.402823e+20.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getBigFloatAsync() {
-        return getBigFloatWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBigFloatWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put big double value 2.5976931e+101.
@@ -484,7 +502,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBigDouble(double numberBody) {
         putBigDoubleAsync(numberBody).toBlocking().value();
@@ -518,13 +536,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the double value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBigDoubleAsync(double numberBody) {
-        return putBigDoubleWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBigDoubleWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big double value 2.5976931e+101.
@@ -532,7 +553,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getBigDouble() {
         return getBigDoubleAsync().toBlocking().value();
@@ -563,13 +584,16 @@ public class NumbersImpl implements Numbers {
      * Get big double value 2.5976931e+101.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getBigDoubleAsync() {
-        return getBigDoubleWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBigDoubleWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put big double value 99999999.99.
@@ -578,7 +602,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBigDoublePositiveDecimal(double numberBody) {
         putBigDoublePositiveDecimalAsync(numberBody).toBlocking().value();
@@ -612,13 +636,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the double value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBigDoublePositiveDecimalAsync(double numberBody) {
-        return putBigDoublePositiveDecimalWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBigDoublePositiveDecimalWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big double value 99999999.99.
@@ -626,7 +653,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getBigDoublePositiveDecimal() {
         return getBigDoublePositiveDecimalAsync().toBlocking().value();
@@ -657,13 +684,16 @@ public class NumbersImpl implements Numbers {
      * Get big double value 99999999.99.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getBigDoublePositiveDecimalAsync() {
-        return getBigDoublePositiveDecimalWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBigDoublePositiveDecimalWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put big double value -99999999.99.
@@ -672,7 +702,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBigDoubleNegativeDecimal(double numberBody) {
         putBigDoubleNegativeDecimalAsync(numberBody).toBlocking().value();
@@ -706,13 +736,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the double value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBigDoubleNegativeDecimalAsync(double numberBody) {
-        return putBigDoubleNegativeDecimalWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBigDoubleNegativeDecimalWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big double value -99999999.99.
@@ -720,7 +753,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getBigDoubleNegativeDecimal() {
         return getBigDoubleNegativeDecimalAsync().toBlocking().value();
@@ -751,13 +784,16 @@ public class NumbersImpl implements Numbers {
      * Get big double value -99999999.99.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getBigDoubleNegativeDecimalAsync() {
-        return getBigDoubleNegativeDecimalWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBigDoubleNegativeDecimalWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put big decimal value 2.5976931e+101.
@@ -766,7 +802,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBigDecimal(BigDecimal numberBody) {
         putBigDecimalAsync(numberBody).toBlocking().value();
@@ -803,13 +839,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the BigDecimal value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBigDecimalAsync(BigDecimal numberBody) {
-        return putBigDecimalWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBigDecimalWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big decimal value 2.5976931e+101.
@@ -817,7 +856,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the BigDecimal object if successful.
+     * @return the {@link BigDecimal} object if successful.
      */
     public BigDecimal getBigDecimal() {
         return getBigDecimalAsync().toBlocking().value();
@@ -848,13 +887,16 @@ public class NumbersImpl implements Numbers {
      * Get big decimal value 2.5976931e+101.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, BigDecimal> object
+     * @return a {@link Single} emitting the {@link BigDecimal} object
      */
     public Single<BigDecimal> getBigDecimalAsync() {
-        return getBigDecimalWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() { public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBigDecimalWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() {
+                    public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put big decimal value 99999999.99.
@@ -863,7 +905,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBigDecimalPositiveDecimal(BigDecimal numberBody) {
         putBigDecimalPositiveDecimalAsync(numberBody).toBlocking().value();
@@ -900,13 +942,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the BigDecimal value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBigDecimalPositiveDecimalAsync(BigDecimal numberBody) {
-        return putBigDecimalPositiveDecimalWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBigDecimalPositiveDecimalWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big decimal value 99999999.99.
@@ -914,7 +959,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the BigDecimal object if successful.
+     * @return the {@link BigDecimal} object if successful.
      */
     public BigDecimal getBigDecimalPositiveDecimal() {
         return getBigDecimalPositiveDecimalAsync().toBlocking().value();
@@ -945,13 +990,16 @@ public class NumbersImpl implements Numbers {
      * Get big decimal value 99999999.99.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, BigDecimal> object
+     * @return a {@link Single} emitting the {@link BigDecimal} object
      */
     public Single<BigDecimal> getBigDecimalPositiveDecimalAsync() {
-        return getBigDecimalPositiveDecimalWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() { public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBigDecimalPositiveDecimalWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() {
+                    public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put big decimal value -99999999.99.
@@ -960,7 +1008,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putBigDecimalNegativeDecimal(BigDecimal numberBody) {
         putBigDecimalNegativeDecimalAsync(numberBody).toBlocking().value();
@@ -997,13 +1045,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the BigDecimal value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putBigDecimalNegativeDecimalAsync(BigDecimal numberBody) {
-        return putBigDecimalNegativeDecimalWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putBigDecimalNegativeDecimalWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big decimal value -99999999.99.
@@ -1011,7 +1062,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the BigDecimal object if successful.
+     * @return the {@link BigDecimal} object if successful.
      */
     public BigDecimal getBigDecimalNegativeDecimal() {
         return getBigDecimalNegativeDecimalAsync().toBlocking().value();
@@ -1042,13 +1093,16 @@ public class NumbersImpl implements Numbers {
      * Get big decimal value -99999999.99.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, BigDecimal> object
+     * @return a {@link Single} emitting the {@link BigDecimal} object
      */
     public Single<BigDecimal> getBigDecimalNegativeDecimalAsync() {
-        return getBigDecimalNegativeDecimalWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() { public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) { return restResponse.body(); } });
-        }
-
+            return getBigDecimalNegativeDecimalWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() {
+                    public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put small float value 3.402823e-20.
@@ -1057,7 +1111,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putSmallFloat(double numberBody) {
         putSmallFloatAsync(numberBody).toBlocking().value();
@@ -1091,13 +1145,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the double value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putSmallFloatAsync(double numberBody) {
-        return putSmallFloatWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putSmallFloatWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big double value 3.402823e-20.
@@ -1105,7 +1162,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getSmallFloat() {
         return getSmallFloatAsync().toBlocking().value();
@@ -1136,13 +1193,16 @@ public class NumbersImpl implements Numbers {
      * Get big double value 3.402823e-20.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getSmallFloatAsync() {
-        return getSmallFloatWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getSmallFloatWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put small double value 2.5976931e-101.
@@ -1151,7 +1211,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putSmallDouble(double numberBody) {
         putSmallDoubleAsync(numberBody).toBlocking().value();
@@ -1185,13 +1245,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the double value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putSmallDoubleAsync(double numberBody) {
-        return putSmallDoubleWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putSmallDoubleWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get big double value 2.5976931e-101.
@@ -1199,7 +1262,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the double object if successful.
+     * @return the {@link double} object if successful.
      */
     public double getSmallDouble() {
         return getSmallDoubleAsync().toBlocking().value();
@@ -1230,13 +1293,16 @@ public class NumbersImpl implements Numbers {
      * Get big double value 2.5976931e-101.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Double> object
+     * @return a {@link Single} emitting the {@link Double} object
      */
     public Single<Double> getSmallDoubleAsync() {
-        return getSmallDoubleWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Double>, Double>() { public Double call(RestResponse<Void, Double> restResponse) { return restResponse.body(); } });
-        }
-
+            return getSmallDoubleWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Double>, Double>() {
+                    public Double call(RestResponse<Void, Double> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put small decimal value 2.5976931e-101.
@@ -1245,7 +1311,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putSmallDecimal(BigDecimal numberBody) {
         putSmallDecimalAsync(numberBody).toBlocking().value();
@@ -1282,13 +1348,16 @@ public class NumbersImpl implements Numbers {
      *
      * @param numberBody the BigDecimal value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putSmallDecimalAsync(BigDecimal numberBody) {
-        return putSmallDecimalWithRestResponseAsync(numberBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putSmallDecimalWithRestResponseAsync(numberBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get small decimal value 2.5976931e-101.
@@ -1296,7 +1365,7 @@ public class NumbersImpl implements Numbers {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the BigDecimal object if successful.
+     * @return the {@link BigDecimal} object if successful.
      */
     public BigDecimal getSmallDecimal() {
         return getSmallDecimalAsync().toBlocking().value();
@@ -1327,12 +1396,15 @@ public class NumbersImpl implements Numbers {
      * Get small decimal value 2.5976931e-101.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, BigDecimal> object
+     * @return a {@link Single} emitting the {@link BigDecimal} object
      */
     public Single<BigDecimal> getSmallDecimalAsync() {
-        return getSmallDecimalWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() { public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) { return restResponse.body(); } });
-        }
-
+            return getSmallDecimalWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, BigDecimal>, BigDecimal>() {
+                    public BigDecimal call(RestResponse<Void, BigDecimal> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

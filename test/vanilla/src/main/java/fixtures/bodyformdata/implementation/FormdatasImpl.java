@@ -12,7 +12,6 @@ package fixtures.bodyformdata.implementation;
 
 import com.microsoft.rest.RestProxy;
 import com.microsoft.rest.RestResponse;
-import com.microsoft.rest.http.FileSegment;
 import fixtures.bodyformdata.Formdatas;
 import com.google.common.reflect.TypeToken;
 import com.microsoft.rest.annotations.BodyParam;
@@ -72,12 +71,6 @@ public class FormdatasImpl implements Formdatas {
         @UnexpectedResponseExceptionType(ErrorException.class)
         Single<RestResponse<Void, InputStream>> uploadFileViaBody(@BodyParam("application/octet-stream") byte[] fileContent);
 
-        @Headers({ "x-ms-logging-context: fixtures.bodyformdata.Formdatas uploadFileViaBody" })
-        @PUT("formdata/stream/uploadfile")
-        // @Streaming not supported by RestProxy
-        @ExpectedResponses({200})
-        @UnexpectedResponseExceptionType(ErrorException.class)
-        Single<RestResponse<Void, InputStream>> uploadFileViaBody(@BodyParam("application/octet-stream") FileSegment fileContent);
     }
 
     /**
@@ -88,7 +81,7 @@ public class FormdatasImpl implements Formdatas {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the InputStream object if successful.
+     * @return the {@link InputStream} object if successful.
      */
     public InputStream uploadFile(byte[] fileContent, String fileName) {
         return uploadFileAsync(fileContent, fileName).toBlocking().value();
@@ -131,13 +124,16 @@ public class FormdatasImpl implements Formdatas {
      * @param fileContent File to upload.
      * @param fileName File name to upload. Name has to be spelled exactly as written here.
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, InputStream> object
+     * @return a {@link Single} emitting the {@link InputStream} object
      */
     public Single<InputStream> uploadFileAsync(byte[] fileContent, String fileName) {
-    return uploadFileWithRestResponseAsync(fileContent, fileName)
-        .map(new Func1<RestResponse<Void, InputStream>, InputStream>() { public InputStream call(RestResponse<Void, InputStream> restResponse) { return restResponse.body(); } });
+            return uploadFileWithRestResponseAsync(fileContent, fileName)
+                .map(new Func1<RestResponse<Void, InputStream>, InputStream>() {
+                    public InputStream call(RestResponse<Void, InputStream> restResponse) {
+                        return restResponse.body();
+                    }
+                });
     }
-
 
     /**
      * Upload file.
@@ -146,7 +142,7 @@ public class FormdatasImpl implements Formdatas {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the InputStream object if successful.
+     * @return the {@link InputStream} object if successful.
      */
     public InputStream uploadFileViaBody(byte[] fileContent) {
         return uploadFileViaBodyAsync(fileContent).toBlocking().value();
@@ -181,28 +177,17 @@ public class FormdatasImpl implements Formdatas {
     /**
      * Upload file.
      *
-     * @param fileSegment File to upload.
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, InputStream> object
-     */
-    public Single<RestResponse<Void, InputStream>> uploadFileViaBodyWithRestResponseAsync(FileSegment fileSegment) {
-        if (fileSegment == null) {
-            throw new IllegalArgumentException("Parameter fileContent is required and cannot be null.");
-        }
-        return service.uploadFileViaBody(fileSegment);
-    }
-
-    /**
-     * Upload file.
-     *
      * @param fileContent File to upload.
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, InputStream> object
+     * @return a {@link Single} emitting the {@link InputStream} object
      */
     public Single<InputStream> uploadFileViaBodyAsync(byte[] fileContent) {
-        return uploadFileViaBodyWithRestResponseAsync(fileContent)
-            .map(new Func1<RestResponse<Void, InputStream>, InputStream>() { public InputStream call(RestResponse<Void, InputStream> restResponse) { return restResponse.body(); } });
-        }
-
+            return uploadFileViaBodyWithRestResponseAsync(fileContent)
+                .map(new Func1<RestResponse<Void, InputStream>, InputStream>() {
+                    public InputStream call(RestResponse<Void, InputStream> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

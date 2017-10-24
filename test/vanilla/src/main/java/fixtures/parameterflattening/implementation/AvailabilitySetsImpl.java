@@ -75,7 +75,7 @@ public class AvailabilitySetsImpl implements AvailabilitySets {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void update(String resourceGroupName, String avset, Map<String, String> tags) {
         updateAsync(resourceGroupName, avset, tags).toBlocking().value();
@@ -115,8 +115,8 @@ public class AvailabilitySetsImpl implements AvailabilitySets {
             throw new IllegalArgumentException("Parameter tags is required and cannot be null.");
         }
         Validator.validate(tags);
-    AvailabilitySetUpdateParameters tags1 = new AvailabilitySetUpdateParameters();
-    tags1.withTags(tags);
+        AvailabilitySetUpdateParameters tags1 = new AvailabilitySetUpdateParameters();
+        tags1.withTags(tags);
         return service.update(resourceGroupName, avset, tags1);
     }
 
@@ -127,12 +127,15 @@ public class AvailabilitySetsImpl implements AvailabilitySets {
      * @param avset The name of the storage availability set.
      * @param tags A set of tags. A description about the set of tags.
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> updateAsync(String resourceGroupName, String avset, Map<String, String> tags) {
-        return updateWithRestResponseAsync(resourceGroupName, avset, tags)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return updateWithRestResponseAsync(resourceGroupName, avset, tags)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

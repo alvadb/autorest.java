@@ -78,7 +78,7 @@ public class ReadonlypropertysImpl implements Readonlypropertys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ReadonlyObj object if successful.
+     * @return the {@link ReadonlyObj} object if successful.
      */
     public ReadonlyObj getValid() {
         return getValidAsync().toBlocking().value();
@@ -109,13 +109,16 @@ public class ReadonlypropertysImpl implements Readonlypropertys {
      * Get complex types that have readonly properties.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, ReadonlyObj> object
+     * @return a {@link Single} emitting the {@link ReadonlyObj} object
      */
     public Single<ReadonlyObj> getValidAsync() {
-        return getValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, ReadonlyObj>, ReadonlyObj>() { public ReadonlyObj call(RestResponse<Void, ReadonlyObj> restResponse) { return restResponse.body(); } });
-        }
-
+            return getValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, ReadonlyObj>, ReadonlyObj>() {
+                    public ReadonlyObj call(RestResponse<Void, ReadonlyObj> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types that have readonly properties.
@@ -124,7 +127,7 @@ public class ReadonlypropertysImpl implements Readonlypropertys {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putValid(ReadonlyObj complexBody) {
         putValidAsync(complexBody).toBlocking().value();
@@ -162,12 +165,15 @@ public class ReadonlypropertysImpl implements Readonlypropertys {
      *
      * @param complexBody the ReadonlyObj value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putValidAsync(ReadonlyObj complexBody) {
-        return putValidWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putValidWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

@@ -174,7 +174,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void head300() {
         head300Async().toBlocking().value();
@@ -205,13 +205,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Return 300 status code and redirect to /http/success/200.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsHead300Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> head300Async() {
-        return head300WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsHead300Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsHead300Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return head300WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsHead300Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsHead300Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 300 status code and redirect to /http/success/200.
@@ -219,7 +222,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;String&gt; object if successful.
+     * @return the {@link List<String>} object if successful.
      */
     public List<String> get300() {
         return get300Async().toBlocking().value();
@@ -250,13 +253,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Return 300 status code and redirect to /http/success/200.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsGet300Headers, List<String>> object
+     * @return a {@link Single} emitting the {@link List<String>} object
      */
     public Single<List<String>> get300Async() {
-        return get300WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsGet300Headers, List<String>>, List<String>>() { public List<String> call(RestResponse<HttpRedirectsGet300Headers, List<String>> restResponse) { return restResponse.body(); } });
-        }
-
+            return get300WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsGet300Headers, List<String>>, List<String>>() {
+                    public List<String> call(RestResponse<HttpRedirectsGet300Headers, List<String>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 301 status code and redirect to /http/success/200.
@@ -264,7 +270,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void head301() {
         head301Async().toBlocking().value();
@@ -295,13 +301,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Return 301 status code and redirect to /http/success/200.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsHead301Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> head301Async() {
-        return head301WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsHead301Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsHead301Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return head301WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsHead301Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsHead301Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 301 status code and redirect to /http/success/200.
@@ -309,7 +318,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void get301() {
         get301Async().toBlocking().value();
@@ -340,13 +349,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Return 301 status code and redirect to /http/success/200.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsGet301Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> get301Async() {
-        return get301WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsGet301Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsGet301Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return get301WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsGet301Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsGet301Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put true Boolean value in request returns 301.  This request should not be automatically redirected, but should return the received 301 to the caller for evaluation.
@@ -354,7 +366,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void put301() {
         put301Async().toBlocking().value();
@@ -386,12 +398,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Put true Boolean value in request returns 301.  This request should not be automatically redirected, but should return the received 301 to the caller for evaluation.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPut301Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> put301Async() {
-        return put301WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsPut301Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPut301Headers, Void> restResponse) { return restResponse.body(); } });
-        }
+            return put301WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsPut301Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPut301Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put true Boolean value in request returns 301.  This request should not be automatically redirected, but should return the received 301 to the caller for evaluation.
@@ -400,7 +416,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void put301(Boolean booleanValue) {
         put301Async(booleanValue).toBlocking().value();
@@ -434,13 +450,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPut301Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> put301Async(Boolean booleanValue) {
-        return put301WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<HttpRedirectsPut301Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPut301Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return put301WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<HttpRedirectsPut301Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPut301Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 302 status code and redirect to /http/success/200.
@@ -448,7 +467,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void head302() {
         head302Async().toBlocking().value();
@@ -479,13 +498,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Return 302 status code and redirect to /http/success/200.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsHead302Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> head302Async() {
-        return head302WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsHead302Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsHead302Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return head302WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsHead302Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsHead302Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Return 302 status code and redirect to /http/success/200.
@@ -493,7 +515,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void get302() {
         get302Async().toBlocking().value();
@@ -524,13 +546,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Return 302 status code and redirect to /http/success/200.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsGet302Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> get302Async() {
-        return get302WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsGet302Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsGet302Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return get302WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsGet302Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsGet302Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Patch true Boolean value in request returns 302.  This request should not be automatically redirected, but should return the received 302 to the caller for evaluation.
@@ -538,7 +563,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void patch302() {
         patch302Async().toBlocking().value();
@@ -570,12 +595,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Patch true Boolean value in request returns 302.  This request should not be automatically redirected, but should return the received 302 to the caller for evaluation.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPatch302Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> patch302Async() {
-        return patch302WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsPatch302Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPatch302Headers, Void> restResponse) { return restResponse.body(); } });
-        }
+            return patch302WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsPatch302Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPatch302Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Patch true Boolean value in request returns 302.  This request should not be automatically redirected, but should return the received 302 to the caller for evaluation.
@@ -584,7 +613,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void patch302(Boolean booleanValue) {
         patch302Async(booleanValue).toBlocking().value();
@@ -618,13 +647,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPatch302Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> patch302Async(Boolean booleanValue) {
-        return patch302WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<HttpRedirectsPatch302Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPatch302Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return patch302WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<HttpRedirectsPatch302Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPatch302Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Post true Boolean value in request returns 303.  This request should be automatically redirected usign a get, ultimately returning a 200 status code.
@@ -632,7 +664,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void post303() {
         post303Async().toBlocking().value();
@@ -664,12 +696,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Post true Boolean value in request returns 303.  This request should be automatically redirected usign a get, ultimately returning a 200 status code.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPost303Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> post303Async() {
-        return post303WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsPost303Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPost303Headers, Void> restResponse) { return restResponse.body(); } });
-        }
+            return post303WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsPost303Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPost303Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Post true Boolean value in request returns 303.  This request should be automatically redirected usign a get, ultimately returning a 200 status code.
@@ -678,7 +714,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void post303(Boolean booleanValue) {
         post303Async(booleanValue).toBlocking().value();
@@ -712,13 +748,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPost303Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> post303Async(Boolean booleanValue) {
-        return post303WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<HttpRedirectsPost303Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPost303Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return post303WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<HttpRedirectsPost303Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPost303Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Redirect with 307, resulting in a 200 success.
@@ -726,7 +765,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void head307() {
         head307Async().toBlocking().value();
@@ -757,13 +796,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Redirect with 307, resulting in a 200 success.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsHead307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> head307Async() {
-        return head307WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsHead307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsHead307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return head307WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsHead307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsHead307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Redirect get with 307, resulting in a 200 success.
@@ -771,7 +813,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void get307() {
         get307Async().toBlocking().value();
@@ -802,13 +844,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Redirect get with 307, resulting in a 200 success.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsGet307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> get307Async() {
-        return get307WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsGet307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsGet307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return get307WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsGet307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsGet307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put redirected with 307, resulting in a 200 after redirect.
@@ -816,7 +861,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void put307() {
         put307Async().toBlocking().value();
@@ -848,12 +893,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Put redirected with 307, resulting in a 200 after redirect.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPut307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> put307Async() {
-        return put307WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsPut307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPut307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
+            return put307WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsPut307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPut307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put redirected with 307, resulting in a 200 after redirect.
@@ -862,7 +911,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void put307(Boolean booleanValue) {
         put307Async(booleanValue).toBlocking().value();
@@ -896,13 +945,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPut307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> put307Async(Boolean booleanValue) {
-        return put307WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<HttpRedirectsPut307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPut307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return put307WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<HttpRedirectsPut307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPut307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Patch redirected with 307, resulting in a 200 after redirect.
@@ -910,7 +962,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void patch307() {
         patch307Async().toBlocking().value();
@@ -942,12 +994,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Patch redirected with 307, resulting in a 200 after redirect.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPatch307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> patch307Async() {
-        return patch307WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsPatch307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPatch307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
+            return patch307WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsPatch307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPatch307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Patch redirected with 307, resulting in a 200 after redirect.
@@ -956,7 +1012,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void patch307(Boolean booleanValue) {
         patch307Async(booleanValue).toBlocking().value();
@@ -990,13 +1046,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPatch307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> patch307Async(Boolean booleanValue) {
-        return patch307WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<HttpRedirectsPatch307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPatch307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return patch307WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<HttpRedirectsPatch307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPatch307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Post redirected with 307, resulting in a 200 after redirect.
@@ -1004,7 +1063,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void post307() {
         post307Async().toBlocking().value();
@@ -1036,12 +1095,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Post redirected with 307, resulting in a 200 after redirect.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPost307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> post307Async() {
-        return post307WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsPost307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPost307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
+            return post307WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsPost307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPost307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Post redirected with 307, resulting in a 200 after redirect.
@@ -1050,7 +1113,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void post307(Boolean booleanValue) {
         post307Async(booleanValue).toBlocking().value();
@@ -1084,13 +1147,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsPost307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> post307Async(Boolean booleanValue) {
-        return post307WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<HttpRedirectsPost307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsPost307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return post307WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<HttpRedirectsPost307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsPost307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Delete redirected with 307, resulting in a 200 after redirect.
@@ -1098,7 +1164,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void delete307() {
         delete307Async().toBlocking().value();
@@ -1130,12 +1196,16 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * Delete redirected with 307, resulting in a 200 after redirect.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsDelete307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> delete307Async() {
-        return delete307WithRestResponseAsync()
-            .map(new Func1<RestResponse<HttpRedirectsDelete307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsDelete307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
+            return delete307WithRestResponseAsync()
+                .map(new Func1<RestResponse<HttpRedirectsDelete307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsDelete307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Delete redirected with 307, resulting in a 200 after redirect.
@@ -1144,7 +1214,7 @@ public class HttpRedirectsImpl implements HttpRedirects {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void delete307(Boolean booleanValue) {
         delete307Async(booleanValue).toBlocking().value();
@@ -1178,12 +1248,15 @@ public class HttpRedirectsImpl implements HttpRedirects {
      *
      * @param booleanValue Simple boolean value true
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<HttpRedirectsDelete307Headers, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> delete307Async(Boolean booleanValue) {
-        return delete307WithRestResponseAsync(booleanValue)
-            .map(new Func1<RestResponse<HttpRedirectsDelete307Headers, Void>, Void>() { public Void call(RestResponse<HttpRedirectsDelete307Headers, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return delete307WithRestResponseAsync(booleanValue)
+                .map(new Func1<RestResponse<HttpRedirectsDelete307Headers, Void>, Void>() {
+                    public Void call(RestResponse<HttpRedirectsDelete307Headers, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

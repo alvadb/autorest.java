@@ -107,7 +107,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error getRequiredPath(String pathParameter) {
         return getRequiredPathAsync(pathParameter).toBlocking().value();
@@ -144,13 +144,16 @@ public class ImplicitsImpl implements Implicits {
      *
      * @param pathParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> getRequiredPathAsync(String pathParameter) {
-        return getRequiredPathWithRestResponseAsync(pathParameter)
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return getRequiredPathWithRestResponseAsync(pathParameter)
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly optional query parameter.
@@ -158,7 +161,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putOptionalQuery() {
         putOptionalQueryAsync().toBlocking().value();
@@ -190,12 +193,16 @@ public class ImplicitsImpl implements Implicits {
      * Test implicitly optional query parameter.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putOptionalQueryAsync() {
-        return putOptionalQueryWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return putOptionalQueryWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly optional query parameter.
@@ -204,7 +211,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putOptionalQuery(String queryParameter) {
         putOptionalQueryAsync(queryParameter).toBlocking().value();
@@ -238,13 +245,16 @@ public class ImplicitsImpl implements Implicits {
      *
      * @param queryParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putOptionalQueryAsync(String queryParameter) {
-        return putOptionalQueryWithRestResponseAsync(queryParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putOptionalQueryWithRestResponseAsync(queryParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly optional header parameter.
@@ -252,7 +262,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putOptionalHeader() {
         putOptionalHeaderAsync().toBlocking().value();
@@ -284,12 +294,16 @@ public class ImplicitsImpl implements Implicits {
      * Test implicitly optional header parameter.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putOptionalHeaderAsync() {
-        return putOptionalHeaderWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return putOptionalHeaderWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly optional header parameter.
@@ -298,7 +312,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putOptionalHeader(String queryParameter) {
         putOptionalHeaderAsync(queryParameter).toBlocking().value();
@@ -332,13 +346,16 @@ public class ImplicitsImpl implements Implicits {
      *
      * @param queryParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putOptionalHeaderAsync(String queryParameter) {
-        return putOptionalHeaderWithRestResponseAsync(queryParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putOptionalHeaderWithRestResponseAsync(queryParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly optional body parameter.
@@ -346,7 +363,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putOptionalBody() {
         putOptionalBodyAsync().toBlocking().value();
@@ -378,12 +395,16 @@ public class ImplicitsImpl implements Implicits {
      * Test implicitly optional body parameter.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putOptionalBodyAsync() {
-        return putOptionalBodyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
+            return putOptionalBodyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly optional body parameter.
@@ -392,7 +413,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putOptionalBody(String bodyParameter) {
         putOptionalBodyAsync(bodyParameter).toBlocking().value();
@@ -426,13 +447,16 @@ public class ImplicitsImpl implements Implicits {
      *
      * @param bodyParameter the String value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putOptionalBodyAsync(String bodyParameter) {
-        return putOptionalBodyWithRestResponseAsync(bodyParameter)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putOptionalBodyWithRestResponseAsync(bodyParameter)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly required path parameter.
@@ -440,7 +464,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error getRequiredGlobalPath() {
         return getRequiredGlobalPathAsync().toBlocking().value();
@@ -474,13 +498,16 @@ public class ImplicitsImpl implements Implicits {
      * Test implicitly required path parameter.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> getRequiredGlobalPathAsync() {
-        return getRequiredGlobalPathWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return getRequiredGlobalPathWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly required query parameter.
@@ -488,7 +515,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error getRequiredGlobalQuery() {
         return getRequiredGlobalQueryAsync().toBlocking().value();
@@ -522,13 +549,16 @@ public class ImplicitsImpl implements Implicits {
      * Test implicitly required query parameter.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> getRequiredGlobalQueryAsync() {
-        return getRequiredGlobalQueryWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return getRequiredGlobalQueryWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Test implicitly optional query parameter.
@@ -536,7 +566,7 @@ public class ImplicitsImpl implements Implicits {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Error object if successful.
+     * @return the {@link Error} object if successful.
      */
     public Error getOptionalGlobalQuery() {
         return getOptionalGlobalQueryAsync().toBlocking().value();
@@ -567,12 +597,15 @@ public class ImplicitsImpl implements Implicits {
      * Test implicitly optional query parameter.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Error> object
+     * @return a {@link Single} emitting the {@link Error} object
      */
     public Single<Error> getOptionalGlobalQueryAsync() {
-        return getOptionalGlobalQueryWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Error>, Error>() { public Error call(RestResponse<Void, Error> restResponse) { return restResponse.body(); } });
-        }
-
+            return getOptionalGlobalQueryWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Error>, Error>() {
+                    public Error call(RestResponse<Void, Error> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

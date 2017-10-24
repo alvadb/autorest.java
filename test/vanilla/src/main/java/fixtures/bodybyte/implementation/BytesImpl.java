@@ -94,7 +94,7 @@ public class BytesImpl implements Bytes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the byte[] object if successful.
+     * @return the {@link byte[]} object if successful.
      */
     public byte[] getNull() {
         return getNullAsync().toBlocking().value();
@@ -125,13 +125,16 @@ public class BytesImpl implements Bytes {
      * Get null byte value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, byte[]> object
+     * @return a {@link Single} emitting the {@link byte[]} object
      */
     public Single<byte[]> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, byte[]>, byte[]>() { public byte[] call(RestResponse<Void, byte[]> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, byte[]>, byte[]>() {
+                    public byte[] call(RestResponse<Void, byte[]> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get empty byte value ''.
@@ -139,7 +142,7 @@ public class BytesImpl implements Bytes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the byte[] object if successful.
+     * @return the {@link byte[]} object if successful.
      */
     public byte[] getEmpty() {
         return getEmptyAsync().toBlocking().value();
@@ -170,13 +173,16 @@ public class BytesImpl implements Bytes {
      * Get empty byte value ''.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, byte[]> object
+     * @return a {@link Single} emitting the {@link byte[]} object
      */
     public Single<byte[]> getEmptyAsync() {
-        return getEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, byte[]>, byte[]>() { public byte[] call(RestResponse<Void, byte[]> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, byte[]>, byte[]>() {
+                    public byte[] call(RestResponse<Void, byte[]> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6).
@@ -184,7 +190,7 @@ public class BytesImpl implements Bytes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the byte[] object if successful.
+     * @return the {@link byte[]} object if successful.
      */
     public byte[] getNonAscii() {
         return getNonAsciiAsync().toBlocking().value();
@@ -215,13 +221,16 @@ public class BytesImpl implements Bytes {
      * Get non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6).
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, byte[]> object
+     * @return a {@link Single} emitting the {@link byte[]} object
      */
     public Single<byte[]> getNonAsciiAsync() {
-        return getNonAsciiWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, byte[]>, byte[]>() { public byte[] call(RestResponse<Void, byte[]> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNonAsciiWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, byte[]>, byte[]>() {
+                    public byte[] call(RestResponse<Void, byte[]> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6).
@@ -230,7 +239,7 @@ public class BytesImpl implements Bytes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putNonAscii(byte[] byteBody) {
         putNonAsciiAsync(byteBody).toBlocking().value();
@@ -267,13 +276,16 @@ public class BytesImpl implements Bytes {
      *
      * @param byteBody Base64-encoded non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putNonAsciiAsync(byte[] byteBody) {
-        return putNonAsciiWithRestResponseAsync(byteBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putNonAsciiWithRestResponseAsync(byteBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid byte value ':::SWAGGER::::'.
@@ -281,7 +293,7 @@ public class BytesImpl implements Bytes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the byte[] object if successful.
+     * @return the {@link byte[]} object if successful.
      */
     public byte[] getInvalid() {
         return getInvalidAsync().toBlocking().value();
@@ -312,12 +324,15 @@ public class BytesImpl implements Bytes {
      * Get invalid byte value ':::SWAGGER::::'.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, byte[]> object
+     * @return a {@link Single} emitting the {@link byte[]} object
      */
     public Single<byte[]> getInvalidAsync() {
-        return getInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, byte[]>, byte[]>() { public byte[] call(RestResponse<Void, byte[]> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, byte[]>, byte[]>() {
+                    public byte[] call(RestResponse<Void, byte[]> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

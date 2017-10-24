@@ -179,7 +179,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getNull() {
         return getNullAsync().toBlocking().value();
@@ -210,13 +210,16 @@ public class DatetimesImpl implements Datetimes {
      * Get null datetime value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid datetime value.
@@ -224,7 +227,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getInvalid() {
         return getInvalidAsync().toBlocking().value();
@@ -255,13 +258,16 @@ public class DatetimesImpl implements Datetimes {
      * Get invalid datetime value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getInvalidAsync() {
-        return getInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get overflow datetime value.
@@ -269,7 +275,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getOverflow() {
         return getOverflowAsync().toBlocking().value();
@@ -300,13 +306,16 @@ public class DatetimesImpl implements Datetimes {
      * Get overflow datetime value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getOverflowAsync() {
-        return getOverflowWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getOverflowWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get underflow datetime value.
@@ -314,7 +323,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getUnderflow() {
         return getUnderflowAsync().toBlocking().value();
@@ -345,13 +354,16 @@ public class DatetimesImpl implements Datetimes {
      * Get underflow datetime value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getUnderflowAsync() {
-        return getUnderflowWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUnderflowWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put max datetime value 9999-12-31T23:59:59.9999999Z.
@@ -360,7 +372,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putUtcMaxDateTime(DateTime datetimeBody) {
         putUtcMaxDateTimeAsync(datetimeBody).toBlocking().value();
@@ -397,13 +409,16 @@ public class DatetimesImpl implements Datetimes {
      *
      * @param datetimeBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putUtcMaxDateTimeAsync(DateTime datetimeBody) {
-        return putUtcMaxDateTimeWithRestResponseAsync(datetimeBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putUtcMaxDateTimeWithRestResponseAsync(datetimeBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get max datetime value 9999-12-31t23:59:59.9999999z.
@@ -411,7 +426,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getUtcLowercaseMaxDateTime() {
         return getUtcLowercaseMaxDateTimeAsync().toBlocking().value();
@@ -442,13 +457,16 @@ public class DatetimesImpl implements Datetimes {
      * Get max datetime value 9999-12-31t23:59:59.9999999z.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getUtcLowercaseMaxDateTimeAsync() {
-        return getUtcLowercaseMaxDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUtcLowercaseMaxDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get max datetime value 9999-12-31T23:59:59.9999999Z.
@@ -456,7 +474,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getUtcUppercaseMaxDateTime() {
         return getUtcUppercaseMaxDateTimeAsync().toBlocking().value();
@@ -487,13 +505,16 @@ public class DatetimesImpl implements Datetimes {
      * Get max datetime value 9999-12-31T23:59:59.9999999Z.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getUtcUppercaseMaxDateTimeAsync() {
-        return getUtcUppercaseMaxDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUtcUppercaseMaxDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999+14:00.
@@ -502,7 +523,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putLocalPositiveOffsetMaxDateTime(DateTime datetimeBody) {
         putLocalPositiveOffsetMaxDateTimeAsync(datetimeBody).toBlocking().value();
@@ -539,13 +560,16 @@ public class DatetimesImpl implements Datetimes {
      *
      * @param datetimeBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putLocalPositiveOffsetMaxDateTimeAsync(DateTime datetimeBody) {
-        return putLocalPositiveOffsetMaxDateTimeWithRestResponseAsync(datetimeBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putLocalPositiveOffsetMaxDateTimeWithRestResponseAsync(datetimeBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get max datetime value with positive num offset 9999-12-31t23:59:59.9999999+14:00.
@@ -553,7 +577,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getLocalPositiveOffsetLowercaseMaxDateTime() {
         return getLocalPositiveOffsetLowercaseMaxDateTimeAsync().toBlocking().value();
@@ -584,13 +608,16 @@ public class DatetimesImpl implements Datetimes {
      * Get max datetime value with positive num offset 9999-12-31t23:59:59.9999999+14:00.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getLocalPositiveOffsetLowercaseMaxDateTimeAsync() {
-        return getLocalPositiveOffsetLowercaseMaxDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLocalPositiveOffsetLowercaseMaxDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get max datetime value with positive num offset 9999-12-31T23:59:59.9999999+14:00.
@@ -598,7 +625,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getLocalPositiveOffsetUppercaseMaxDateTime() {
         return getLocalPositiveOffsetUppercaseMaxDateTimeAsync().toBlocking().value();
@@ -629,13 +656,16 @@ public class DatetimesImpl implements Datetimes {
      * Get max datetime value with positive num offset 9999-12-31T23:59:59.9999999+14:00.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getLocalPositiveOffsetUppercaseMaxDateTimeAsync() {
-        return getLocalPositiveOffsetUppercaseMaxDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLocalPositiveOffsetUppercaseMaxDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put max datetime value with positive numoffset 9999-12-31t23:59:59.9999999-14:00.
@@ -644,7 +674,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putLocalNegativeOffsetMaxDateTime(DateTime datetimeBody) {
         putLocalNegativeOffsetMaxDateTimeAsync(datetimeBody).toBlocking().value();
@@ -681,13 +711,16 @@ public class DatetimesImpl implements Datetimes {
      *
      * @param datetimeBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putLocalNegativeOffsetMaxDateTimeAsync(DateTime datetimeBody) {
-        return putLocalNegativeOffsetMaxDateTimeWithRestResponseAsync(datetimeBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putLocalNegativeOffsetMaxDateTimeWithRestResponseAsync(datetimeBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get max datetime value with positive num offset 9999-12-31T23:59:59.9999999-14:00.
@@ -695,7 +728,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getLocalNegativeOffsetUppercaseMaxDateTime() {
         return getLocalNegativeOffsetUppercaseMaxDateTimeAsync().toBlocking().value();
@@ -726,13 +759,16 @@ public class DatetimesImpl implements Datetimes {
      * Get max datetime value with positive num offset 9999-12-31T23:59:59.9999999-14:00.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getLocalNegativeOffsetUppercaseMaxDateTimeAsync() {
-        return getLocalNegativeOffsetUppercaseMaxDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLocalNegativeOffsetUppercaseMaxDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get max datetime value with positive num offset 9999-12-31t23:59:59.9999999-14:00.
@@ -740,7 +776,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getLocalNegativeOffsetLowercaseMaxDateTime() {
         return getLocalNegativeOffsetLowercaseMaxDateTimeAsync().toBlocking().value();
@@ -771,13 +807,16 @@ public class DatetimesImpl implements Datetimes {
      * Get max datetime value with positive num offset 9999-12-31t23:59:59.9999999-14:00.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getLocalNegativeOffsetLowercaseMaxDateTimeAsync() {
-        return getLocalNegativeOffsetLowercaseMaxDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLocalNegativeOffsetLowercaseMaxDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put min datetime value 0001-01-01T00:00:00Z.
@@ -786,7 +825,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putUtcMinDateTime(DateTime datetimeBody) {
         putUtcMinDateTimeAsync(datetimeBody).toBlocking().value();
@@ -823,13 +862,16 @@ public class DatetimesImpl implements Datetimes {
      *
      * @param datetimeBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putUtcMinDateTimeAsync(DateTime datetimeBody) {
-        return putUtcMinDateTimeWithRestResponseAsync(datetimeBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putUtcMinDateTimeWithRestResponseAsync(datetimeBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get min datetime value 0001-01-01T00:00:00Z.
@@ -837,7 +879,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getUtcMinDateTime() {
         return getUtcMinDateTimeAsync().toBlocking().value();
@@ -868,13 +910,16 @@ public class DatetimesImpl implements Datetimes {
      * Get min datetime value 0001-01-01T00:00:00Z.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getUtcMinDateTimeAsync() {
-        return getUtcMinDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getUtcMinDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put min datetime value 0001-01-01T00:00:00+14:00.
@@ -883,7 +928,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putLocalPositiveOffsetMinDateTime(DateTime datetimeBody) {
         putLocalPositiveOffsetMinDateTimeAsync(datetimeBody).toBlocking().value();
@@ -920,13 +965,16 @@ public class DatetimesImpl implements Datetimes {
      *
      * @param datetimeBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putLocalPositiveOffsetMinDateTimeAsync(DateTime datetimeBody) {
-        return putLocalPositiveOffsetMinDateTimeWithRestResponseAsync(datetimeBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putLocalPositiveOffsetMinDateTimeWithRestResponseAsync(datetimeBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get min datetime value 0001-01-01T00:00:00+14:00.
@@ -934,7 +982,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getLocalPositiveOffsetMinDateTime() {
         return getLocalPositiveOffsetMinDateTimeAsync().toBlocking().value();
@@ -965,13 +1013,16 @@ public class DatetimesImpl implements Datetimes {
      * Get min datetime value 0001-01-01T00:00:00+14:00.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getLocalPositiveOffsetMinDateTimeAsync() {
-        return getLocalPositiveOffsetMinDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLocalPositiveOffsetMinDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put min datetime value 0001-01-01T00:00:00-14:00.
@@ -980,7 +1031,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putLocalNegativeOffsetMinDateTime(DateTime datetimeBody) {
         putLocalNegativeOffsetMinDateTimeAsync(datetimeBody).toBlocking().value();
@@ -1017,13 +1068,16 @@ public class DatetimesImpl implements Datetimes {
      *
      * @param datetimeBody the DateTime value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putLocalNegativeOffsetMinDateTimeAsync(DateTime datetimeBody) {
-        return putLocalNegativeOffsetMinDateTimeWithRestResponseAsync(datetimeBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putLocalNegativeOffsetMinDateTimeWithRestResponseAsync(datetimeBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get min datetime value 0001-01-01T00:00:00-14:00.
@@ -1031,7 +1085,7 @@ public class DatetimesImpl implements Datetimes {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DateTime object if successful.
+     * @return the {@link DateTime} object if successful.
      */
     public DateTime getLocalNegativeOffsetMinDateTime() {
         return getLocalNegativeOffsetMinDateTimeAsync().toBlocking().value();
@@ -1062,12 +1116,15 @@ public class DatetimesImpl implements Datetimes {
      * Get min datetime value 0001-01-01T00:00:00-14:00.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, DateTime> object
+     * @return a {@link Single} emitting the {@link DateTime} object
      */
     public Single<DateTime> getLocalNegativeOffsetMinDateTimeAsync() {
-        return getLocalNegativeOffsetMinDateTimeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, DateTime>, DateTime>() { public DateTime call(RestResponse<Void, DateTime> restResponse) { return restResponse.body(); } });
-        }
-
+            return getLocalNegativeOffsetMinDateTimeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, DateTime>, DateTime>() {
+                    public DateTime call(RestResponse<Void, DateTime> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

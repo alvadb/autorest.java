@@ -13,7 +13,6 @@ package fixtures.bodyformdata;
 import com.microsoft.rest.RestResponse;
 import com.microsoft.rest.ServiceCallback;
 import com.microsoft.rest.ServiceFuture;
-import com.microsoft.rest.http.FileSegment;
 import fixtures.bodyformdata.models.ErrorException;
 import java.io.InputStream;
 import java.io.IOException;
@@ -106,6 +105,5 @@ public interface Formdatas {
      */
     Single<RestResponse<Void, InputStream>> uploadFileViaBodyWithRestResponseAsync(byte[] fileContent);
 
-    Single<RestResponse<Void, InputStream>> uploadFileViaBodyWithRestResponseAsync(FileSegment fileSegment);
 
 }

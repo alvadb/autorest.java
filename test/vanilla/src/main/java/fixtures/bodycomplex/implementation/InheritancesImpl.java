@@ -78,7 +78,7 @@ public class InheritancesImpl implements Inheritances {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Siamese object if successful.
+     * @return the {@link Siamese} object if successful.
      */
     public Siamese getValid() {
         return getValidAsync().toBlocking().value();
@@ -109,13 +109,16 @@ public class InheritancesImpl implements Inheritances {
      * Get complex types that extend others.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Siamese> object
+     * @return a {@link Single} emitting the {@link Siamese} object
      */
     public Single<Siamese> getValidAsync() {
-        return getValidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Siamese>, Siamese>() { public Siamese call(RestResponse<Void, Siamese> restResponse) { return restResponse.body(); } });
-        }
-
+            return getValidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Siamese>, Siamese>() {
+                    public Siamese call(RestResponse<Void, Siamese> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put complex types that extend others.
@@ -124,7 +127,7 @@ public class InheritancesImpl implements Inheritances {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putValid(Siamese complexBody) {
         putValidAsync(complexBody).toBlocking().value();
@@ -162,12 +165,15 @@ public class InheritancesImpl implements Inheritances {
      *
      * @param complexBody Please put a siamese with id=2, name="Siameee", color=green, breed=persion, which hates 2 dogs, the 1st one named "Potato" with id=1 and food="tomato", and the 2nd one named "Tomato" with id=-1 and food="french fries".
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putValidAsync(Siamese complexBody) {
-        return putValidWithRestResponseAsync(complexBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putValidWithRestResponseAsync(complexBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

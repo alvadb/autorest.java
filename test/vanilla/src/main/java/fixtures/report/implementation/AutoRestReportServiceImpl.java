@@ -97,7 +97,7 @@ public class AutoRestReportServiceImpl extends ServiceClient implements AutoRest
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Map&lt;String, Integer&gt; object if successful.
+     * @return the {@link Map<String, Integer>} object if successful.
      */
     public Map<String, Integer> getReport() {
         return getReportAsync().toBlocking().value();
@@ -128,12 +128,15 @@ public class AutoRestReportServiceImpl extends ServiceClient implements AutoRest
      * Get test coverage report.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Map<String, Integer>> object
+     * @return a {@link Single} emitting the {@link Map<String, Integer>} object
      */
     public Single<Map<String, Integer>> getReportAsync() {
-        return getReportWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() { public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) { return restResponse.body(); } });
-        }
-
+            return getReportWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Map<String, Integer>>, Map<String, Integer>>() {
+                    public Map<String, Integer> call(RestResponse<Void, Map<String, Integer>> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

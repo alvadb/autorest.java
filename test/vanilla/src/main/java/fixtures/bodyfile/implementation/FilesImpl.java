@@ -84,7 +84,7 @@ public class FilesImpl implements Files {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the InputStream object if successful.
+     * @return the {@link InputStream} object if successful.
      */
     public InputStream getFile() {
         return getFileAsync().toBlocking().value();
@@ -115,13 +115,16 @@ public class FilesImpl implements Files {
      * Get file.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, InputStream> object
+     * @return a {@link Single} emitting the {@link InputStream} object
      */
     public Single<InputStream> getFileAsync() {
-        return getFileWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, InputStream>, InputStream>() { public InputStream call(RestResponse<Void, InputStream> restResponse) { return restResponse.body(); } });
-        }
-
+            return getFileWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, InputStream>, InputStream>() {
+                    public InputStream call(RestResponse<Void, InputStream> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get a large file.
@@ -129,7 +132,7 @@ public class FilesImpl implements Files {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the InputStream object if successful.
+     * @return the {@link InputStream} object if successful.
      */
     public InputStream getFileLarge() {
         return getFileLargeAsync().toBlocking().value();
@@ -160,13 +163,16 @@ public class FilesImpl implements Files {
      * Get a large file.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, InputStream> object
+     * @return a {@link Single} emitting the {@link InputStream} object
      */
     public Single<InputStream> getFileLargeAsync() {
-        return getFileLargeWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, InputStream>, InputStream>() { public InputStream call(RestResponse<Void, InputStream> restResponse) { return restResponse.body(); } });
-        }
-
+            return getFileLargeWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, InputStream>, InputStream>() {
+                    public InputStream call(RestResponse<Void, InputStream> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get empty file.
@@ -174,7 +180,7 @@ public class FilesImpl implements Files {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the InputStream object if successful.
+     * @return the {@link InputStream} object if successful.
      */
     public InputStream getEmptyFile() {
         return getEmptyFileAsync().toBlocking().value();
@@ -205,12 +211,15 @@ public class FilesImpl implements Files {
      * Get empty file.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, InputStream> object
+     * @return a {@link Single} emitting the {@link InputStream} object
      */
     public Single<InputStream> getEmptyFileAsync() {
-        return getEmptyFileWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, InputStream>, InputStream>() { public InputStream call(RestResponse<Void, InputStream> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyFileWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, InputStream>, InputStream>() {
+                    public InputStream call(RestResponse<Void, InputStream> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

@@ -168,7 +168,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Product object if successful.
+     * @return the {@link Product} object if successful.
      */
     public Product validationOfMethodParameters(String resourceGroupName, int id) {
         return validationOfMethodParametersAsync(resourceGroupName, id).toBlocking().value();
@@ -214,13 +214,16 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @param resourceGroupName Required string between 3 and 10 chars with pattern [a-zA-Z0-9]+.
      * @param id Required int multiple of 10 from 100 to 1000.
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Product> object
+     * @return a {@link Single} emitting the {@link Product} object
      */
     public Single<Product> validationOfMethodParametersAsync(String resourceGroupName, int id) {
-        return validationOfMethodParametersWithRestResponseAsync(resourceGroupName, id)
-            .map(new Func1<RestResponse<Void, Product>, Product>() { public Product call(RestResponse<Void, Product> restResponse) { return restResponse.body(); } });
-        }
-
+            return validationOfMethodParametersWithRestResponseAsync(resourceGroupName, id)
+                .map(new Func1<RestResponse<Void, Product>, Product>() {
+                    public Product call(RestResponse<Void, Product> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Validates body parameters on the method. See swagger for details.
@@ -230,7 +233,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Product object if successful.
+     * @return the {@link Product} object if successful.
      */
     public Product validationOfBody(String resourceGroupName, int id) {
         return validationOfBodyAsync(resourceGroupName, id).toBlocking().value();
@@ -278,12 +281,16 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @param resourceGroupName Required string between 3 and 10 chars with pattern [a-zA-Z0-9]+.
      * @param id Required int multiple of 10 from 100 to 1000.
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Product> object
+     * @return a {@link Single} emitting the {@link Product} object
      */
     public Single<Product> validationOfBodyAsync(String resourceGroupName, int id) {
-        return validationOfBodyWithRestResponseAsync(resourceGroupName, id)
-            .map(new Func1<RestResponse<Void, Product>, Product>() { public Product call(RestResponse<Void, Product> restResponse) { return restResponse.body(); } });
-        }
+            return validationOfBodyWithRestResponseAsync(resourceGroupName, id)
+                .map(new Func1<RestResponse<Void, Product>, Product>() {
+                    public Product call(RestResponse<Void, Product> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Validates body parameters on the method. See swagger for details.
@@ -294,7 +301,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Product object if successful.
+     * @return the {@link Product} object if successful.
      */
     public Product validationOfBody(String resourceGroupName, int id, Product body) {
         return validationOfBodyAsync(resourceGroupName, id, body).toBlocking().value();
@@ -344,20 +351,23 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @param id Required int multiple of 10 from 100 to 1000.
      * @param body the Product value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Product> object
+     * @return a {@link Single} emitting the {@link Product} object
      */
     public Single<Product> validationOfBodyAsync(String resourceGroupName, int id, Product body) {
-        return validationOfBodyWithRestResponseAsync(resourceGroupName, id, body)
-            .map(new Func1<RestResponse<Void, Product>, Product>() { public Product call(RestResponse<Void, Product> restResponse) { return restResponse.body(); } });
-        }
-
+            return validationOfBodyWithRestResponseAsync(resourceGroupName, id, body)
+                .map(new Func1<RestResponse<Void, Product>, Product>() {
+                    public Product call(RestResponse<Void, Product> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void getWithConstantInPath() {
         getWithConstantInPathAsync().toBlocking().value();
@@ -386,20 +396,23 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
     /**
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> getWithConstantInPathAsync() {
-        return getWithConstantInPathWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return getWithConstantInPathWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Product object if successful.
+     * @return the {@link Product} object if successful.
      */
     public Product postWithConstantInBody() {
         return postWithConstantInBodyAsync().toBlocking().value();
@@ -430,12 +443,16 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
     /**
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Product> object
+     * @return a {@link Single} emitting the {@link Product} object
      */
     public Single<Product> postWithConstantInBodyAsync() {
-        return postWithConstantInBodyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Product>, Product>() { public Product call(RestResponse<Void, Product> restResponse) { return restResponse.body(); } });
-        }
+            return postWithConstantInBodyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Product>, Product>() {
+                    public Product call(RestResponse<Void, Product> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      *
@@ -443,7 +460,7 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Product object if successful.
+     * @return the {@link Product} object if successful.
      */
     public Product postWithConstantInBody(Product body) {
         return postWithConstantInBodyAsync(body).toBlocking().value();
@@ -476,12 +493,15 @@ public class AutoRestValidationTestImpl extends ServiceClient implements AutoRes
      *
      * @param body the Product value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Product> object
+     * @return a {@link Single} emitting the {@link Product} object
      */
     public Single<Product> postWithConstantInBodyAsync(Product body) {
-        return postWithConstantInBodyWithRestResponseAsync(body)
-            .map(new Func1<RestResponse<Void, Product>, Product>() { public Product call(RestResponse<Void, Product> restResponse) { return restResponse.body(); } });
-        }
-
+            return postWithConstantInBodyWithRestResponseAsync(body)
+                .map(new Func1<RestResponse<Void, Product>, Product>() {
+                    public Product call(RestResponse<Void, Product> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

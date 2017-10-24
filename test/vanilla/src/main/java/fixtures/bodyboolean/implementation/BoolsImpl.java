@@ -100,7 +100,7 @@ public class BoolsImpl implements Bools {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the boolean object if successful.
+     * @return the {@link boolean} object if successful.
      */
     public boolean getTrue() {
         return getTrueAsync().toBlocking().value();
@@ -131,13 +131,16 @@ public class BoolsImpl implements Bools {
      * Get true Boolean value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Boolean> object
+     * @return a {@link Single} emitting the {@link Boolean} object
      */
     public Single<Boolean> getTrueAsync() {
-        return getTrueWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Boolean>, Boolean>() { public Boolean call(RestResponse<Void, Boolean> restResponse) { return restResponse.body(); } });
-        }
-
+            return getTrueWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Boolean>, Boolean>() {
+                    public Boolean call(RestResponse<Void, Boolean> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set Boolean value true.
@@ -146,7 +149,7 @@ public class BoolsImpl implements Bools {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putTrue(boolean boolBody) {
         putTrueAsync(boolBody).toBlocking().value();
@@ -180,13 +183,16 @@ public class BoolsImpl implements Bools {
      *
      * @param boolBody the boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putTrueAsync(boolean boolBody) {
-        return putTrueWithRestResponseAsync(boolBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putTrueWithRestResponseAsync(boolBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get false Boolean value.
@@ -194,7 +200,7 @@ public class BoolsImpl implements Bools {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the boolean object if successful.
+     * @return the {@link boolean} object if successful.
      */
     public boolean getFalse() {
         return getFalseAsync().toBlocking().value();
@@ -225,13 +231,16 @@ public class BoolsImpl implements Bools {
      * Get false Boolean value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Boolean> object
+     * @return a {@link Single} emitting the {@link Boolean} object
      */
     public Single<Boolean> getFalseAsync() {
-        return getFalseWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Boolean>, Boolean>() { public Boolean call(RestResponse<Void, Boolean> restResponse) { return restResponse.body(); } });
-        }
-
+            return getFalseWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Boolean>, Boolean>() {
+                    public Boolean call(RestResponse<Void, Boolean> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Set Boolean value false.
@@ -240,7 +249,7 @@ public class BoolsImpl implements Bools {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putFalse(boolean boolBody) {
         putFalseAsync(boolBody).toBlocking().value();
@@ -274,13 +283,16 @@ public class BoolsImpl implements Bools {
      *
      * @param boolBody the boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putFalseAsync(boolean boolBody) {
-        return putFalseWithRestResponseAsync(boolBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putFalseWithRestResponseAsync(boolBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get null Boolean value.
@@ -288,7 +300,7 @@ public class BoolsImpl implements Bools {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the boolean object if successful.
+     * @return the {@link boolean} object if successful.
      */
     public boolean getNull() {
         return getNullAsync().toBlocking().value();
@@ -319,13 +331,16 @@ public class BoolsImpl implements Bools {
      * Get null Boolean value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Boolean> object
+     * @return a {@link Single} emitting the {@link Boolean} object
      */
     public Single<Boolean> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Boolean>, Boolean>() { public Boolean call(RestResponse<Void, Boolean> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Boolean>, Boolean>() {
+                    public Boolean call(RestResponse<Void, Boolean> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get invalid Boolean value.
@@ -333,7 +348,7 @@ public class BoolsImpl implements Bools {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the boolean object if successful.
+     * @return the {@link boolean} object if successful.
      */
     public boolean getInvalid() {
         return getInvalidAsync().toBlocking().value();
@@ -364,12 +379,15 @@ public class BoolsImpl implements Bools {
      * Get invalid Boolean value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Boolean> object
+     * @return a {@link Single} emitting the {@link Boolean} object
      */
     public Single<Boolean> getInvalidAsync() {
-        return getInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Boolean>, Boolean>() { public Boolean call(RestResponse<Void, Boolean> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Boolean>, Boolean>() {
+                    public Boolean call(RestResponse<Void, Boolean> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

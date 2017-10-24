@@ -89,7 +89,7 @@ public class DurationsImpl implements Durations {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Period object if successful.
+     * @return the {@link Period} object if successful.
      */
     public Period getNull() {
         return getNullAsync().toBlocking().value();
@@ -120,13 +120,16 @@ public class DurationsImpl implements Durations {
      * Get null duration value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Period> object
+     * @return a {@link Single} emitting the {@link Period} object
      */
     public Single<Period> getNullAsync() {
-        return getNullWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Period>, Period>() { public Period call(RestResponse<Void, Period> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNullWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Period>, Period>() {
+                    public Period call(RestResponse<Void, Period> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Put a positive duration value.
@@ -135,7 +138,7 @@ public class DurationsImpl implements Durations {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the void object if successful.
+     * @return the {@link void} object if successful.
      */
     public void putPositiveDuration(Period durationBody) {
         putPositiveDurationAsync(durationBody).toBlocking().value();
@@ -172,13 +175,16 @@ public class DurationsImpl implements Durations {
      *
      * @param durationBody the Period value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Void> object
+     * @return a {@link Single} emitting the {@link Void} object
      */
     public Single<Void> putPositiveDurationAsync(Period durationBody) {
-        return putPositiveDurationWithRestResponseAsync(durationBody)
-            .map(new Func1<RestResponse<Void, Void>, Void>() { public Void call(RestResponse<Void, Void> restResponse) { return restResponse.body(); } });
-        }
-
+            return putPositiveDurationWithRestResponseAsync(durationBody)
+                .map(new Func1<RestResponse<Void, Void>, Void>() {
+                    public Void call(RestResponse<Void, Void> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get a positive duration value.
@@ -186,7 +192,7 @@ public class DurationsImpl implements Durations {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Period object if successful.
+     * @return the {@link Period} object if successful.
      */
     public Period getPositiveDuration() {
         return getPositiveDurationAsync().toBlocking().value();
@@ -217,13 +223,16 @@ public class DurationsImpl implements Durations {
      * Get a positive duration value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Period> object
+     * @return a {@link Single} emitting the {@link Period} object
      */
     public Single<Period> getPositiveDurationAsync() {
-        return getPositiveDurationWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Period>, Period>() { public Period call(RestResponse<Void, Period> restResponse) { return restResponse.body(); } });
-        }
-
+            return getPositiveDurationWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Period>, Period>() {
+                    public Period call(RestResponse<Void, Period> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get an invalid duration value.
@@ -231,7 +240,7 @@ public class DurationsImpl implements Durations {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Period object if successful.
+     * @return the {@link Period} object if successful.
      */
     public Period getInvalid() {
         return getInvalidAsync().toBlocking().value();
@@ -262,12 +271,15 @@ public class DurationsImpl implements Durations {
      * Get an invalid duration value.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Period> object
+     * @return a {@link Single} emitting the {@link Period} object
      */
     public Single<Period> getInvalidAsync() {
-        return getInvalidWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Period>, Period>() { public Period call(RestResponse<Void, Period> restResponse) { return restResponse.body(); } });
-        }
-
+            return getInvalidWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Period>, Period>() {
+                    public Period call(RestResponse<Void, Period> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }

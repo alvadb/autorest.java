@@ -79,7 +79,7 @@ public class HttpFailuresImpl implements HttpFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws ErrorException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the boolean object if successful.
+     * @return the {@link boolean} object if successful.
      */
     public boolean getEmptyError() {
         return getEmptyErrorAsync().toBlocking().value();
@@ -110,13 +110,16 @@ public class HttpFailuresImpl implements HttpFailures {
      * Get empty error form server.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Boolean> object
+     * @return a {@link Single} emitting the {@link Boolean} object
      */
     public Single<Boolean> getEmptyErrorAsync() {
-        return getEmptyErrorWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Boolean>, Boolean>() { public Boolean call(RestResponse<Void, Boolean> restResponse) { return restResponse.body(); } });
-        }
-
+            return getEmptyErrorWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Boolean>, Boolean>() {
+                    public Boolean call(RestResponse<Void, Boolean> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get empty error form server.
@@ -124,7 +127,7 @@ public class HttpFailuresImpl implements HttpFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the boolean object if successful.
+     * @return the {@link boolean} object if successful.
      */
     public boolean getNoModelError() {
         return getNoModelErrorAsync().toBlocking().value();
@@ -155,13 +158,16 @@ public class HttpFailuresImpl implements HttpFailures {
      * Get empty error form server.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Boolean> object
+     * @return a {@link Single} emitting the {@link Boolean} object
      */
     public Single<Boolean> getNoModelErrorAsync() {
-        return getNoModelErrorWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Boolean>, Boolean>() { public Boolean call(RestResponse<Void, Boolean> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNoModelErrorWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Boolean>, Boolean>() {
+                    public Boolean call(RestResponse<Void, Boolean> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
     /**
      * Get empty response from server.
@@ -169,7 +175,7 @@ public class HttpFailuresImpl implements HttpFailures {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the boolean object if successful.
+     * @return the {@link boolean} object if successful.
      */
     public boolean getNoModelEmpty() {
         return getNoModelEmptyAsync().toBlocking().value();
@@ -200,12 +206,15 @@ public class HttpFailuresImpl implements HttpFailures {
      * Get empty response from server.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return a {@link Single} emitting the RestResponse<Void, Boolean> object
+     * @return a {@link Single} emitting the {@link Boolean} object
      */
     public Single<Boolean> getNoModelEmptyAsync() {
-        return getNoModelEmptyWithRestResponseAsync()
-            .map(new Func1<RestResponse<Void, Boolean>, Boolean>() { public Boolean call(RestResponse<Void, Boolean> restResponse) { return restResponse.body(); } });
-        }
-
+            return getNoModelEmptyWithRestResponseAsync()
+                .map(new Func1<RestResponse<Void, Boolean>, Boolean>() {
+                    public Boolean call(RestResponse<Void, Boolean> restResponse) {
+                        return restResponse.body();
+                    }
+                });
+    }
 
 }
