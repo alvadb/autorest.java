@@ -1,8 +1,10 @@
 @using System
 @using AutoRest.Java.vanilla.Templates
+@using AutoRest.Java.Syntax.Templates
 @using System.Linq;
 @using AutoRest.Java
 @using AutoRest.Java.Model
+
 @inherits AutoRest.Core.Template<AutoRest.Java.Model.MethodGroupJv>
 /**
 @Header(" * ").TrimMultilineHeader()
@@ -42,9 +44,9 @@ public class @(Model.MethodGroupImplType)@(Model.ParentDeclaration) {
 
     @EmptyLine
 
-    @foreach (MethodJv method in Model.Methods)
+    @foreach (var operationMethod in Model.Methods.SelectMany(m => ((MethodJv)m).CreateOperationMethods()))
     {
-    @:@(Include(new MethodTemplate(), method))
+    @:@(Include(new OperationMethodTemplate(), operationMethod))
     @EmptyLine
     }
 }

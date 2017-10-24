@@ -1,0 +1,38 @@
+﻿@using System.Linq;
+@using AutoRest.Core.Utilities.Collections;
+@using AutoRest.Core.Model
+@using AutoRest.Core.Utilities
+@using AutoRest.Java
+@using AutoRest.Java.Model
+@inherits AutoRest.Core.Template<AutoRest.Java.Syntax.OperationMethod>
+
+@{ 
+    var paramsString = string.Join(", ", Model.Parameters.Select(p => $"{p.Type} {p.Name}"));
+}
+
+/**
+@if (!string.IsNullOrEmpty(Model.SummaryJavadoc))
+{
+@: * @Model.SummaryJavadoc
+}
+@if (!string.IsNullOrEmpty(Model.DescriptionJavadoc))
+{
+@: * @Model.DescriptionJavadoc
+}
+ *
+@foreach (var param in Model.Parameters)
+{
+@: * @@param @param.Name @param.Javadoc.Else($"the {param.Type} value");
+}
+@foreach (var exceptionDoc in Model.ExceptionJavadocs)
+{
+@:@exceptionDoc
+}
+@if (!string.IsNullOrEmpty(Model.ReturnTypeJavadoc))
+{
+@: * @@return @Model.ReturnTypeJavadoc
+}
+ */
+public @Model.ReturnTypeName @(Model.Name)(@paramsString) {
+    @Model.Implementation
+}

@@ -1,5 +1,6 @@
 @using System
 @using AutoRest.Java.vanilla.Templates
+@using AutoRest.Java.Syntax.Templates
 @using System.Linq
 @using AutoRest.Core.Utilities
 @using AutoRest.Java
@@ -139,9 +140,9 @@ if (Model.RootMethods.Any())
 @EmptyLine
 }
 <text>
-@foreach (MethodJv method in Model.RootMethods)
+@foreach (var operationMethod in Model.RootMethods.SelectMany(m => m.CreateOperationMethods()))
 {
-    @:@(Include(new MethodTemplate(), method))
+    @:@(Include(new OperationMethodTemplate(), operationMethod))
     @EmptyLine
 }
 </text>
