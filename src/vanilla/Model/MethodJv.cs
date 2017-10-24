@@ -311,7 +311,7 @@ namespace AutoRest.Java.Model
             var takeAllParameters = !takeOnlyRequiredParameters;
             var parameters = LocalParameters
                 .Where(p => (takeAllParameters || p.IsRequired) && !p.IsConstant)
-                .Select(p => new OperationParameter(type: p.WireType.Name, name: p.Name, javadoc: p.Documentation))
+                .Select(p => new OperationParameter(type: p.ClientType.Name, name: p.Name, javadoc: p.Documentation))
                 .ToImmutableArray();
 
             return parameters;
